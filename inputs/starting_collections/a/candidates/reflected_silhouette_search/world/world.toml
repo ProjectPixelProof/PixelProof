@@ -1,0 +1,14 @@
+schema_version = "0.4.0"
+world_id = "reflected_silhouette_search"
+renderer_version = "reflected-silhouette-search-0.1.0"
+question_family = "search"
+decision_type = "selection"
+answer_candidates = ["NW", "NE", "SW", "SE"]
+support_recipe = "two disconnected diagonal silhouettes within one medium-sized sector jointly determine the winner"
+
+[axes]
+answer_identity = "balanced_random_sector"
+ink = "shared_random_saturated_ink"
+pair_geometry = "two_detached_asymmetric_filled_glyphs"
+decision_rule = "whole_silhouette_reflection_across_perpendicular_bisector"
+support_shape = "two_disconnected_components"

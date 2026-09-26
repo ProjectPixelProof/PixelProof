@@ -1,0 +1,30 @@
+# Paper Section 3: Frontier-hard replicate B
+
+> **Frozen paper treatment.** This is `paper-difficulty@0.3.0:frontier_hard_b`. It is one
+> of two randomized initial-library replicates, not a semantic task category.
+> Its ten executable seeds and complete five-image outcomes from Sol High,
+> Opus 5 High, and Gemini 3.7 Flash High are hash-pinned by `luna_s3_frontier_hard_6h_001`.
+
+Design one new executable visual question whose answer is recoverable from the
+rendered pixels by an independently implemented inverse arm. Use the frozen
+frontier outcomes as evidence about which computations were easy or difficult,
+not as layouts to imitate. After each valid proposal, explain what the evaluator
+panel did, identify one mechanism-level reason for its success or failure, and
+make one falsifiable change intended to lower majority-frontier accuracy without
+using tiny marks, ambiguous wording, hidden metadata, or unstable rendering.
+
+The builder receives candidate source and bounded textual feedback but no
+evaluator raster. Difficulty never overrides protected mechanical validity.
+
+## Frozen generated seeds
+
+- **`interleaved_sheet_extract`** (Section 1; opus5; Sol/Opus/Gemini 0.6/1.0/0.6): The picture shows one framed lattice of 14 rows and 7 columns of square cells; each cell is either dark (filled) or blank. Beside every lattice row, just outside the frame on its left, exactly one marker is printed: either a filled dot or a hollow ring. Exactly 7 rows carry a filled dot and exactly 7 rows carry a hollow ring. Discard every row whose marker is a hollow ring, keep the rows whose marker is a filled dot in their original top-to-bottom order, and push those 7 kept rows together into a single block of 7 rows and 7 columns. The dark cells of that block form one of these five symbols: ring (a closed square outline with a hollow centre), wedge (a solid triangle pointing down, widest across its top row), zigzag (a bar along the top, a staircase running down to the left, and a bar along the bottom), arrow (a broad arrowhead pointing down with a short stem below it), slash (a thick diagonal band running from the top left corner to the bottom right corner). Which of the five symbols do the dark cells of that block form? Answer with one word.
+- **`arrow_reachable_terminal`** (Section 1; sol-max; Sol/Opus/Gemini 0.8/0.2/0.6): Starting at the green START circle, follow black links only in the direction of their purple arrowheads. Which colored terminal can be reached? Links meet only at circles, and every link may be followed only in its arrow's direction. Answer red, blue, or orange.
+- **`paired_seam_correspondence`** (Section 2; luna-max; Sol/Opus/Gemini 0.4/0.6/0.6): Ignoring color, position, size, and the gap, do the two separated tiles have the same sequence of bumps and recesses along their facing edges? Keep the top-to-bottom order and do not rotate or flip either tile. Answer yes or no.
+- **`bitplane_glyph_reveal`** (Section 1; deepseek-v4-flash-0731; Sol/Opus/Gemini 0.0/0.6/0.6): The image is a dense field of gray noise. The answer letter is hidden only in the least-significant bit (bit-plane 0) of each pixel's gray value; the other seven bits are random noise. Read that least-significant bit plane. Which letter, A or B, is revealed? Answer A or B.
+- **`stitch_face_alternation`** (Section 2; opus5; Sol/Opus/Gemini 0.6/0.6/1.0): This picture shows a mending board on a plain white background. Exactly one flat tape strip has a thin thread stitched through it: that thread crosses the tape exactly five times, and one end of that thread carries a small crimson square tag. At each crossing the thread either passes in FRONT of the tape, staying visible right across it, or BEHIND the tape, hidden where the tape covers it and leaving a visible gap. Loose thread scraps and bare tape pieces elsewhere in the picture are not stitched through any tape and must be ignored. Walk the thread from its tagged end and take the five crossings in the order the thread meets them. The stitch alternates if front and behind strictly take turns along that walk, never twice in a row. Does this stitch alternate? Answer with exactly one of: yes, no.
+- **`global_elongation_axis`** (Section 1; deepseek-v4-flash-0731; Sol/Opus/Gemini 0.6/0.6/0.6): The dark dots together form one elongated cloud. Looking at the whole cloud, along which single direction is it stretched out: horizontal, rising (uphill to the right), vertical, or falling (downhill to the right)? Answer horizontal, rising, vertical, or falling.
+- **`colored_arc_curvature_correspondence`** (Section 1; luna-max; Sol/Opus/Gemini 1.0/0.6/0.6): The image shows a REFERENCE panel and candidates A and B. Each panel has four uniquely colored curved strokes. Rank the strokes from 1 (least bowed) to 4 (most bowed) by normalized bow from the straight endpoint chord. Which candidate has the same color-to-curvature-rank assignment as the REFERENCE? Ignore panel position, stroke position, rotation, reflection, and line width. Answer A or B.
+- **`transpose_stamp_correspondence`** (Section 2; sol-max; Sol/Opus/Gemini 0.4/0.0/1.0): The black-bordered mini-grid is the reference. Swap its rows and columns: the cell at row r, column c moves to row c, column r. Exactly one colored-bordered mini-grid is the result. Which border color marks it? Answer amber, cyan, or violet.
+- **`toothline_rasterize`** (Section 2; sol-high; Sol/Opus/Gemini 1.0/0.2/0.2): Follow the connected route from the amber triangle to the teal circle. It has nine V-shaped teeth. In route order, write a dark cell for a tooth pointing up and a light cell for a tooth pointing down, filling a 3 by 3 tile left-to-right and top-to-bottom. Which symbol appears: X, plus, T, or L?
+- **`spring_coil_count`** (Section 2; sol-high; Sol/Opus/Gemini 0.6/0.8/0.2): How many full coils are visible in the single blue spring? Count one coil for each complete top-to-bottom-to-top cycle while following the wire from left to right. Do not count a partial cycle at either end.

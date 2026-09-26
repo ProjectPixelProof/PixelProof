@@ -1,0 +1,249 @@
+{
+  "aggregate_accuracy": 0.7333333333333334,
+  "aggregation": "majority_evaluators_at_or_below_threshold",
+  "candidate_id": "stitch_face_alternation",
+  "candidate_sha256": "697db0e24cec4c6c86516c4581a40c570ac1bfdb51b6f9d97f8782c16c21da93",
+  "difficulty_hypothesis": null,
+  "episode_index": 0,
+  "evaluated_at": "2026-08-29T00:00:00Z",
+  "evaluator_accuracies": {
+    "gemini37_flash_high": 1.0,
+    "opus5_high": 0.6,
+    "sol_high": 0.6
+  },
+  "examples_per_evaluator": 5,
+  "feedback_visibility": "outcome_only_bootstrap_no_public_rationales",
+  "hard_accuracy_threshold": 0.6,
+  "hard_seed_eligible": true,
+  "maximum_paid_requests": 15,
+  "policy_id": "difficulty-feedback@0.6.0",
+  "protected_valid": true,
+  "sample_responses": [
+    {
+      "candidates": [
+        "yes",
+        "no"
+      ],
+      "oracle_answer": "no",
+      "question": "This picture shows a mending board on a plain white background. Exactly one flat tape strip has a thin thread stitched through it: that thread crosses the tape exactly five times, and one end of that thread carries a small crimson square tag. At each crossing the thread either passes in FRONT of the tape, staying visible right across it, or BEHIND the tape, hidden where the tape covers it and leaving a visible gap. Loose thread scraps and bare tape pieces elsewhere in the picture are not stitched through any tape and must be ignored. Walk the thread from its tagged end and take the five crossings in the order the thread meets them. The stitch alternates if front and behind strictly take turns along that walk, never twice in a row. Does this stitch alternate? Answer with exactly one of: yes, no.",
+      "responses": [
+        {
+          "confidence": null,
+          "confidence_status": "not_preserved_in_frozen_section1_2_export",
+          "correct": false,
+          "evaluator": "sol_high",
+          "model_id": "openai/gpt-5.6-sol",
+          "prediction": "yes",
+          "provider": "OpenAI",
+          "served_model": "openai/gpt-5.6-sol",
+          "status": "scored"
+        },
+        {
+          "confidence": null,
+          "confidence_status": "not_preserved_in_frozen_section1_2_export",
+          "correct": true,
+          "evaluator": "opus5_high",
+          "model_id": "anthropic/claude-opus-5",
+          "prediction": "no",
+          "provider": "Anthropic",
+          "served_model": "anthropic/claude-opus-5",
+          "status": "scored"
+        },
+        {
+          "confidence": null,
+          "confidence_status": "not_preserved_in_frozen_section1_2_export",
+          "correct": true,
+          "evaluator": "gemini37_flash_high",
+          "model_id": "google/gemini-3.7-flash",
+          "prediction": "no",
+          "provider": "Google",
+          "served_model": "google/gemini-3.7-flash",
+          "status": "scored"
+        }
+      ],
+      "sample_id": "sample-01"
+    },
+    {
+      "candidates": [
+        "yes",
+        "no"
+      ],
+      "oracle_answer": "yes",
+      "question": "This picture shows a mending board on a plain white background. Exactly one flat tape strip has a thin thread stitched through it: that thread crosses the tape exactly five times, and one end of that thread carries a small crimson square tag. At each crossing the thread either passes in FRONT of the tape, staying visible right across it, or BEHIND the tape, hidden where the tape covers it and leaving a visible gap. Loose thread scraps and bare tape pieces elsewhere in the picture are not stitched through any tape and must be ignored. Walk the thread from its tagged end and take the five crossings in the order the thread meets them. The stitch alternates if front and behind strictly take turns along that walk, never twice in a row. Does this stitch alternate? Answer with exactly one of: yes, no.",
+      "responses": [
+        {
+          "confidence": null,
+          "confidence_status": "not_preserved_in_frozen_section1_2_export",
+          "correct": true,
+          "evaluator": "sol_high",
+          "model_id": "openai/gpt-5.6-sol",
+          "prediction": "yes",
+          "provider": "OpenAI",
+          "served_model": "openai/gpt-5.6-sol",
+          "status": "scored"
+        },
+        {
+          "confidence": null,
+          "confidence_status": "not_preserved_in_frozen_section1_2_export",
+          "correct": false,
+          "evaluator": "opus5_high",
+          "model_id": "anthropic/claude-opus-5",
+          "prediction": "no",
+          "provider": "Anthropic",
+          "served_model": "anthropic/claude-opus-5",
+          "status": "scored"
+        },
+        {
+          "confidence": null,
+          "confidence_status": "not_preserved_in_frozen_section1_2_export",
+          "correct": true,
+          "evaluator": "gemini37_flash_high",
+          "model_id": "google/gemini-3.7-flash",
+          "prediction": "yes",
+          "provider": "Google",
+          "served_model": "google/gemini-3.7-flash",
+          "status": "scored"
+        }
+      ],
+      "sample_id": "sample-02"
+    },
+    {
+      "candidates": [
+        "yes",
+        "no"
+      ],
+      "oracle_answer": "no",
+      "question": "This picture shows a mending board on a plain white background. Exactly one flat tape strip has a thin thread stitched through it: that thread crosses the tape exactly five times, and one end of that thread carries a small crimson square tag. At each crossing the thread either passes in FRONT of the tape, staying visible right across it, or BEHIND the tape, hidden where the tape covers it and leaving a visible gap. Loose thread scraps and bare tape pieces elsewhere in the picture are not stitched through any tape and must be ignored. Walk the thread from its tagged end and take the five crossings in the order the thread meets them. The stitch alternates if front and behind strictly take turns along that walk, never twice in a row. Does this stitch alternate? Answer with exactly one of: yes, no.",
+      "responses": [
+        {
+          "confidence": null,
+          "confidence_status": "not_preserved_in_frozen_section1_2_export",
+          "correct": false,
+          "evaluator": "sol_high",
+          "model_id": "openai/gpt-5.6-sol",
+          "prediction": "yes",
+          "provider": "OpenAI",
+          "served_model": "openai/gpt-5.6-sol",
+          "status": "scored"
+        },
+        {
+          "confidence": null,
+          "confidence_status": "not_preserved_in_frozen_section1_2_export",
+          "correct": true,
+          "evaluator": "opus5_high",
+          "model_id": "anthropic/claude-opus-5",
+          "prediction": "no",
+          "provider": "Anthropic",
+          "served_model": "anthropic/claude-opus-5",
+          "status": "scored"
+        },
+        {
+          "confidence": null,
+          "confidence_status": "not_preserved_in_frozen_section1_2_export",
+          "correct": true,
+          "evaluator": "gemini37_flash_high",
+          "model_id": "google/gemini-3.7-flash",
+          "prediction": "no",
+          "provider": "Google",
+          "served_model": "google/gemini-3.7-flash",
+          "status": "scored"
+        }
+      ],
+      "sample_id": "sample-03"
+    },
+    {
+      "candidates": [
+        "yes",
+        "no"
+      ],
+      "oracle_answer": "yes",
+      "question": "This picture shows a mending board on a plain white background. Exactly one flat tape strip has a thin thread stitched through it: that thread crosses the tape exactly five times, and one end of that thread carries a small crimson square tag. At each crossing the thread either passes in FRONT of the tape, staying visible right across it, or BEHIND the tape, hidden where the tape covers it and leaving a visible gap. Loose thread scraps and bare tape pieces elsewhere in the picture are not stitched through any tape and must be ignored. Walk the thread from its tagged end and take the five crossings in the order the thread meets them. The stitch alternates if front and behind strictly take turns along that walk, never twice in a row. Does this stitch alternate? Answer with exactly one of: yes, no.",
+      "responses": [
+        {
+          "confidence": null,
+          "confidence_status": "not_preserved_in_frozen_section1_2_export",
+          "correct": true,
+          "evaluator": "sol_high",
+          "model_id": "openai/gpt-5.6-sol",
+          "prediction": "yes",
+          "provider": "OpenAI",
+          "served_model": "openai/gpt-5.6-sol",
+          "status": "scored"
+        },
+        {
+          "confidence": null,
+          "confidence_status": "not_preserved_in_frozen_section1_2_export",
+          "correct": false,
+          "evaluator": "opus5_high",
+          "model_id": "anthropic/claude-opus-5",
+          "prediction": "no",
+          "provider": "Anthropic",
+          "served_model": "anthropic/claude-opus-5",
+          "status": "scored"
+        },
+        {
+          "confidence": null,
+          "confidence_status": "not_preserved_in_frozen_section1_2_export",
+          "correct": true,
+          "evaluator": "gemini37_flash_high",
+          "model_id": "google/gemini-3.7-flash",
+          "prediction": "yes",
+          "provider": "Google",
+          "served_model": "google/gemini-3.7-flash",
+          "status": "scored"
+        }
+      ],
+      "sample_id": "sample-04"
+    },
+    {
+      "candidates": [
+        "yes",
+        "no"
+      ],
+      "oracle_answer": "no",
+      "question": "This picture shows a mending board on a plain white background. Exactly one flat tape strip has a thin thread stitched through it: that thread crosses the tape exactly five times, and one end of that thread carries a small crimson square tag. At each crossing the thread either passes in FRONT of the tape, staying visible right across it, or BEHIND the tape, hidden where the tape covers it and leaving a visible gap. Loose thread scraps and bare tape pieces elsewhere in the picture are not stitched through any tape and must be ignored. Walk the thread from its tagged end and take the five crossings in the order the thread meets them. The stitch alternates if front and behind strictly take turns along that walk, never twice in a row. Does this stitch alternate? Answer with exactly one of: yes, no.",
+      "responses": [
+        {
+          "confidence": null,
+          "confidence_status": "not_preserved_in_frozen_section1_2_export",
+          "correct": true,
+          "evaluator": "sol_high",
+          "model_id": "openai/gpt-5.6-sol",
+          "prediction": "no",
+          "provider": "OpenAI",
+          "served_model": "openai/gpt-5.6-sol",
+          "status": "scored"
+        },
+        {
+          "confidence": null,
+          "confidence_status": "not_preserved_in_frozen_section1_2_export",
+          "correct": true,
+          "evaluator": "opus5_high",
+          "model_id": "anthropic/claude-opus-5",
+          "prediction": "no",
+          "provider": "Anthropic",
+          "served_model": "anthropic/claude-opus-5",
+          "status": "scored"
+        },
+        {
+          "confidence": null,
+          "confidence_status": "not_preserved_in_frozen_section1_2_export",
+          "correct": true,
+          "evaluator": "gemini37_flash_high",
+          "model_id": "google/gemini-3.7-flash",
+          "prediction": "no",
+          "provider": "Google",
+          "served_model": "google/gemini-3.7-flash",
+          "status": "scored"
+        }
+      ],
+      "sample_id": "sample-05"
+    }
+  ],
+  "sample_set_sha256": "f92da4fb3fb77c9ba2ea676170c527286d4b2e7c9a504011759d6c7af29debc5",
+  "schema_version": "difficulty-feedback-result-0.6.0",
+  "source_archive_candidate_sha256": "bb75d8c1a80c4ea07c9d9250b18618b5905441c4db19f3df3947b0a10e2d681a",
+  "source_cost_status": "not_preserved_in_frozen_section1_2_export",
+  "status": "complete",
+  "total_cost_usd": 0.0
+}

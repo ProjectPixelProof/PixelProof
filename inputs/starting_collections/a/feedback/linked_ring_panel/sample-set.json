@@ -1,0 +1,89 @@
+{
+  "candidate_id": "linked_ring_panel",
+  "candidate_sha256": "b3a49c079b84a1455101adc9cb32f92ae43a7ecc493bfb2b458f77ec00f5cf17",
+  "distinct_image_count": 5,
+  "sample_unit": "unique_image",
+  "samples": [
+    {
+      "candidate_id": "linked_ring_panel",
+      "candidates": [
+        "panel-1",
+        "panel-2",
+        "panel-3",
+        "panel-4",
+        "panel-5"
+      ],
+      "image_path": "bootstrap/feedback/linked_ring_panel/images/sample-01.png",
+      "image_sha256": "134c3a19c8b3ef0465522096b62b292c49faf9ca60e4e49c155a35974e2d7d38",
+      "margin": "48.90005850126701",
+      "question": "This image shows five framed square panels of identical size standing side by side in one row, numbered 1 to 5 from left to right. Every panel holds exactly two rings of the same thickness, drawn in two different flat colours, and in every panel the two rings cross each other at exactly two places, so ring count, ring size, colour, position and the amount of ink carry no information. The rings are opaque, so at each crossing one ring passes in front and hides a short piece of the other one, leaving a plain break in the ring behind. Two rings are interlocked when neither ring stays in front the whole way round: one ring passes in front at one crossing and behind at the other, so each of the two rings carries exactly one break and each is still a single connected curve. Two rings are merely stacked when the same ring passes in front at both crossings, so that front ring carries no break at all while the ring behind it is broken twice and falls into two separate pieces. Exactly one panel holds a pair of interlocked rings. In each of the other four panels the pair is merely stacked, and the piece of the ring behind that lies between its two breaks is at least 26 pixels long, so both of its breaks are plainly visible. Which ring is drawn in which colour, which ring is in front at a given crossing, and where the pair sits inside its panel are all free to vary. Which numbered panel holds the two interlocked rings, that is the panel in which each of the two rings carries exactly one break? Answer with exactly one of: panel-1, panel-2, panel-3, panel-4, panel-5.",
+      "sample_id": "sample-01",
+      "sample_key": "3c55ebf05b56f8cdff1f7439d6f4e12761bd89797a27228f72e3c7c9f4676cfb"
+    },
+    {
+      "candidate_id": "linked_ring_panel",
+      "candidates": [
+        "panel-1",
+        "panel-2",
+        "panel-3",
+        "panel-4",
+        "panel-5"
+      ],
+      "image_path": "bootstrap/feedback/linked_ring_panel/images/sample-02.png",
+      "image_sha256": "a8ffe04fc7eae5da936278f60a9b5c6d8051f17f78cedb3e40636d300f6e77fc",
+      "margin": "41.812754731840755",
+      "question": "This image shows five framed square panels of identical size standing side by side in one row, numbered 1 to 5 from left to right. Every panel holds exactly two rings of the same thickness, drawn in two different flat colours, and in every panel the two rings cross each other at exactly two places, so ring count, ring size, colour, position and the amount of ink carry no information. The rings are opaque, so at each crossing one ring passes in front and hides a short piece of the other one, leaving a plain break in the ring behind. Two rings are interlocked when neither ring stays in front the whole way round: one ring passes in front at one crossing and behind at the other, so each of the two rings carries exactly one break and each is still a single connected curve. Two rings are merely stacked when the same ring passes in front at both crossings, so that front ring carries no break at all while the ring behind it is broken twice and falls into two separate pieces. Exactly one panel holds a pair of interlocked rings. In each of the other four panels the pair is merely stacked, and the piece of the ring behind that lies between its two breaks is at least 26 pixels long, so both of its breaks are plainly visible. Which ring is drawn in which colour, which ring is in front at a given crossing, and where the pair sits inside its panel are all free to vary. Which numbered panel holds the two interlocked rings, that is the panel in which each of the two rings carries exactly one break? Answer with exactly one of: panel-1, panel-2, panel-3, panel-4, panel-5.",
+      "sample_id": "sample-02",
+      "sample_key": "082d40c962bf881da12180c8c8bfaa630d1d3bd987d53f698682155b7093b674"
+    },
+    {
+      "candidate_id": "linked_ring_panel",
+      "candidates": [
+        "panel-1",
+        "panel-2",
+        "panel-3",
+        "panel-4",
+        "panel-5"
+      ],
+      "image_path": "bootstrap/feedback/linked_ring_panel/images/sample-03.png",
+      "image_sha256": "3a464af254117ec74243a81c765a30a5be15a37268ce2936c29f7cf8f146c980",
+      "margin": "34.3612943463457",
+      "question": "This image shows five framed square panels of identical size standing side by side in one row, numbered 1 to 5 from left to right. Every panel holds exactly two rings of the same thickness, drawn in two different flat colours, and in every panel the two rings cross each other at exactly two places, so ring count, ring size, colour, position and the amount of ink carry no information. The rings are opaque, so at each crossing one ring passes in front and hides a short piece of the other one, leaving a plain break in the ring behind. Two rings are interlocked when neither ring stays in front the whole way round: one ring passes in front at one crossing and behind at the other, so each of the two rings carries exactly one break and each is still a single connected curve. Two rings are merely stacked when the same ring passes in front at both crossings, so that front ring carries no break at all while the ring behind it is broken twice and falls into two separate pieces. Exactly one panel holds a pair of interlocked rings. In each of the other four panels the pair is merely stacked, and the piece of the ring behind that lies between its two breaks is at least 26 pixels long, so both of its breaks are plainly visible. Which ring is drawn in which colour, which ring is in front at a given crossing, and where the pair sits inside its panel are all free to vary. Which numbered panel holds the two interlocked rings, that is the panel in which each of the two rings carries exactly one break? Answer with exactly one of: panel-1, panel-2, panel-3, panel-4, panel-5.",
+      "sample_id": "sample-03",
+      "sample_key": "99c71ee17638ebf3b82f9d2409f89690104b16dca33cbee41d57f10b4bbe73f0"
+    },
+    {
+      "candidate_id": "linked_ring_panel",
+      "candidates": [
+        "panel-1",
+        "panel-2",
+        "panel-3",
+        "panel-4",
+        "panel-5"
+      ],
+      "image_path": "bootstrap/feedback/linked_ring_panel/images/sample-04.png",
+      "image_sha256": "e854fb37637f56c9dc8118c909b96390dfb931fbabb4161131b7462aa88035b4",
+      "margin": "41.50916741654526",
+      "question": "This image shows five framed square panels of identical size standing side by side in one row, numbered 1 to 5 from left to right. Every panel holds exactly two rings of the same thickness, drawn in two different flat colours, and in every panel the two rings cross each other at exactly two places, so ring count, ring size, colour, position and the amount of ink carry no information. The rings are opaque, so at each crossing one ring passes in front and hides a short piece of the other one, leaving a plain break in the ring behind. Two rings are interlocked when neither ring stays in front the whole way round: one ring passes in front at one crossing and behind at the other, so each of the two rings carries exactly one break and each is still a single connected curve. Two rings are merely stacked when the same ring passes in front at both crossings, so that front ring carries no break at all while the ring behind it is broken twice and falls into two separate pieces. Exactly one panel holds a pair of interlocked rings. In each of the other four panels the pair is merely stacked, and the piece of the ring behind that lies between its two breaks is at least 26 pixels long, so both of its breaks are plainly visible. Which ring is drawn in which colour, which ring is in front at a given crossing, and where the pair sits inside its panel are all free to vary. Which numbered panel holds the two interlocked rings, that is the panel in which each of the two rings carries exactly one break? Answer with exactly one of: panel-1, panel-2, panel-3, panel-4, panel-5.",
+      "sample_id": "sample-04",
+      "sample_key": "014bb0f50c382253f23a393b9371ea352ffdc040cff80bbc4146648114054ca7"
+    },
+    {
+      "candidate_id": "linked_ring_panel",
+      "candidates": [
+        "panel-1",
+        "panel-2",
+        "panel-3",
+        "panel-4",
+        "panel-5"
+      ],
+      "image_path": "bootstrap/feedback/linked_ring_panel/images/sample-05.png",
+      "image_sha256": "da7c68895b993ab5e932e5f30047839bb1772846028263cbd03343c1897f9823",
+      "margin": "39.19915254758819",
+      "question": "This image shows five framed square panels of identical size standing side by side in one row, numbered 1 to 5 from left to right. Every panel holds exactly two rings of the same thickness, drawn in two different flat colours, and in every panel the two rings cross each other at exactly two places, so ring count, ring size, colour, position and the amount of ink carry no information. The rings are opaque, so at each crossing one ring passes in front and hides a short piece of the other one, leaving a plain break in the ring behind. Two rings are interlocked when neither ring stays in front the whole way round: one ring passes in front at one crossing and behind at the other, so each of the two rings carries exactly one break and each is still a single connected curve. Two rings are merely stacked when the same ring passes in front at both crossings, so that front ring carries no break at all while the ring behind it is broken twice and falls into two separate pieces. Exactly one panel holds a pair of interlocked rings. In each of the other four panels the pair is merely stacked, and the piece of the ring behind that lies between its two breaks is at least 26 pixels long, so both of its breaks are plainly visible. Which ring is drawn in which colour, which ring is in front at a given crossing, and where the pair sits inside its panel are all free to vary. Which numbered panel holds the two interlocked rings, that is the panel in which each of the two rings carries exactly one break? Answer with exactly one of: panel-1, panel-2, panel-3, panel-4, panel-5.",
+      "sample_id": "sample-05",
+      "sample_key": "98cf3e586ffddd654b81241286ad5371a2ef0ac02a5314b2a39c03653fa4e870"
+    }
+  ],
+  "source_selection_id": "section3-frontier-hard-seeds@0.2.0"
+}

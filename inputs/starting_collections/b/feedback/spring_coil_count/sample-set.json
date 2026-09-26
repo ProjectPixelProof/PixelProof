@@ -1,0 +1,89 @@
+{
+  "candidate_id": "spring_coil_count",
+  "candidate_sha256": "dca5b3e7490bc6d6ec56c3e71bcc16d90472f05f578be2cc0a04c55d6ec36e84",
+  "distinct_image_count": 5,
+  "sample_unit": "unique_image",
+  "samples": [
+    {
+      "candidate_id": "spring_coil_count",
+      "candidates": [
+        "3",
+        "4",
+        "5",
+        "6",
+        "7"
+      ],
+      "image_path": "bootstrap/feedback/spring_coil_count/images/sample-01.png",
+      "image_sha256": "5154b19ad60010d85c0be03c0cc222f42828336cdf6abb0ba77a056bfe75f396",
+      "margin": "39.0",
+      "question": "How many full coils are visible in the single blue spring? Count one coil for each complete top-to-bottom-to-top cycle while following the wire from left to right. Do not count a partial cycle at either end.",
+      "sample_id": "sample-01",
+      "sample_key": "538e9113a4e6a6f242702db0289f9e9517e719f1d5cd60c82f57249052abc2e1"
+    },
+    {
+      "candidate_id": "spring_coil_count",
+      "candidates": [
+        "3",
+        "4",
+        "5",
+        "6",
+        "7"
+      ],
+      "image_path": "bootstrap/feedback/spring_coil_count/images/sample-02.png",
+      "image_sha256": "d8322a4179471ea3804fe001d7e45f9eeb24887a03389932c1117b13423914d5",
+      "margin": "17.0",
+      "question": "How many full coils are visible in the single blue spring? Count one coil for each complete top-to-bottom-to-top cycle while following the wire from left to right. Do not count a partial cycle at either end.",
+      "sample_id": "sample-02",
+      "sample_key": "c642348688b1557ad23af694af1da275a56a57816ab148c7c14f2fa19c0dc954"
+    },
+    {
+      "candidate_id": "spring_coil_count",
+      "candidates": [
+        "3",
+        "4",
+        "5",
+        "6",
+        "7"
+      ],
+      "image_path": "bootstrap/feedback/spring_coil_count/images/sample-03.png",
+      "image_sha256": "3f9da5002ea22cbc8a442cbeb689e3d4d73b651e427922a704a9381349139cdc",
+      "margin": "31.0",
+      "question": "How many full coils are visible in the single blue spring? Count one coil for each complete top-to-bottom-to-top cycle while following the wire from left to right. Do not count a partial cycle at either end.",
+      "sample_id": "sample-03",
+      "sample_key": "8993e8347c7b862ce149d880255075c75aaaec0e1aa8afb07074a6c418fa23cc"
+    },
+    {
+      "candidate_id": "spring_coil_count",
+      "candidates": [
+        "3",
+        "4",
+        "5",
+        "6",
+        "7"
+      ],
+      "image_path": "bootstrap/feedback/spring_coil_count/images/sample-04.png",
+      "image_sha256": "b32f483c6c2fb80d6d457ab1f19f4b7e43875a6c53134f049a50f411bc135993",
+      "margin": "36.0",
+      "question": "How many full coils are visible in the single blue spring? Count one coil for each complete top-to-bottom-to-top cycle while following the wire from left to right. Do not count a partial cycle at either end.",
+      "sample_id": "sample-04",
+      "sample_key": "5608f6d01ba52dee20a4fc7aa26d8bb27ba5e3a8134a78e48f36d5385f88eccd"
+    },
+    {
+      "candidate_id": "spring_coil_count",
+      "candidates": [
+        "3",
+        "4",
+        "5",
+        "6",
+        "7"
+      ],
+      "image_path": "bootstrap/feedback/spring_coil_count/images/sample-05.png",
+      "image_sha256": "3700e54035ecfc6ecdf75db9dcbad5ff83c6517c7878660f70652336a399a650",
+      "margin": "28.0",
+      "question": "How many full coils are visible in the single blue spring? Count one coil for each complete top-to-bottom-to-top cycle while following the wire from left to right. Do not count a partial cycle at either end.",
+      "sample_id": "sample-05",
+      "sample_key": "0c2862d8d01da24944493dda5d6113ad250fb86408273a2b08ef5a97368b4cf5"
+    }
+  ],
+  "source_selection_id": "section3-frontier-hard-seeds@0.2.0"
+}

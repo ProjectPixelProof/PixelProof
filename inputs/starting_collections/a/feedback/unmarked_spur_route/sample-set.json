@@ -1,0 +1,74 @@
+{
+  "candidate_id": "unmarked_spur_route",
+  "candidate_sha256": "765c7922c71ee2934e4c69e5a024c13357df64184ea62a4bd3fb47b3bca35057",
+  "distinct_image_count": 5,
+  "sample_unit": "unique_image",
+  "samples": [
+    {
+      "candidate_id": "unmarked_spur_route",
+      "candidates": [
+        "yes",
+        "no"
+      ],
+      "image_path": "bootstrap/feedback/unmarked_spur_route/images/sample-01.png",
+      "image_sha256": "1b3877051f149a024f505da210e9c4ea2abfc12d283af09aeca3d4b514899113",
+      "margin": "22.0",
+      "question": "Trace the thick dark network from the green start. Does the path to the amber terminal contain an extra unmarked dead-end spur? Ignore the colored terminal markers; answer yes or no.",
+      "sample_id": "sample-01",
+      "sample_key": "6c0ffaddc0c9330ff0c7148a013a2abb582e06460cba9058d54eba4ecdc2e220"
+    },
+    {
+      "candidate_id": "unmarked_spur_route",
+      "candidates": [
+        "yes",
+        "no"
+      ],
+      "image_path": "bootstrap/feedback/unmarked_spur_route/images/sample-02.png",
+      "image_sha256": "cbfabcfaeb9ebafd13742b0d3627f2975741d571adad3b2fabd79d3f1f7ffaeb",
+      "margin": "22.0",
+      "question": "Trace the thick dark network from the green start. Does the path to the amber terminal contain an extra unmarked dead-end spur? Ignore the colored terminal markers; answer yes or no.",
+      "sample_id": "sample-02",
+      "sample_key": "2af9862a02fa6b4058b5aac6ace4eddc209e63260fb5e9502b80ef01c2923fca"
+    },
+    {
+      "candidate_id": "unmarked_spur_route",
+      "candidates": [
+        "yes",
+        "no"
+      ],
+      "image_path": "bootstrap/feedback/unmarked_spur_route/images/sample-03.png",
+      "image_sha256": "9c8124b008c16fc5e374732b9760d731cfda641ef5006bcf05bd043f7fd91510",
+      "margin": "22.0",
+      "question": "Trace the thick dark network from the green start. Does the path to the amber terminal contain an extra unmarked dead-end spur? Ignore the colored terminal markers; answer yes or no.",
+      "sample_id": "sample-03",
+      "sample_key": "535fdf8a21368cf64e562c19f9b7c7a52d8a02b5ae12fbb30283e2ffe47d6140"
+    },
+    {
+      "candidate_id": "unmarked_spur_route",
+      "candidates": [
+        "yes",
+        "no"
+      ],
+      "image_path": "bootstrap/feedback/unmarked_spur_route/images/sample-04.png",
+      "image_sha256": "f7fc13bb2886041b0bb1789d3545f5afc67b9380ecb46bbbbdc45a19280974fd",
+      "margin": "22.0",
+      "question": "Trace the thick dark network from the green start. Does the path to the amber terminal contain an extra unmarked dead-end spur? Ignore the colored terminal markers; answer yes or no.",
+      "sample_id": "sample-04",
+      "sample_key": "6792aa2b14298bcb44694a2df128c95b95293be7e06e7aa09d0a44099328bb3b"
+    },
+    {
+      "candidate_id": "unmarked_spur_route",
+      "candidates": [
+        "yes",
+        "no"
+      ],
+      "image_path": "bootstrap/feedback/unmarked_spur_route/images/sample-05.png",
+      "image_sha256": "3d88117777d6f79b919b8c6f41987a3b40301acf1952a1036910606406ca70cd",
+      "margin": "22.0",
+      "question": "Trace the thick dark network from the green start. Does the path to the amber terminal contain an extra unmarked dead-end spur? Ignore the colored terminal markers; answer yes or no.",
+      "sample_id": "sample-05",
+      "sample_key": "09d2719d40f99e0f3d0f5e308beea7987dda347511d03f5d207eec33f7ff8315"
+    }
+  ],
+  "source_selection_id": "section3-frontier-hard-seeds@0.2.0"
+}

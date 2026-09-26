@@ -1,0 +1,46 @@
+{
+  "schema_version": "0.4.0",
+  "candidate_id": "global_elongation_axis",
+  "title": "Principal global stretch axis of a scattered dot cloud",
+  "question": "The dark dots together form one elongated cloud. Looking at the whole cloud, along which single direction is it stretched out: horizontal, rising (uphill to the right), vertical, or falling (downhill to the right)?",
+  "decision_type": "selection",
+  "task_signature": {
+    "decision_var": "elongation_axis",
+    "structure": "global_axis_of_cloud",
+    "decision_type": "selection",
+    "mechanism": "Recover the global Gestalt stretch of a whole scattered dot cloud: take every ink mark as an equal-mass point, compute the principal (second-moment) variance axis of the entire set, and select the single principal direction among horizontal, rising, vertical, and falling. The answer is a property of the collective global arrangement, not of any one dot, mark count, block of ink, colour, or centre position."
+  },
+  "latent_z": {
+    "description": "Latent scene encodes the ordered list of rounded dot centre coordinates plus the sampled axis label; the decision is fully determined by the rendered arrangement of those coordinates, never by ink colour, count, or a single mark.",
+    "fields": ["dots"]
+  },
+  "latent_alias": {
+    "mode": "not_applicable",
+    "justification": "Rendering is injective over sampled scenes: each dot centre is a rounded real coordinate drawn as a fixed-radius disk, so distinct dot sets yield distinct rasters, every sampled raster maps to exactly one elongation decision, and the analytic gold reads only the dot positions (the principal variance axis of the set).",
+    "label_inputs": ["dots"]
+  },
+  "boundary": {
+    "observable": "The decision boundary is the angular gap between the cloud's true principal stretch axis and the nearest class boundary (22.5/67.5/112.5/157.5 degrees). Near that gap the cloud is ambiguously elongated, and the axis is visibly the direction in which the whole scatter cloud is stretched out.",
+    "quarantine": "Scenes are quarantined when the principal axis lies within 5 degrees of a class boundary, or when the cloud is not actually elongated (major/minor variance ratio below 1.8, e.g. a circular cloud whose stretch axis is undefined), so ambiguous and erased cases abstain rather than guess."
+  },
+  "oracle_independence": {
+    "image_only": true,
+    "forbidden_imports_absent": true
+  },
+  "mechanism_fingerprint": {
+    "decision_family": "selection",
+    "entities": ["set", "point"],
+    "arity": "single",
+    "relation": "orientation",
+    "margin_operator": "angular_difference",
+    "oracle_primitives": ["color_segmentation", "centroid", "composition"],
+    "composition_depth": 2
+  },
+  "semantic_contrast": {
+    "closest_known_worlds": ["steeper_line", "orientation_sign", "constellation_polygon_sides", "density_gradient_direction", "concentric_ring_count"],
+    "known_negative_matches": [],
+    "contrast": "No visible-memory world recovers the principal second-moment (variance) axis of a whole scattered mark cloud. steeper_line and orientation_sign read the orientation of one or two individual strokes or bars; constellation_polygon_sides counts convex-hull corner vertices; density_gradient_direction reads the first-moment centroid offset (densification toward an edge); concentric_ring_count reads radial layering around a shared center. This candidate instead measures the global variance structure of a full interior cloud and selects its principal stretch axis — a collective closure / shape-of-the-scatter Gestalt, not a stroke, boundary event, densification direction, or radial layer.",
+    "expected_information_gain": "Isolates whether a VLM recovers the global principal elongation axis of a whole scattered mark cloud from the raster alone, versus falling back on any single dot, the ink count, block of ink, colour, centre position, an individual stroke's lean, or a local extremity."
+  },
+  "deviations": []
+}

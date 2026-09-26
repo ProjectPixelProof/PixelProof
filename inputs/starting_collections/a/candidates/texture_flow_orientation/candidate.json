@@ -1,0 +1,58 @@
+{
+  "schema_version": "0.4.0",
+  "candidate_id": "texture_flow_orientation",
+  "title": "Direction in which the whole texture field of small strokes predominantly aligns",
+  "question": "A field of many small dark strokes is scattered across a white canvas. Taken together, the whole stroke texture points predominantly in a single direction: most of the little strokes lean the same way, like a gentle flow field, while a few unrelated strokes point elsewhere. Which direction does the whole texture field predominantly align: horizontal, rising (uphill to the right), vertical, or falling (downhill to the right)? Answer with the single direction word.",
+  "decision_type": "selection",
+  "task_signature": {
+    "decision_var": "dominant_orientation",
+    "structure": "texture_field_orientation",
+    "decision_type": "selection",
+    "mechanism": "Recover every dark stroke of the whole field from the raster by connected-component analysis, fit each stroke's principal (long) axis by PCA of its pixel coordinates, bucket each recovered axis into one of four orientations (horizontal / rising / vertical / falling), and select the orientation bucket that dominates the entire field. The answer is an emergent aggregate of the whole global texture flow, not of any single stroke, its ink, its length, its colour, or its absolute position."
+  },
+  "latent_z": {
+    "fields": [
+      "strokes",
+      "draw_order",
+      "dominant_count",
+      "total"
+    ]
+  },
+  "boundary": {
+    "observable": "The decision boundary is visible across the whole field: a stroke is classified into one of four 45-degree orientation sectors, and the picture exposes the counts of strokes in each sector; the boundary event is the gap between the dominant sector's count and the next-largest sector's count, directly readable from the array of strokes in the image.",
+    "quarantine": "Scenes whose dominant-sector count is not at least 3 strokes above the next-largest sector are flagged; at that tight clearance the field no longer reads unambiguously as pointing in a single direction and the pixel arm cannot cleanly separate the dominant orientation from a competing one."
+  },
+  "oracle_independence": {
+    "image_only": true,
+    "forbidden_imports_absent": true
+  },
+  "deviations": [],
+  "latent_alias": {
+    "mode": "tested_transforms",
+    "justification": "The non-overlapping strokes do not occlude one another, so the order in which they are painted is photometrically invisible yet is a genuine sampled scene field. Rotating the declared draw_order list yields a byte-identical raster while analytic gold (which reads only the strokes' geometry) is unchanged, giving a nontrivial pixel-identical tested transform over every scene.",
+    "label_inputs": [
+      "strokes"
+    ]
+  },
+  "mechanism_fingerprint": {
+    "decision_family": "selection",
+    "entities": ["segment", "set", "axis"],
+    "arity": "set",
+    "relation": "orientation",
+    "margin_operator": "top_gap",
+    "oracle_primitives": ["color_segmentation", "connected_components", "line_fit", "pixel_count"],
+    "composition_depth": 2
+  },
+  "semantic_contrast": {
+    "closest_known_worlds": [
+      "global_elongation_axis",
+      "density_gradient_direction",
+      "orientation_sign",
+      "steeper_line",
+      "dot_lattice_regularity"
+    ],
+    "known_negative_matches": [],
+    "contrast": "This world asks a four-way selection over the emergent dominant orientation of a whole texture field of many small strokes. Unlike orientation_sign (which judges the lean of a single bar against one canonical axis) and steeper_line (which compares the orientations of exactly two separate strokes), the decision here aggregates the principal axes of the entire stroke population. Unlike global_elongation_axis (which derives a direction from the spatial second moment of a cloud's point positions -- where the dots are spread out) and density_gradient_direction (a density/centroid moment), this world derives its answer from the headings the individual marks themselves point in, a texture-energy orientation flow rather than a space-occupancy elongation. dot_lattice_regularity is a spacing/periodicity predicate, not an orientation selection.",
+    "expected_information_gain": "Isolates whether a model can recover the local orientation of each mark in a textured field, aggregate those orientations across the whole canvas, and select the single dominant direction -- a global orientation-texture Gestalt distinct from single/pair stroke comparisons, spatial elongation, density gradients, and lattice periodicity."
+  }
+}

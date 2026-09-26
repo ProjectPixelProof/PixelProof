@@ -1,0 +1,74 @@
+{
+  "candidate_id": "coherent_arc_triplet",
+  "candidate_sha256": "2c6a116b0fb6b77955d3c6d6322629994df637ea965ad5f60d996db6cfd4b5e4",
+  "distinct_image_count": 5,
+  "sample_unit": "unique_image",
+  "samples": [
+    {
+      "candidate_id": "coherent_arc_triplet",
+      "candidates": [
+        "yes",
+        "no"
+      ],
+      "image_path": "bootstrap/feedback/coherent_arc_triplet/images/sample-01.png",
+      "image_sha256": "33a67893f6779e5f74af46725ff5524452a4de9ed01115f69f72972ce74b55b9",
+      "margin": "1.0",
+      "question": "Do all three separated colored curve fragments trace parts of one imaginary circle? Answer yes or no.",
+      "sample_id": "sample-01",
+      "sample_key": "dc98f36c4c4b29c36da19fddfd792b6aaace660e508c819e700a43f168d9948e"
+    },
+    {
+      "candidate_id": "coherent_arc_triplet",
+      "candidates": [
+        "yes",
+        "no"
+      ],
+      "image_path": "bootstrap/feedback/coherent_arc_triplet/images/sample-02.png",
+      "image_sha256": "cbea6f8b856d8bd4892915a0d64acd7a181289b911baca0af8d4ffbff9136bbf",
+      "margin": "2.0",
+      "question": "Do all three separated colored curve fragments trace parts of one imaginary circle? Answer yes or no.",
+      "sample_id": "sample-02",
+      "sample_key": "e24e5161b86793fe50ef4a4235830e49c5ca0ef27d1645945809ac42ef599694"
+    },
+    {
+      "candidate_id": "coherent_arc_triplet",
+      "candidates": [
+        "yes",
+        "no"
+      ],
+      "image_path": "bootstrap/feedback/coherent_arc_triplet/images/sample-03.png",
+      "image_sha256": "c2c15f11e0890089256bcde2f0686902d8b9bcd0b3d6449b53b582ca8561b5c3",
+      "margin": "1.0",
+      "question": "Do all three separated colored curve fragments trace parts of one imaginary circle? Answer yes or no.",
+      "sample_id": "sample-03",
+      "sample_key": "b5a8943bc1bba34811366c4970d2eb405737371783efefa21f006d97b5c91fcd"
+    },
+    {
+      "candidate_id": "coherent_arc_triplet",
+      "candidates": [
+        "yes",
+        "no"
+      ],
+      "image_path": "bootstrap/feedback/coherent_arc_triplet/images/sample-04.png",
+      "image_sha256": "9be264bad9a87c82505068d4a3461cfe10f4e76a4a0a94cab19f0bbe4e62f2b2",
+      "margin": "2.0",
+      "question": "Do all three separated colored curve fragments trace parts of one imaginary circle? Answer yes or no.",
+      "sample_id": "sample-04",
+      "sample_key": "0d0b866c349eb56bde583ce57766ff8d3e724459239728d0b8da7b44cbf2fe46"
+    },
+    {
+      "candidate_id": "coherent_arc_triplet",
+      "candidates": [
+        "yes",
+        "no"
+      ],
+      "image_path": "bootstrap/feedback/coherent_arc_triplet/images/sample-05.png",
+      "image_sha256": "8b3c8638e973d828d295408bb701dd183c7fde1bdedac2c0e063f5017eab62c2",
+      "margin": "1.0",
+      "question": "Do all three separated colored curve fragments trace parts of one imaginary circle? Answer yes or no.",
+      "sample_id": "sample-05",
+      "sample_key": "815a5dcdc87fbc3b018f46ef7697217d4e68b4b638e02b3b34b8c31249f3b7a6"
+    }
+  ],
+  "source_selection_id": "section3-frontier-hard-seeds@0.2.0"
+}

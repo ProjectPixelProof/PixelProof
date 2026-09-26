@@ -1,0 +1,24 @@
+# Radial-density-regime question world metadata.
+
+[world]
+id = "radial_density_regime"
+title = "Global radial texture energy: are the dots packed toward the centre core or the outer rim?"
+profile = "paper-semantic@0.3.0:reveal_global_structure"
+decision_type = "yesno"
+prompt_families = ["pf1_core_yesno", "pf2_rim_yesno"]
+answer_classes = ["yes", "no"]
+
+[targets]
+decision = "decision"        # 'core' | 'rim'
+margin = "margin"            # inner-vs-outer dot-count difference
+quarantined = "quarantined"  # ambiguous near-tie band
+
+[direction]
+profile = "paper-semantic@0.3.0:reveal_global_structure"
+seed_direction = "reveal global structure (radial texture-energy regime)"
+
+[renderer]
+canvas = 512
+dot_radius = 5
+boundary = 128
+quarantine_threshold = 14.0

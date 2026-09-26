@@ -1,0 +1,249 @@
+{
+  "aggregate_accuracy": 0.6666666666666666,
+  "aggregation": "majority_evaluators_at_or_below_threshold",
+  "candidate_id": "radial_density_regime",
+  "candidate_sha256": "16521bace057b378d85ba14082882fb9a20a1645f12c1df223cca7f9553309a4",
+  "difficulty_hypothesis": null,
+  "episode_index": 0,
+  "evaluated_at": "2026-08-29T00:00:00Z",
+  "evaluator_accuracies": {
+    "gemini37_flash_high": 0.6,
+    "opus5_high": 0.4,
+    "sol_high": 1.0
+  },
+  "examples_per_evaluator": 5,
+  "feedback_visibility": "outcome_only_bootstrap_no_public_rationales",
+  "hard_accuracy_threshold": 0.6,
+  "hard_seed_eligible": true,
+  "maximum_paid_requests": 15,
+  "policy_id": "difficulty-feedback@0.6.0",
+  "protected_valid": true,
+  "sample_responses": [
+    {
+      "candidates": [
+        "yes",
+        "no"
+      ],
+      "oracle_answer": "no",
+      "question": "Across the whole canvas the dark dots are distributed radially. Are the dots packed tightly toward the centre (a solid core), with the rim spread thin? Answer yes or no.",
+      "responses": [
+        {
+          "confidence": null,
+          "confidence_status": "not_preserved_in_frozen_section1_2_export",
+          "correct": true,
+          "evaluator": "sol_high",
+          "model_id": "openai/gpt-5.6-sol",
+          "prediction": "no",
+          "provider": "OpenAI",
+          "served_model": "openai/gpt-5.6-sol",
+          "status": "scored"
+        },
+        {
+          "confidence": null,
+          "confidence_status": "not_preserved_in_frozen_section1_2_export",
+          "correct": true,
+          "evaluator": "opus5_high",
+          "model_id": "anthropic/claude-opus-5",
+          "prediction": "no",
+          "provider": "Anthropic",
+          "served_model": "anthropic/claude-opus-5",
+          "status": "scored"
+        },
+        {
+          "confidence": null,
+          "confidence_status": "not_preserved_in_frozen_section1_2_export",
+          "correct": true,
+          "evaluator": "gemini37_flash_high",
+          "model_id": "google/gemini-3.7-flash",
+          "prediction": "no",
+          "provider": "Google",
+          "served_model": "google/gemini-3.7-flash",
+          "status": "scored"
+        }
+      ],
+      "sample_id": "sample-01"
+    },
+    {
+      "candidates": [
+        "yes",
+        "no"
+      ],
+      "oracle_answer": "yes",
+      "question": "Across the whole canvas the dark dots are distributed radially. Are the dots packed tightly toward the centre (a solid core), with the rim spread thin? Answer yes or no.",
+      "responses": [
+        {
+          "confidence": null,
+          "confidence_status": "not_preserved_in_frozen_section1_2_export",
+          "correct": true,
+          "evaluator": "sol_high",
+          "model_id": "openai/gpt-5.6-sol",
+          "prediction": "yes",
+          "provider": "OpenAI",
+          "served_model": "openai/gpt-5.6-sol",
+          "status": "scored"
+        },
+        {
+          "confidence": null,
+          "confidence_status": "not_preserved_in_frozen_section1_2_export",
+          "correct": false,
+          "evaluator": "opus5_high",
+          "model_id": "anthropic/claude-opus-5",
+          "prediction": "no",
+          "provider": "Anthropic",
+          "served_model": "anthropic/claude-opus-5",
+          "status": "scored"
+        },
+        {
+          "confidence": null,
+          "confidence_status": "not_preserved_in_frozen_section1_2_export",
+          "correct": false,
+          "evaluator": "gemini37_flash_high",
+          "model_id": "google/gemini-3.7-flash",
+          "prediction": "no",
+          "provider": "Google",
+          "served_model": "google/gemini-3.7-flash",
+          "status": "scored"
+        }
+      ],
+      "sample_id": "sample-02"
+    },
+    {
+      "candidates": [
+        "yes",
+        "no"
+      ],
+      "oracle_answer": "no",
+      "question": "Across the whole canvas the dark dots are distributed radially. Are the dots packed tightly toward the centre (a solid core), with the rim spread thin? Answer yes or no.",
+      "responses": [
+        {
+          "confidence": null,
+          "confidence_status": "not_preserved_in_frozen_section1_2_export",
+          "correct": true,
+          "evaluator": "sol_high",
+          "model_id": "openai/gpt-5.6-sol",
+          "prediction": "no",
+          "provider": "OpenAI",
+          "served_model": "openai/gpt-5.6-sol",
+          "status": "scored"
+        },
+        {
+          "confidence": null,
+          "confidence_status": "not_preserved_in_frozen_section1_2_export",
+          "correct": true,
+          "evaluator": "opus5_high",
+          "model_id": "anthropic/claude-opus-5",
+          "prediction": "no",
+          "provider": "Anthropic",
+          "served_model": "anthropic/claude-opus-5",
+          "status": "scored"
+        },
+        {
+          "confidence": null,
+          "confidence_status": "not_preserved_in_frozen_section1_2_export",
+          "correct": true,
+          "evaluator": "gemini37_flash_high",
+          "model_id": "google/gemini-3.7-flash",
+          "prediction": "no",
+          "provider": "Google",
+          "served_model": "google/gemini-3.7-flash",
+          "status": "scored"
+        }
+      ],
+      "sample_id": "sample-03"
+    },
+    {
+      "candidates": [
+        "yes",
+        "no"
+      ],
+      "oracle_answer": "yes",
+      "question": "Across the whole canvas the dark dots are distributed radially. Are the dots packed tightly toward the centre (a solid core), with the rim spread thin? Answer yes or no.",
+      "responses": [
+        {
+          "confidence": null,
+          "confidence_status": "not_preserved_in_frozen_section1_2_export",
+          "correct": true,
+          "evaluator": "sol_high",
+          "model_id": "openai/gpt-5.6-sol",
+          "prediction": "yes",
+          "provider": "OpenAI",
+          "served_model": "openai/gpt-5.6-sol",
+          "status": "scored"
+        },
+        {
+          "confidence": null,
+          "confidence_status": "not_preserved_in_frozen_section1_2_export",
+          "correct": false,
+          "evaluator": "opus5_high",
+          "model_id": "anthropic/claude-opus-5",
+          "prediction": "no",
+          "provider": "Anthropic",
+          "served_model": "anthropic/claude-opus-5",
+          "status": "scored"
+        },
+        {
+          "confidence": null,
+          "confidence_status": "not_preserved_in_frozen_section1_2_export",
+          "correct": false,
+          "evaluator": "gemini37_flash_high",
+          "model_id": "google/gemini-3.7-flash",
+          "prediction": "no",
+          "provider": "Google",
+          "served_model": "google/gemini-3.7-flash",
+          "status": "scored"
+        }
+      ],
+      "sample_id": "sample-04"
+    },
+    {
+      "candidates": [
+        "yes",
+        "no"
+      ],
+      "oracle_answer": "no",
+      "question": "Across the whole canvas the dark dots are distributed radially. Are the dots packed tightly toward the centre (a solid core), with the rim spread thin? Answer yes or no.",
+      "responses": [
+        {
+          "confidence": null,
+          "confidence_status": "not_preserved_in_frozen_section1_2_export",
+          "correct": true,
+          "evaluator": "sol_high",
+          "model_id": "openai/gpt-5.6-sol",
+          "prediction": "no",
+          "provider": "OpenAI",
+          "served_model": "openai/gpt-5.6-sol",
+          "status": "scored"
+        },
+        {
+          "confidence": null,
+          "confidence_status": "not_preserved_in_frozen_section1_2_export",
+          "correct": false,
+          "evaluator": "opus5_high",
+          "model_id": "anthropic/claude-opus-5",
+          "prediction": "yes",
+          "provider": "Anthropic",
+          "served_model": "anthropic/claude-opus-5",
+          "status": "scored"
+        },
+        {
+          "confidence": null,
+          "confidence_status": "not_preserved_in_frozen_section1_2_export",
+          "correct": true,
+          "evaluator": "gemini37_flash_high",
+          "model_id": "google/gemini-3.7-flash",
+          "prediction": "no",
+          "provider": "Google",
+          "served_model": "google/gemini-3.7-flash",
+          "status": "scored"
+        }
+      ],
+      "sample_id": "sample-05"
+    }
+  ],
+  "sample_set_sha256": "0c3383f0b4fe58c11eb250445b843c7bea2e44c342ac027c90b286a61a874d13",
+  "schema_version": "difficulty-feedback-result-0.6.0",
+  "source_archive_candidate_sha256": "632124e1610b4985752f2daf19ac9f0b28ec5e1d6a3a549e099bb75880ed9a3d",
+  "source_cost_status": "not_preserved_in_frozen_section1_2_export",
+  "status": "complete",
+  "total_cost_usd": 0.0
+}

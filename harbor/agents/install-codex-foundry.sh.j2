@@ -1,0 +1,32 @@
+#!/bin/bash
+set -euo pipefail
+
+apt-get update
+apt-get install -y --no-install-recommends curl ca-certificates
+
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.2/install.sh | bash
+export NVM_DIR="$HOME/.nvm"
+# nvm.sh may return non-zero internally even when it loaded correctly.
+\. "$NVM_DIR/nvm.sh" || true
+command -v nvm >/dev/null || { echo "nvm failed to load" >&2; exit 1; }
+nvm install 22
+
+{% if version %}
+npm install -g @openai/codex@{{ version }}
+{% else %}
+npm install -g @openai/codex@latest
+{% endif %}
+
+# Harbor installs as root, while scientific episodes run the provider CLI as
+# the unprivileged agent user. Copy the pinned package and Node runtime out of
+# root's private nvm tree so that the agent can execute them.
+codex_package="$(npm root -g)/@openai/codex"
+test -f "$codex_package/bin/codex.js"
+rm -rf /opt/openai-codex
+mkdir -p /opt/openai-codex
+cp -a "$codex_package/." /opt/openai-codex/
+install -m 0755 "$(command -v node)" /usr/local/bin/node
+ln -sfn /opt/openai-codex/bin/codex.js /usr/local/bin/codex
+chmod -R a+rX /opt/openai-codex
+
+runuser -u agent -- env HOME=/home/agent PATH=/usr/local/bin:/usr/bin:/bin codex --version

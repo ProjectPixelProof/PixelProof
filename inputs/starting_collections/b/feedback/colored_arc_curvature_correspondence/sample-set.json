@@ -1,0 +1,74 @@
+{
+  "candidate_id": "colored_arc_curvature_correspondence",
+  "candidate_sha256": "0219844734b905ba1bc789d2f3fe83a03bdcd8a409daf939e30ebb4066760364",
+  "distinct_image_count": 5,
+  "sample_unit": "unique_image",
+  "samples": [
+    {
+      "candidate_id": "colored_arc_curvature_correspondence",
+      "candidates": [
+        "A",
+        "B"
+      ],
+      "image_path": "bootstrap/feedback/colored_arc_curvature_correspondence/images/sample-01.png",
+      "image_sha256": "b82c9c3d27a0f4c7a5ff5c6aafdfe17e4d3947f2e70fbb185209b0a404de58dd",
+      "margin": "2.0",
+      "question": "The image shows a REFERENCE panel and candidates A and B. Each panel has four uniquely colored curved strokes. Rank the strokes from 1 (least bowed) to 4 (most bowed) by normalized bow from the straight endpoint chord. Which candidate has the same color-to-curvature-rank assignment as the REFERENCE? Ignore panel position, stroke position, rotation, reflection, and line width. Answer A or B.",
+      "sample_id": "sample-01",
+      "sample_key": "7d219e38ce872630775713657b6bdb81a397e2a5252b813e0ee978b4d14ac756"
+    },
+    {
+      "candidate_id": "colored_arc_curvature_correspondence",
+      "candidates": [
+        "A",
+        "B"
+      ],
+      "image_path": "bootstrap/feedback/colored_arc_curvature_correspondence/images/sample-02.png",
+      "image_sha256": "7059840cd95f8abe316b64b8a7b7f3f95969c00483f4b01da8b95fe3f2e1dce9",
+      "margin": "2.0",
+      "question": "The image shows a REFERENCE panel and candidates A and B. Each panel has four uniquely colored curved strokes. Rank the strokes from 1 (least bowed) to 4 (most bowed) by normalized bow from the straight endpoint chord. Which candidate has the same color-to-curvature-rank assignment as the REFERENCE? Ignore panel position, stroke position, rotation, reflection, and line width. Answer A or B.",
+      "sample_id": "sample-02",
+      "sample_key": "07ba0990720d866a22d539c6ed899beb483108039d7d55eac58ecb6ec017fc8e"
+    },
+    {
+      "candidate_id": "colored_arc_curvature_correspondence",
+      "candidates": [
+        "A",
+        "B"
+      ],
+      "image_path": "bootstrap/feedback/colored_arc_curvature_correspondence/images/sample-03.png",
+      "image_sha256": "297854732e08ae1691b338fac44f8c1484b175836ee819cbc3d1b0a7cc7b1734",
+      "margin": "2.0",
+      "question": "The image shows a REFERENCE panel and candidates A and B. Each panel has four uniquely colored curved strokes. Rank the strokes from 1 (least bowed) to 4 (most bowed) by normalized bow from the straight endpoint chord. Which candidate has the same color-to-curvature-rank assignment as the REFERENCE? Ignore panel position, stroke position, rotation, reflection, and line width. Answer A or B.",
+      "sample_id": "sample-03",
+      "sample_key": "22917453d888df04e0c71add1ba00f1389220fccbef82e27d336dab5ea4deace"
+    },
+    {
+      "candidate_id": "colored_arc_curvature_correspondence",
+      "candidates": [
+        "A",
+        "B"
+      ],
+      "image_path": "bootstrap/feedback/colored_arc_curvature_correspondence/images/sample-04.png",
+      "image_sha256": "41c3ec5ac78f461009b79f916905da49099b84be250b4d445623189c1b0fda00",
+      "margin": "2.0",
+      "question": "The image shows a REFERENCE panel and candidates A and B. Each panel has four uniquely colored curved strokes. Rank the strokes from 1 (least bowed) to 4 (most bowed) by normalized bow from the straight endpoint chord. Which candidate has the same color-to-curvature-rank assignment as the REFERENCE? Ignore panel position, stroke position, rotation, reflection, and line width. Answer A or B.",
+      "sample_id": "sample-04",
+      "sample_key": "538e8f67902cd03f0f27367032a0c77b47b50d16fe3144758d3450801abbc4e1"
+    },
+    {
+      "candidate_id": "colored_arc_curvature_correspondence",
+      "candidates": [
+        "A",
+        "B"
+      ],
+      "image_path": "bootstrap/feedback/colored_arc_curvature_correspondence/images/sample-05.png",
+      "image_sha256": "bdf5707577347d5b4595f53f20bdf9405b8a889e45571c7302b5647a08bfd843",
+      "margin": "2.0",
+      "question": "The image shows a REFERENCE panel and candidates A and B. Each panel has four uniquely colored curved strokes. Rank the strokes from 1 (least bowed) to 4 (most bowed) by normalized bow from the straight endpoint chord. Which candidate has the same color-to-curvature-rank assignment as the REFERENCE? Ignore panel position, stroke position, rotation, reflection, and line width. Answer A or B.",
+      "sample_id": "sample-05",
+      "sample_key": "22d3d2e982882d9e0078aed82b43ccc0c71a34aa4513271546d94f8e39862e56"
+    }
+  ],
+  "source_selection_id": "section3-frontier-hard-seeds@0.2.0"
+}

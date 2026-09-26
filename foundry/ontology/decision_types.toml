@@ -1,0 +1,16 @@
+schema_version = "0.1.0"
+
+[[decision_types]]
+id = "yesno"
+
+[[decision_types]]
+id = "comparison"
+
+[[decision_types]]
+id = "selection"
+
+[[decision_types]]
+id = "threshold"
+
+[[decision_types]]
+id = "count_open"

@@ -1,0 +1,84 @@
+{
+  "candidate_id": "texture_flow_orientation",
+  "candidate_sha256": "71ca70b872eec3ce1cbd6b3de3fcd64306ee9dddc4a34f1e1311d95ed1883a57",
+  "distinct_image_count": 5,
+  "sample_unit": "unique_image",
+  "samples": [
+    {
+      "candidate_id": "texture_flow_orientation",
+      "candidates": [
+        "horizontal",
+        "rising",
+        "vertical",
+        "falling"
+      ],
+      "image_path": "bootstrap/feedback/texture_flow_orientation/images/sample-01.png",
+      "image_sha256": "3f1a6d20f583cf10cf6eaa3358e8d1f5ca7c1d1eb27756bc021059f3b50113a1",
+      "margin": "15.0",
+      "question": "Ignoring the few stray marks, the overall pattern of the small strokes forms one dominant orientation across the whole image. Which one orientation does the whole stroke field lean toward: horizontal, rising, vertical, or falling? Answer with the single direction word.",
+      "sample_id": "sample-01",
+      "sample_key": "579ccbc2fa784dfb5500f93e6b3046a5491a6438e58b5bc48af8c8dd84a2a65d"
+    },
+    {
+      "candidate_id": "texture_flow_orientation",
+      "candidates": [
+        "horizontal",
+        "rising",
+        "vertical",
+        "falling"
+      ],
+      "image_path": "bootstrap/feedback/texture_flow_orientation/images/sample-02.png",
+      "image_sha256": "b3a2b5dc1bb7ed65e994964ba5f385e496e92ac8dd6fccdf61a3a712ffdf0bed",
+      "margin": "11.0",
+      "question": "Ignoring the few stray marks, the overall pattern of the small strokes forms one dominant orientation across the whole image. Which one orientation does the whole stroke field lean toward: horizontal, rising, vertical, or falling? Answer with the single direction word.",
+      "sample_id": "sample-02",
+      "sample_key": "6f57ec4417c1fb291fb1b559532b538c082c03d7c767cbc34a3682523e8283ba"
+    },
+    {
+      "candidate_id": "texture_flow_orientation",
+      "candidates": [
+        "horizontal",
+        "rising",
+        "vertical",
+        "falling"
+      ],
+      "image_path": "bootstrap/feedback/texture_flow_orientation/images/sample-03.png",
+      "image_sha256": "091f26719948178f8d849a7fb568b1e9ddccfb56a4ad8a61cb2a2831e5dfb9ff",
+      "margin": "17.0",
+      "question": "Ignoring the few stray marks, the overall pattern of the small strokes forms one dominant orientation across the whole image. Which one orientation does the whole stroke field lean toward: horizontal, rising, vertical, or falling? Answer with the single direction word.",
+      "sample_id": "sample-03",
+      "sample_key": "dd565d29acf4d950ca891654057a8d8feff09a2f75c5dac77b28a73ce51910d2"
+    },
+    {
+      "candidate_id": "texture_flow_orientation",
+      "candidates": [
+        "horizontal",
+        "rising",
+        "vertical",
+        "falling"
+      ],
+      "image_path": "bootstrap/feedback/texture_flow_orientation/images/sample-04.png",
+      "image_sha256": "4f5c1f47359335c05cf1f28385310b485c03e9fa5d6037d535635f8fa901f752",
+      "margin": "13.0",
+      "question": "Ignoring the few stray marks, the overall pattern of the small strokes forms one dominant orientation across the whole image. Which one orientation does the whole stroke field lean toward: horizontal, rising, vertical, or falling? Answer with the single direction word.",
+      "sample_id": "sample-04",
+      "sample_key": "e82e9aeaecfea4dee2ed17cfbdf62a566a27f1fe517a8f4960b6328c33a1bce4"
+    },
+    {
+      "candidate_id": "texture_flow_orientation",
+      "candidates": [
+        "horizontal",
+        "rising",
+        "vertical",
+        "falling"
+      ],
+      "image_path": "bootstrap/feedback/texture_flow_orientation/images/sample-05.png",
+      "image_sha256": "41686b4f02cd3a9679f8bbfdc3e65e996cf7645af6d9eee8f1237b60e6580995",
+      "margin": "11.0",
+      "question": "Ignoring the few stray marks, the overall pattern of the small strokes forms one dominant orientation across the whole image. Which one orientation does the whole stroke field lean toward: horizontal, rising, vertical, or falling? Answer with the single direction word.",
+      "sample_id": "sample-05",
+      "sample_key": "1f54cd91da5081b7fa9b280f5b5598585401e82dfff0a03c62d28d7e878c2e6f"
+    }
+  ],
+  "source_selection_id": "section3-frontier-hard-seeds@0.2.0"
+}

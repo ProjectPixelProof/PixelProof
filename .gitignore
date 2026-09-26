@@ -1,0 +1,22 @@
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.DS_Store
+._*
+.env
+.env.*
+!.env.example
+auth.json
+credentials*
+*.pem
+*.key
+artifacts/
+jobs/
+runs/
+dist/
+*.egg-info/
+
+# Archive integrity metadata is generated, not source.
+/RELEASE_SHA256.json

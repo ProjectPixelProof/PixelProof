@@ -1,0 +1,17 @@
+[world]
+name = "bitplane_glyph_reveal"
+description = "Least-significant-bit-plane glyph reveal: which letter appears in the LSB plane of a noise field?"
+task = "selection"
+method_refs = ["13"]
+splits = ["smoke", "pilot", "full"]
+
+[gold]
+decision_attr = "glyph"
+margin_key = "margin"
+quarantine_bin = "ambiguous_reveal"
+
+[provenance]
+source_repo = "Harbor/paper-semantic@0.3.0"
+source_commit = "reveal_declared_transform"
+source_path = "bitplane_glyph_reveal"
+role = "candidate"

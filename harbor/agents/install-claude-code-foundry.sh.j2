@@ -1,0 +1,15 @@
+#!/bin/bash
+set -euo pipefail
+
+apt-get update
+apt-get install -y --no-install-recommends curl ca-certificates util-linux
+
+{% if version %}
+curl -fsSL https://claude.ai/install.sh | bash -s -- {{ version }}
+{% else %}
+curl -fsSL https://claude.ai/install.sh | bash
+{% endif %}
+
+claude_bin="$HOME/.local/bin/claude"
+"$claude_bin" --version
+install -m 0755 "$claude_bin" /usr/local/bin/claude

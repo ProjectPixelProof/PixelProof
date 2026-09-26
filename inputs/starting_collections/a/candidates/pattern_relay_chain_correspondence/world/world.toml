@@ -1,0 +1,9 @@
+[world]
+name = "pattern_relay_chain_correspondence"
+protocol = "question-world@0.4.0"
+renderer = "pillow"
+
+[decision]
+type = "selection"
+candidates = ["red", "green", "blue"]
+margin = "minimum runner-up Hamming distance across followed glyph joins"

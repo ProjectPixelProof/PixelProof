@@ -1,0 +1,84 @@
+{
+  "candidate_id": "global_elongation_axis",
+  "candidate_sha256": "1c8c311a3de8a723145fe89f0b7242161ea46862d5159b265361d3253d8b4d43",
+  "distinct_image_count": 5,
+  "sample_unit": "unique_image",
+  "samples": [
+    {
+      "candidate_id": "global_elongation_axis",
+      "candidates": [
+        "horizontal",
+        "rising",
+        "vertical",
+        "falling"
+      ],
+      "image_path": "bootstrap/feedback/global_elongation_axis/images/sample-01.png",
+      "image_sha256": "b230477b9f164d143974f89acacd1b65bd94dcea6c8b04d0352fd1672111a66c",
+      "margin": "19.541041272471944",
+      "question": "The dark dots together form one elongated cloud. Looking at the whole cloud, along which single direction is it stretched out: horizontal, rising (uphill to the right), vertical, or falling (downhill to the right)? Answer horizontal, rising, vertical, or falling.",
+      "sample_id": "sample-01",
+      "sample_key": "44e990f91d770c1683f2e04bd88f3e2d286b2541db367af7a66a8a190b84ca29"
+    },
+    {
+      "candidate_id": "global_elongation_axis",
+      "candidates": [
+        "horizontal",
+        "rising",
+        "vertical",
+        "falling"
+      ],
+      "image_path": "bootstrap/feedback/global_elongation_axis/images/sample-02.png",
+      "image_sha256": "5e1bc1446335b4d97ac8fcd6e43ba5626e8383980e899e7c42e2c8cdb55c3f59",
+      "margin": "19.9124044129953",
+      "question": "The dark dots together form one elongated cloud. Looking at the whole cloud, along which single direction is it stretched out: horizontal, rising (uphill to the right), vertical, or falling (downhill to the right)? Answer horizontal, rising, vertical, or falling.",
+      "sample_id": "sample-02",
+      "sample_key": "5264770470373402f5883f9c4d4636c37f717eaea3675165f96ccc78803dc60d"
+    },
+    {
+      "candidate_id": "global_elongation_axis",
+      "candidates": [
+        "horizontal",
+        "rising",
+        "vertical",
+        "falling"
+      ],
+      "image_path": "bootstrap/feedback/global_elongation_axis/images/sample-03.png",
+      "image_sha256": "59532697a221b8d947d3f55d26cf47dcba797171b5f89891c39f4c70aebc7858",
+      "margin": "19.683180877561767",
+      "question": "The dark dots together form one elongated cloud. Looking at the whole cloud, along which single direction is it stretched out: horizontal, rising (uphill to the right), vertical, or falling (downhill to the right)? Answer horizontal, rising, vertical, or falling.",
+      "sample_id": "sample-03",
+      "sample_key": "3ad50e27056a209a5f480fa1bf0579ecbceac9122d0ef3082279443b9e391e5b"
+    },
+    {
+      "candidate_id": "global_elongation_axis",
+      "candidates": [
+        "horizontal",
+        "rising",
+        "vertical",
+        "falling"
+      ],
+      "image_path": "bootstrap/feedback/global_elongation_axis/images/sample-04.png",
+      "image_sha256": "d1e0b7bfd1acf01b311b386c18a93af96189697cebdd864a1961c72d92c078da",
+      "margin": "22.31595103299543",
+      "question": "The dark dots together form one elongated cloud. Looking at the whole cloud, along which single direction is it stretched out: horizontal, rising (uphill to the right), vertical, or falling (downhill to the right)? Answer horizontal, rising, vertical, or falling.",
+      "sample_id": "sample-04",
+      "sample_key": "7800b9af2ebe166f82e0770611506757443b10505d6269800e79e9aec3bd7a67"
+    },
+    {
+      "candidate_id": "global_elongation_axis",
+      "candidates": [
+        "horizontal",
+        "rising",
+        "vertical",
+        "falling"
+      ],
+      "image_path": "bootstrap/feedback/global_elongation_axis/images/sample-05.png",
+      "image_sha256": "219a5940e4fd5eb9114431d26549c9724cfde62378db7aed3d606b1f588b92e3",
+      "margin": "20.116322260733853",
+      "question": "The dark dots together form one elongated cloud. Looking at the whole cloud, along which single direction is it stretched out: horizontal, rising (uphill to the right), vertical, or falling (downhill to the right)? Answer horizontal, rising, vertical, or falling.",
+      "sample_id": "sample-05",
+      "sample_key": "ea796b01b0282c5ad40daa5dc01fbb591601460ce8f673eca4a6c5d9246eeac3"
+    }
+  ],
+  "source_selection_id": "section3-frontier-hard-seeds@0.2.0"
+}

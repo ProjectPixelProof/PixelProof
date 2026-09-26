@@ -1,0 +1,46 @@
+{
+  "schema_version": "0.4.0",
+  "candidate_id": "run_bar_decompression",
+  "title": "Run-bar decompression reveal",
+  "question": "In each cyan lane, read the bars from left to right. A dark bar means black cells and a pale bar means white cells; the bar height in small grid steps is that run's length. Expand the runs into one row per lane, then stack the lanes from top to bottom. Which symbol appears: zigzag, key, anchor, or bell?",
+  "decision_type": "selection",
+  "task_signature": {
+    "decision_var": "decompressed_run_bar_symbol",
+    "structure": "stacked_run_length_bar_lanes",
+    "decision_type": "selection",
+    "mechanism": "Locate ten visibly framed lanes, translate each left-to-right sequence of colored bar heights into alternating-valued run lengths, expand each sequence to a binary row, stack the rows, and classify the recovered glyph."
+  },
+  "latent_z": {
+    "description": "The rendered scene contains the complete run tokens plus answer-independent palette, translation, and canvas nuisances.",
+    "fields": ["encoded", "x_shift", "palette_index", "canvas_width", "canvas_height"]
+  },
+  "latent_alias": {
+    "mode": "not_applicable",
+    "justification": "Every encoded run, token translation, palette choice, and canvas extent changes visible pixels; the decoded decision is computed only from the visibly rendered encoded runs, so no render-invariant latent relabeling is declared.",
+    "label_inputs": ["encoded"]
+  },
+  "boundary": {
+    "observable": "The decision boundary is the visible integer bar-height lattice: changing a bar by one grid step changes one decoded run length, and the reported margin is the top-two Hamming-template score gap after decompression.",
+    "quarantine": "Scenes with a top-two template gap below 12 decoded cells are quarantined as visually unstable."
+  },
+  "oracle_independence": {
+    "image_only": true,
+    "forbidden_imports_absent": true
+  },
+  "mechanism_fingerprint": {
+    "decision_family": "composition",
+    "entities": ["bar", "region", "shape", "color"],
+    "arity": "set",
+    "relation": "composition",
+    "margin_operator": "top_gap",
+    "oracle_primitives": ["color_segmentation", "connected_components", "bounding_box", "pixel_count", "composition"],
+    "composition_depth": 4
+  },
+  "semantic_contrast": {
+    "closest_known_worlds": ["opening_filter_reveal", "ranked_strip_reassembly", "majority_microtile_decode", "equal_cell_mosaic", "alternating_row_zipper"],
+    "known_negative_matches": [],
+    "contrast": "Unlike opening-filter reveal, the transform uses no spatial neighborhood, erosion, dilation, or same-size cellular mask: it converts each bar's measured magnitude into a variable multiplicity of output cells. Unlike ranked-strip reassembly, no visible item is sorted or spatially permuted; bar magnitude is interpreted as a run length. Unlike equal-cell normalization or row zipping, the output has a different representational arity from the input tokens and requires value-to-multiplicity decompression in every lane.",
+    "expected_information_gain": "This isolates whether a model can bind color to bit value, quantize visible bar height, and execute run-length decompression before recognizing a global symbol."
+  },
+  "deviations": []
+}

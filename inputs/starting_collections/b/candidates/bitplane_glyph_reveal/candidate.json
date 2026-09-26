@@ -1,0 +1,46 @@
+{
+  "schema_version": "0.4.0",
+  "candidate_id": "bitplane_glyph_reveal",
+  "title": "Least-significant-bit-plane glyph reveal",
+  "question": "The image is a dense 512x512 field of gray noise. The hidden answer letter is encoded solely in the least-significant bit (bit-plane 0) of every pixel's gray value; the other seven bits are independent random noise. Isolate the least-significant bit plane (keep only the last binary digit of each gray value). A single block letter then appears. Which letter, A or B, is revealed?",
+  "decision_type": "selection",
+  "task_signature": {
+    "decision_var": "glyph",
+    "structure": "bitplane_reveal",
+    "decision_type": "selection",
+    "mechanism": "The answer is a single block glyph (letter A or B) recovered by isolating the least-significant bit plane of a uniform 8-bit gray-noise field: every pixel value carries independent random noise in its high seven bits, and only bit 0 is forced to encode the glyph (1 inside the glyph, 0 outside), so the direct raster is pure indistinguishable speckle and the symbol appears only after the declared LSB-plane extraction."
+  },
+  "latent_z": {
+    "description": "Latent scene samples a per-pixel random 7-bit noise field, a declared answer glyph (A or B) written into the lowest bit of every pixel, and the block size; only the glyph is the label.",
+    "fields": ["noise", "glyph", "cell"]
+  },
+  "latent_alias": {
+    "mode": "not_applicable",
+    "justification": "The latent parametrization is injective into the raster: the per-pixel 7-bit noise directly fills 512x512 distinct pixel values, the declared glyph forces a distinct low bit in exactly the glyph cells, and the block size changes the cell grid, so no two distinct latent vectors reproduce the same image and no latent field is hidden from rendering. The label input is only the glyph.",
+    "label_inputs": ["glyph"]
+  },
+  "boundary": {
+    "observable": "The decision boundary is the block-letter shape that appears in the least-significant-bit plane; the low-bit glyph region is where every pixel in an on-cell carries bit 0 equal to 1, directly distinguishable from the surrounding off-cells in that bit plane.",
+    "quarantine": "Scenes whose recovered A-vs-B template correlation margin is below 0.15 are quarantined as ambiguous reveal fits."
+  },
+  "oracle_independence": {
+    "image_only": true,
+    "forbidden_imports_absent": true
+  },
+  "mechanism_fingerprint": {
+    "decision_family": "selection",
+    "entities": ["shape", "region"],
+    "arity": "single",
+    "relation": "composition",
+    "margin_operator": "count_difference",
+    "oracle_primitives": ["pixel_count", "composition"],
+    "composition_depth": 2
+  },
+  "semantic_contrast": {
+    "closest_known_worlds": ["skewness_letter_reveal", "value_modulo_band", "texture_variance_reveal", "dot_parity", "column_integral_reveal"],
+    "known_negative_matches": ["vertical_fold_reveal", "spectral_phase_reveal"],
+    "contrast": "No known world recovers an answer from the arithmetic least-significant bit plane of individual pixel values. value_modulo_band reads whole flat block gray levels against a visible divisor; texture_variance_reveal reads block-level spread; mirror_xor_reveal reads a spatial left-right mirror XOR of a binary lattice; dot_parity counts a visible point set. This candidate instead hides the symbol inside the lowest binary digit of every pixel of an otherwise fully random 8-bit noise field and requires the declared LSB-plane slicing to expose a single block glyph, which is a distinct high-frequency value-domain decoding rather than a spatial, brightness-offset, or spread re-spin.",
+    "expected_information_gain": "Isolates whether a VLM can perform a declared per-pixel binary value slicing (least-significant-bit extraction) and read the surviving symbolic shape hidden beneath the high seven bits of a noise field that no spatial, color, or luminance reading exposes."
+  },
+  "deviations": []
+}

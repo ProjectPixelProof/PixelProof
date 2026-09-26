@@ -1,0 +1,11 @@
+schema_version = "0.2.0"
+campaign_id = "oracle_contract_smoke"
+mode = "formal"
+protocol = "question-world@0.2.0"
+seed_set = "none@0"
+min_candidates = 1
+max_candidates = 1
+repair_turns = 0
+max_turns = 2
+timeout_seconds = 3600
+requires_clean_recycle = false

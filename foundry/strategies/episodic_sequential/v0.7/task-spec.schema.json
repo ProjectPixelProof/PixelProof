@@ -1,0 +1,53 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://dualloop.example.invalid/schemas/transactional-task-spec-v0.7.json",
+  "title": "Audited checkpoint-aware transactional episodic candidate session",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version", "campaign_id", "mode", "protocol", "strategy",
+    "seed_set", "episode_index", "min_candidates", "repair_turns",
+    "timeout_seconds", "requires_clean_recycle", "mechanism_memory",
+    "negative_memory", "semantic_neighbor_limit",
+    "semantic_duplicate_threshold", "oracle_stress_seeds",
+    "oracle_stress_scenes_per_seed", "candidate_limit_policy",
+    "episode_limit_policy", "orchestration_mode", "process_trace_required",
+    "provider_turn_policy", "continuation_delay_seconds",
+    "campaign_completion_policy", "reserved_candidate_ids",
+    "phase_audit_required"
+  ],
+  "properties": {
+    "schema_version": {"const": "0.5.0"},
+    "campaign_id": {"type": "string"},
+    "mode": {"const": "discovery"},
+    "protocol": {"const": "question-world@0.4.0"},
+    "strategy": {"const": "episodic-sequential@0.7.0"},
+    "seed_set": {"type": "string"},
+    "episode_index": {"type": "integer", "minimum": 1},
+    "min_candidates": {"const": 1},
+    "repair_turns": {"type": "integer", "minimum": -1},
+    "timeout_seconds": {"type": "integer", "minimum": 60, "maximum": 5400},
+    "requires_clean_recycle": {"const": true},
+    "mechanism_memory": {"type": "string"},
+    "negative_memory": {"type": "string"},
+    "semantic_neighbor_limit": {"type": "integer", "minimum": 1, "maximum": 10},
+    "semantic_duplicate_threshold": {"type": "number", "minimum": 0, "maximum": 1},
+    "oracle_stress_seeds": {
+      "type": "array", "minItems": 2, "uniqueItems": true,
+      "items": {"type": "integer", "minimum": 0}
+    },
+    "oracle_stress_scenes_per_seed": {"type": "integer", "minimum": 12, "maximum": 100},
+    "candidate_limit_policy": {"const": "exactly_one_per_session"},
+    "episode_limit_policy": {"const": "repeat_until_agent_budget"},
+    "orchestration_mode": {"const": "episodic_sequential"},
+    "process_trace_required": {"const": false},
+    "provider_turn_policy": {"const": "single_turn"},
+    "continuation_delay_seconds": {"const": 0},
+    "campaign_completion_policy": {"const": "consume_agent_time_budget"},
+    "reserved_candidate_ids": {
+      "type": "array", "uniqueItems": true,
+      "items": {"type": "string", "pattern": "^[a-z][a-z0-9_]{2,63}$"}
+    },
+    "phase_audit_required": {"const": true}
+  }
+}

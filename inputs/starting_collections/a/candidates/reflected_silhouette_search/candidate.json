@@ -1,0 +1,46 @@
+{
+  "schema_version": "0.4.0",
+  "candidate_id": "reflected_silhouette_search",
+  "title": "Reflected silhouette search",
+  "question": "Each sector contains two separate filled glyphs. Imagine the line through the midpoint of the line joining their centers, perpendicular to that joining line. Which sector contains the only pair whose silhouettes are mirror images across that line? Answer NW, NE, SW, or SE.",
+  "decision_type": "selection",
+  "task_signature": {
+    "decision_var": "reflected_pair_sector",
+    "structure": "four_sector_silhouette_pairs",
+    "decision_type": "selection",
+    "mechanism": "Select the unique sector whose two disconnected asymmetric silhouettes match under reflection across their visible perpendicular-bisector axis, using all pixels of both components."
+  },
+  "latent_z": {
+    "description": "A four-sector raster gallery of detached asymmetric filled glyph pairs. Each panel has a randomized pair axis, shared glyph template, and determinant-one shear on the second glyph; exactly one panel has zero shear and therefore a reflected silhouette pair.",
+    "fields": ["panels", "width", "height", "background", "ink", "guide"]
+  },
+  "latent_alias": {
+    "mode": "tested_transforms",
+    "justification": "The panel collection is an unordered list of visible, sector-keyed records. Reversing that list leaves every polygon at its recorded position, redraws byte-identical pixels, and preserves the reflection winner because analytic gold reads only the rendered panels.",
+    "label_inputs": ["panels"]
+  },
+  "boundary": {
+    "observable": "The target is the only sector where reflecting either complete filled component across the perpendicular bisector of the two visible centroids reproduces the other silhouette; distractor shear mismatch is at least 0.34 and the winner has a positive runner-up margin.",
+    "quarantine": "Quarantine a scene if fewer than two clean components occur in a sector, a pair touches or crosses its sector boundary, the reflection mismatch winner is tied, or the pixel margin is below the declared threshold."
+  },
+  "oracle_independence": {
+    "image_only": true,
+    "forbidden_imports_absent": true
+  },
+  "mechanism_fingerprint": {
+    "decision_family": "selection",
+    "entities": ["shape", "region"],
+    "arity": "mixed",
+    "relation": "composition",
+    "margin_operator": "composition_min",
+    "oracle_primitives": ["color_segmentation", "connected_components", "centroid", "composition"],
+    "composition_depth": 2
+  },
+  "semantic_contrast": {
+    "closest_known_worlds": ["bilateral_aperture_search", "inward_crescent_pair_search", "route_alternation_search", "relational_reference", "convexity"],
+    "known_negative_matches": [],
+    "contrast": "The nearest multipart searches bind local openings, enclosed-window widths, or an ordered sequence of bends. This candidate instead compares complete raster silhouettes of two detached components under a geometric reflection transform; it has no openings, route, enclosed aperture, point anchor, or single-contour convexity predicate. The two components are independently necessary and their correspondence is a whole-shape equality relation, not a count, area, or orientation pop-out.",
+    "expected_information_gain": "This isolates whether a visual system can establish a visible reflection axis from two components and maintain pixel-level shape correspondence across a structured search while ignoring randomized sector, angle, shear sign, ink, and local template cues."
+  },
+  "deviations": []
+}

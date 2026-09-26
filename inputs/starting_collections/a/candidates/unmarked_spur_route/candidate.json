@@ -1,0 +1,46 @@
+{
+  "schema_version": "0.4.0",
+  "candidate_id": "unmarked_spur_route",
+  "title": "Ownership of an unmarked spur on a compact route",
+  "question": "Trace the thick dark network from the green start. Does the path to the amber terminal contain an extra unmarked dead-end spur? Ignore the colored terminal markers; answer yes or no.",
+  "decision_type": "yesno",
+  "task_signature": {
+    "decision_var": "spur_branch_ownership",
+    "structure": "compact_fork_with_one_unmarked_spur",
+    "decision_type": "yesno",
+    "mechanism": "Recover the one connected thick route network, orient its fork from the green start, and determine whether the unmarked degree-one side branch is attached to the amber-directed arm."
+  },
+  "latent_z": {
+    "description": "A compact, randomly translated and oriented thick fork has one unmarked dead-end spur attached to either the amber or violet arm; remote gray ornaments are nondiagnostic and an order-only alias is tested.",
+    "fields": ["spur_terminal", "position", "rotation", "mirror", "style", "decor_order"]
+  },
+  "latent_alias": {
+    "mode": "tested_transforms",
+    "justification": "The renderer draws two identical gray ornaments in a commutative draw-order loop, so swapping the latent decor_order list is a nontrivial pixel-identical alias and leaves the spur-terminal gold unchanged.",
+    "label_inputs": ["spur_terminal"]
+  },
+  "boundary": {
+    "observable": "The amber and violet arms have a large, visible separation from the single extra dark spur; the answer changes when the spur-bearing arm is exchanged, while terminal colors and positions are independently balanced.",
+    "quarantine": "Quarantine if the dark component, colored marker, fork, or spur cannot be recovered with stable pixel margins, including any touching or near-touching marker or skeleton ambiguity."
+  },
+  "oracle_independence": {
+    "image_only": true,
+    "forbidden_imports_absent": true
+  },
+  "mechanism_fingerprint": {
+    "decision_family": "predicate",
+    "entities": ["line", "point", "region", "color"],
+    "arity": "mixed",
+    "relation": "composition",
+    "margin_operator": "discrete_boundary",
+    "oracle_primitives": ["color_segmentation", "connected_components", "centroid", "line_fit", "composition"],
+    "composition_depth": 3
+  },
+  "semantic_contrast": {
+    "closest_known_worlds": ["dual_loop_terminal", "bridge_cut_terminal", "branch_mass_terminal", "directed_rise_checkpoint", "forked_route_terminal"],
+    "known_negative_matches": ["polyline_turn_count"],
+    "contrast": "Those worlds ask for loop existence, bridge indispensability, filled-area mass, directed tangent binding, or geodesic distance. This candidate instead identifies an uncolored degree-one side branch and binds its attachment to one colored arm; it has no cycle, marked cut edge, length ranking, bend count, or checkpoint-order decision.",
+    "expected_information_gain": "It isolates whether a model can parse local route topology and assign an anonymous dead-end branch to a colored terminal path from the raster alone."
+  },
+  "deviations": []
+}

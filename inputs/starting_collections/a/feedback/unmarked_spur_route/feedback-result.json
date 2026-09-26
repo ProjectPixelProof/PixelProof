@@ -1,0 +1,249 @@
+{
+  "aggregate_accuracy": 0.4666666666666666,
+  "aggregation": "majority_evaluators_at_or_below_threshold",
+  "candidate_id": "unmarked_spur_route",
+  "candidate_sha256": "765c7922c71ee2934e4c69e5a024c13357df64184ea62a4bd3fb47b3bca35057",
+  "difficulty_hypothesis": null,
+  "episode_index": 0,
+  "evaluated_at": "2026-08-29T00:00:00Z",
+  "evaluator_accuracies": {
+    "gemini37_flash_high": 0.6,
+    "opus5_high": 0.4,
+    "sol_high": 0.4
+  },
+  "examples_per_evaluator": 5,
+  "feedback_visibility": "outcome_only_bootstrap_no_public_rationales",
+  "hard_accuracy_threshold": 0.6,
+  "hard_seed_eligible": true,
+  "maximum_paid_requests": 15,
+  "policy_id": "difficulty-feedback@0.6.0",
+  "protected_valid": true,
+  "sample_responses": [
+    {
+      "candidates": [
+        "yes",
+        "no"
+      ],
+      "oracle_answer": "no",
+      "question": "Trace the thick dark network from the green start. Does the path to the amber terminal contain an extra unmarked dead-end spur? Ignore the colored terminal markers; answer yes or no.",
+      "responses": [
+        {
+          "confidence": null,
+          "confidence_status": "not_preserved_in_frozen_section1_2_export",
+          "correct": false,
+          "evaluator": "sol_high",
+          "model_id": "openai/gpt-5.6-sol",
+          "prediction": "yes",
+          "provider": "OpenAI",
+          "served_model": "openai/gpt-5.6-sol",
+          "status": "scored"
+        },
+        {
+          "confidence": null,
+          "confidence_status": "not_preserved_in_frozen_section1_2_export",
+          "correct": false,
+          "evaluator": "opus5_high",
+          "model_id": "anthropic/claude-opus-5",
+          "prediction": "yes",
+          "provider": "Anthropic",
+          "served_model": "anthropic/claude-opus-5",
+          "status": "scored"
+        },
+        {
+          "confidence": null,
+          "confidence_status": "not_preserved_in_frozen_section1_2_export",
+          "correct": false,
+          "evaluator": "gemini37_flash_high",
+          "model_id": "google/gemini-3.7-flash",
+          "prediction": "yes",
+          "provider": "Google",
+          "served_model": "google/gemini-3.7-flash",
+          "status": "scored"
+        }
+      ],
+      "sample_id": "sample-01"
+    },
+    {
+      "candidates": [
+        "yes",
+        "no"
+      ],
+      "oracle_answer": "yes",
+      "question": "Trace the thick dark network from the green start. Does the path to the amber terminal contain an extra unmarked dead-end spur? Ignore the colored terminal markers; answer yes or no.",
+      "responses": [
+        {
+          "confidence": null,
+          "confidence_status": "not_preserved_in_frozen_section1_2_export",
+          "correct": true,
+          "evaluator": "sol_high",
+          "model_id": "openai/gpt-5.6-sol",
+          "prediction": "yes",
+          "provider": "OpenAI",
+          "served_model": "openai/gpt-5.6-sol",
+          "status": "scored"
+        },
+        {
+          "confidence": null,
+          "confidence_status": "not_preserved_in_frozen_section1_2_export",
+          "correct": true,
+          "evaluator": "opus5_high",
+          "model_id": "anthropic/claude-opus-5",
+          "prediction": "yes",
+          "provider": "Anthropic",
+          "served_model": "anthropic/claude-opus-5",
+          "status": "scored"
+        },
+        {
+          "confidence": null,
+          "confidence_status": "not_preserved_in_frozen_section1_2_export",
+          "correct": true,
+          "evaluator": "gemini37_flash_high",
+          "model_id": "google/gemini-3.7-flash",
+          "prediction": "yes",
+          "provider": "Google",
+          "served_model": "google/gemini-3.7-flash",
+          "status": "scored"
+        }
+      ],
+      "sample_id": "sample-02"
+    },
+    {
+      "candidates": [
+        "yes",
+        "no"
+      ],
+      "oracle_answer": "no",
+      "question": "Trace the thick dark network from the green start. Does the path to the amber terminal contain an extra unmarked dead-end spur? Ignore the colored terminal markers; answer yes or no.",
+      "responses": [
+        {
+          "confidence": null,
+          "confidence_status": "not_preserved_in_frozen_section1_2_export",
+          "correct": false,
+          "evaluator": "sol_high",
+          "model_id": "openai/gpt-5.6-sol",
+          "prediction": "yes",
+          "provider": "OpenAI",
+          "served_model": "openai/gpt-5.6-sol",
+          "status": "scored"
+        },
+        {
+          "confidence": null,
+          "confidence_status": "not_preserved_in_frozen_section1_2_export",
+          "correct": false,
+          "evaluator": "opus5_high",
+          "model_id": "anthropic/claude-opus-5",
+          "prediction": "yes",
+          "provider": "Anthropic",
+          "served_model": "anthropic/claude-opus-5",
+          "status": "scored"
+        },
+        {
+          "confidence": null,
+          "confidence_status": "not_preserved_in_frozen_section1_2_export",
+          "correct": false,
+          "evaluator": "gemini37_flash_high",
+          "model_id": "google/gemini-3.7-flash",
+          "prediction": "yes",
+          "provider": "Google",
+          "served_model": "google/gemini-3.7-flash",
+          "status": "scored"
+        }
+      ],
+      "sample_id": "sample-03"
+    },
+    {
+      "candidates": [
+        "yes",
+        "no"
+      ],
+      "oracle_answer": "yes",
+      "question": "Trace the thick dark network from the green start. Does the path to the amber terminal contain an extra unmarked dead-end spur? Ignore the colored terminal markers; answer yes or no.",
+      "responses": [
+        {
+          "confidence": null,
+          "confidence_status": "not_preserved_in_frozen_section1_2_export",
+          "correct": true,
+          "evaluator": "sol_high",
+          "model_id": "openai/gpt-5.6-sol",
+          "prediction": "yes",
+          "provider": "OpenAI",
+          "served_model": "openai/gpt-5.6-sol",
+          "status": "scored"
+        },
+        {
+          "confidence": null,
+          "confidence_status": "not_preserved_in_frozen_section1_2_export",
+          "correct": true,
+          "evaluator": "opus5_high",
+          "model_id": "anthropic/claude-opus-5",
+          "prediction": "yes",
+          "provider": "Anthropic",
+          "served_model": "anthropic/claude-opus-5",
+          "status": "scored"
+        },
+        {
+          "confidence": null,
+          "confidence_status": "not_preserved_in_frozen_section1_2_export",
+          "correct": true,
+          "evaluator": "gemini37_flash_high",
+          "model_id": "google/gemini-3.7-flash",
+          "prediction": "yes",
+          "provider": "Google",
+          "served_model": "google/gemini-3.7-flash",
+          "status": "scored"
+        }
+      ],
+      "sample_id": "sample-04"
+    },
+    {
+      "candidates": [
+        "yes",
+        "no"
+      ],
+      "oracle_answer": "no",
+      "question": "Trace the thick dark network from the green start. Does the path to the amber terminal contain an extra unmarked dead-end spur? Ignore the colored terminal markers; answer yes or no.",
+      "responses": [
+        {
+          "confidence": null,
+          "confidence_status": "not_preserved_in_frozen_section1_2_export",
+          "correct": false,
+          "evaluator": "sol_high",
+          "model_id": "openai/gpt-5.6-sol",
+          "prediction": "yes",
+          "provider": "OpenAI",
+          "served_model": "openai/gpt-5.6-sol",
+          "status": "scored"
+        },
+        {
+          "confidence": null,
+          "confidence_status": "not_preserved_in_frozen_section1_2_export",
+          "correct": false,
+          "evaluator": "opus5_high",
+          "model_id": "anthropic/claude-opus-5",
+          "prediction": "yes",
+          "provider": "Anthropic",
+          "served_model": "anthropic/claude-opus-5",
+          "status": "scored"
+        },
+        {
+          "confidence": null,
+          "confidence_status": "not_preserved_in_frozen_section1_2_export",
+          "correct": true,
+          "evaluator": "gemini37_flash_high",
+          "model_id": "google/gemini-3.7-flash",
+          "prediction": "no",
+          "provider": "Google",
+          "served_model": "google/gemini-3.7-flash",
+          "status": "scored"
+        }
+      ],
+      "sample_id": "sample-05"
+    }
+  ],
+  "sample_set_sha256": "7ded37f22567f86aa1c7c8546b51b63f94f240424199708a97a39da33a00eee0",
+  "schema_version": "difficulty-feedback-result-0.6.0",
+  "source_archive_candidate_sha256": "564a216fa18a4640c667c81f851f782d0759328f5d6e390943ffdc3070619145",
+  "source_cost_status": "not_preserved_in_frozen_section1_2_export",
+  "status": "complete",
+  "total_cost_usd": 0.0
+}

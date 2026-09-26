@@ -1,0 +1,27 @@
+[world]
+name = "stitch_face_alternation"
+description = "Front/behind alternation audit along one thin thread stitched through one small tape strip, against the running-stitch prior."
+task = "prior-conflict-pattern-audit"
+splits = ["smoke", "pilot", "full"]
+entrypoint = "world.generate"
+
+[targets]
+continuous = "margin"
+categorical = "decision"
+answer = "answer"
+candidates = "candidates"
+bin = "margin_bin"
+
+[gold]
+decision_attr = "decision"
+margin_key = "margin"
+quarantine_bin = "quarantine"
+boundary_observable = "the five tape crossings themselves: a crossing flips between front and behind exactly when the thread stops being visible across the tape, and the walk order flips exactly when the crimson tag moves to the other end of the thread"
+
+[prior]
+name = "running_stitch_alternates"
+statement = "A running stitch is expected to pass alternately in front of and behind the fabric."
+role = "recorded_for_analysis_never_gold"
+
+[provenance]
+role = "candidate"

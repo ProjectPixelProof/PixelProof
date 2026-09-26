@@ -1,0 +1,14 @@
+{
+  "agent": {
+    "adapter": "codex_oauth:CodexOAuth",
+    "cli_version": "0.147.0",
+    "continuation_delay_seconds": 0,
+    "model": "gpt-5.6-sol",
+    "output_format": "json",
+    "provider_turn_policy": "single_turn",
+    "reasoning_effort": "max",
+    "timeout_seconds_per_episode": 1200
+  },
+  "cost_reporting": "unavailable_subscription",
+  "soft_cost_limit_usd": 100.0
+}

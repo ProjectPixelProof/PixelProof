@@ -1,0 +1,17 @@
+[world]
+name = "run_bar_decompression"
+description = "Decode colored bar heights as binary run lengths and stack the expanded rows to reveal an abstract glyph."
+protocol = "question-world@0.4.0"
+
+[render]
+width = 640
+height = 560
+lanes = 10
+decoded_columns = 10
+
+[oracle]
+input = "final_png_only"
+decision_margin = "top-two Hamming-template score gap"
+
+[boundary]
+quarantine_margin = 12

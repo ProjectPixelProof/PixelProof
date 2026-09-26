@@ -1,0 +1,7 @@
+# Harbor 0.1.44's default Mean metric accepts only one reward key. Foundry
+# verifiers intentionally emit vectors, so every direct foundry run loads this
+# key-wise aggregator.
+metrics:
+  - type: uv-script
+    kwargs:
+      script_path: harbor/metrics/reward_vector.py

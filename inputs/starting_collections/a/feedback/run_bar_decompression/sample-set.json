@@ -1,0 +1,84 @@
+{
+  "candidate_id": "run_bar_decompression",
+  "candidate_sha256": "fcd8796336c2fb7e76cf27dfac938554a6f16a55eb01e9b9233e7f192542c3ee",
+  "distinct_image_count": 5,
+  "sample_unit": "unique_image",
+  "samples": [
+    {
+      "candidate_id": "run_bar_decompression",
+      "candidates": [
+        "zigzag",
+        "key",
+        "anchor",
+        "bell"
+      ],
+      "image_path": "bootstrap/feedback/run_bar_decompression/images/sample-01.png",
+      "image_sha256": "5ea0c03b9095880a66b385a012d9dcefd138efba9a36b1df01745d63bf3d9c51",
+      "margin": "40.0",
+      "question": "In each cyan lane, read the bars from left to right. A dark bar means black cells and a pale bar means white cells; the bar height in small grid steps is that run's length. Expand the runs into one row per lane, then stack the lanes from top to bottom. Which symbol appears: zigzag, key, anchor, or bell?",
+      "sample_id": "sample-01",
+      "sample_key": "49cf665f03339b549627343c39c066698af323faaf02a399ebab86ca9aeb8431"
+    },
+    {
+      "candidate_id": "run_bar_decompression",
+      "candidates": [
+        "zigzag",
+        "key",
+        "anchor",
+        "bell"
+      ],
+      "image_path": "bootstrap/feedback/run_bar_decompression/images/sample-02.png",
+      "image_sha256": "1817bff4f036cd994c06a5e21cdaeac399c4e16fef6cb659833d08a9e88ef7e5",
+      "margin": "48.0",
+      "question": "In each cyan lane, read the bars from left to right. A dark bar means black cells and a pale bar means white cells; the bar height in small grid steps is that run's length. Expand the runs into one row per lane, then stack the lanes from top to bottom. Which symbol appears: zigzag, key, anchor, or bell?",
+      "sample_id": "sample-02",
+      "sample_key": "3ca8e3f1b90da015f1d213e221176b7cd6eb552e6cd98900e0239adc8f0428f2"
+    },
+    {
+      "candidate_id": "run_bar_decompression",
+      "candidates": [
+        "zigzag",
+        "key",
+        "anchor",
+        "bell"
+      ],
+      "image_path": "bootstrap/feedback/run_bar_decompression/images/sample-03.png",
+      "image_sha256": "4b7beb120e6c08959fce568ffa05eb7c666906ed22d79788f8d0756f0c6fcba7",
+      "margin": "30.0",
+      "question": "In each cyan lane, read the bars from left to right. A dark bar means black cells and a pale bar means white cells; the bar height in small grid steps is that run's length. Expand the runs into one row per lane, then stack the lanes from top to bottom. Which symbol appears: zigzag, key, anchor, or bell?",
+      "sample_id": "sample-03",
+      "sample_key": "661c15a215b1bc7702ef8e07a7a963aac787c94feb7df6f77f74c394853ebfed"
+    },
+    {
+      "candidate_id": "run_bar_decompression",
+      "candidates": [
+        "zigzag",
+        "key",
+        "anchor",
+        "bell"
+      ],
+      "image_path": "bootstrap/feedback/run_bar_decompression/images/sample-04.png",
+      "image_sha256": "bf746c8c765b548a1c2629d1ae5370f2334c8dc74f8b83d2dea9d3d5d83600e5",
+      "margin": "30.0",
+      "question": "In each cyan lane, read the bars from left to right. A dark bar means black cells and a pale bar means white cells; the bar height in small grid steps is that run's length. Expand the runs into one row per lane, then stack the lanes from top to bottom. Which symbol appears: zigzag, key, anchor, or bell?",
+      "sample_id": "sample-04",
+      "sample_key": "290628a79ecde5f7c1b53c729406f91af214205d80efdb06dd46a0082fa8a3be"
+    },
+    {
+      "candidate_id": "run_bar_decompression",
+      "candidates": [
+        "zigzag",
+        "key",
+        "anchor",
+        "bell"
+      ],
+      "image_path": "bootstrap/feedback/run_bar_decompression/images/sample-05.png",
+      "image_sha256": "959289b6954fa056421fffd7a179d9222d939f42c4ce92283990db9b7422ab8b",
+      "margin": "40.0",
+      "question": "In each cyan lane, read the bars from left to right. A dark bar means black cells and a pale bar means white cells; the bar height in small grid steps is that run's length. Expand the runs into one row per lane, then stack the lanes from top to bottom. Which symbol appears: zigzag, key, anchor, or bell?",
+      "sample_id": "sample-05",
+      "sample_key": "cf20597786c70b686412c0a85acdb50f8851ff2b7cf062298058fcdab25894ea"
+    }
+  ],
+  "source_selection_id": "section3-frontier-hard-seeds@0.2.0"
+}

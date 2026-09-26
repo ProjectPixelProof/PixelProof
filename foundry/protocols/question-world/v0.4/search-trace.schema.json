@@ -1,0 +1,150 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://dualloop.example.invalid/schemas/search-trace-v0.2.json",
+  "title": "Question-world search trace with ranking passes",
+  "$defs": {
+    "identifier": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9_]{2,63}$"
+    },
+    "budget": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "timeout_seconds",
+        "max_turns",
+        "min_logged_proposals",
+        "max_build_starts",
+        "min_candidates",
+        "max_candidates"
+      ],
+      "properties": {
+        "timeout_seconds": {"type": "integer", "minimum": 60},
+        "max_turns": {"type": "integer", "minimum": 1},
+        "min_logged_proposals": {"type": "integer", "minimum": 1},
+        "max_build_starts": {"type": "integer", "minimum": 1},
+        "min_candidates": {"type": "integer", "minimum": 1},
+        "max_candidates": {"type": "integer", "minimum": 1}
+      }
+    },
+    "run": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["schema_version", "campaign_id", "status", "budget", "deviations"],
+      "properties": {
+        "schema_version": {"const": "search-trace-0.1.0"},
+        "campaign_id": {"type": "string"},
+        "status": {"enum": ["running", "completed"]},
+        "budget": {"$ref": "#/$defs/budget"},
+        "deviations": {"type": "array", "items": {"type": "string"}}
+      }
+    },
+    "event": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "schema_version", "sequence", "elapsed_seconds", "attempt_id",
+        "state", "reason_code", "evidence"
+      ],
+      "properties": {
+        "schema_version": {"const": "search-event-0.1.0"},
+        "sequence": {"type": "integer", "minimum": 1},
+        "elapsed_seconds": {"type": "number", "minimum": 0},
+        "attempt_id": {"$ref": "#/$defs/identifier"},
+        "state": {
+          "enum": [
+            "proposed", "selected_for_build", "build_started", "build_failed",
+            "self_check_failed", "self_check_passed", "self_rejected",
+            "omitted_during_ranking", "submitted"
+          ]
+        },
+        "reason_code": {
+          "type": ["string", "null"],
+          "pattern": "^[a-z][a-z0-9_]{2,63}$"
+        },
+        "evidence": {
+          "type": "array",
+          "items": {"type": "string", "minLength": 1}
+        }
+      }
+    },
+    "proposal": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "schema_version", "attempt_id", "title", "question", "task_signature",
+        "rationale", "anticipated_risks"
+      ],
+      "properties": {
+        "schema_version": {"const": "search-proposal-0.1.0"},
+        "attempt_id": {"$ref": "#/$defs/identifier"},
+        "title": {"type": "string", "minLength": 5},
+        "question": {"type": "string", "minLength": 10},
+        "task_signature": {
+          "type": "object",
+          "required": ["decision_var", "structure", "decision_type", "mechanism"]
+        },
+        "rationale": {"type": "string", "minLength": 20},
+        "anticipated_risks": {
+          "type": "array",
+          "items": {"type": "string", "minLength": 3}
+        }
+      }
+    },
+    "disposition": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "schema_version", "attempt_id", "final_state", "reason_code",
+        "evidence", "summary"
+      ],
+      "properties": {
+        "schema_version": {"const": "search-disposition-0.1.0"},
+        "attempt_id": {"$ref": "#/$defs/identifier"},
+        "final_state": {
+          "enum": ["build_failed", "self_rejected", "omitted_during_ranking", "submitted"]
+        },
+        "reason_code": {"type": "string", "pattern": "^[a-z][a-z0-9_]{2,63}$"},
+        "evidence": {
+          "type": "array",
+          "items": {"type": "string", "minLength": 1}
+        },
+        "summary": {"type": "string", "minLength": 10}
+      }
+    },
+    "ranking": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "schema_version",
+        "pass_index",
+        "elapsed_seconds",
+        "considered_ids",
+        "survivor_ids",
+        "criteria"
+      ],
+      "properties": {
+        "schema_version": {"const": "search-ranking-0.1.0"},
+        "pass_index": {"type": "integer", "minimum": 1},
+        "elapsed_seconds": {"type": "number", "minimum": 0},
+        "considered_ids": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {"type": "string", "pattern": "^[a-z][a-z0-9_]{2,63}$"}
+        },
+        "survivor_ids": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {"type": "string", "pattern": "^[a-z][a-z0-9_]{2,63}$"}
+        },
+        "criteria": {
+          "type": "array",
+          "minItems": 3,
+          "items": {"type": "string", "minLength": 3}
+        }
+      }
+    }
+  }
+}

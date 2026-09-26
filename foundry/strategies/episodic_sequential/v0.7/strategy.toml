@@ -1,0 +1,15 @@
+id = "episodic-sequential"
+version = "0.7.0"
+status = "draft"
+candidate_protocol = "question-world@0.4.0"
+orchestration_mode = "episodic_sequential"
+unit_of_work = "one_audited_checkpoint_aware_publicly_gated_candidate_per_fresh_session"
+context_policy = "fresh_session_with_structured_memory"
+candidate_limit_policy = "exactly_one_per_session"
+episode_limit_policy = "repeat_until_agent_budget"
+protected_verification_cadence = "after_every_session"
+provider_conversation_resume = false
+provider_turn_policy = "single_turn"
+controller_owns_transition = true
+parent_version = "0.6.0"
+only_delta = "add append-only phase evidence and a complete controller-owned paper-run ledger"

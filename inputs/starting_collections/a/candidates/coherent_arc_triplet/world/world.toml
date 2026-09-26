@@ -1,0 +1,18 @@
+[world]
+name = "coherent_arc_triplet"
+version = "0.1.0"
+description = "Decide whether three disconnected contour fragments admit one common circular continuation."
+
+[render]
+width = 768
+height = 768
+fragment_count = 3
+
+[decision]
+type = "yesno"
+variable = "shared_circle_residual"
+boundary = "agreement versus disagreement of three independently visible continuation circles"
+
+[oracle]
+input = "final_png_only"
+method = "palette-agnostic chroma segmentation, connected components, independent centerline extraction, circle fits, and collective residual"

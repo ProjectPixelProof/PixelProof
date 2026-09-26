@@ -1,0 +1,259 @@
+{
+  "aggregate_accuracy": 0.6,
+  "aggregation": "majority_evaluators_at_or_below_threshold",
+  "candidate_id": "global_elongation_axis",
+  "candidate_sha256": "1c8c311a3de8a723145fe89f0b7242161ea46862d5159b265361d3253d8b4d43",
+  "difficulty_hypothesis": null,
+  "episode_index": 0,
+  "evaluated_at": "2026-08-29T00:00:00Z",
+  "evaluator_accuracies": {
+    "gemini37_flash_high": 0.6,
+    "opus5_high": 0.6,
+    "sol_high": 0.6
+  },
+  "examples_per_evaluator": 5,
+  "feedback_visibility": "outcome_only_bootstrap_no_public_rationales",
+  "hard_accuracy_threshold": 0.6,
+  "hard_seed_eligible": true,
+  "maximum_paid_requests": 15,
+  "policy_id": "difficulty-feedback@0.6.0",
+  "protected_valid": true,
+  "sample_responses": [
+    {
+      "candidates": [
+        "horizontal",
+        "rising",
+        "vertical",
+        "falling"
+      ],
+      "oracle_answer": "vertical",
+      "question": "The dark dots together form one elongated cloud. Looking at the whole cloud, along which single direction is it stretched out: horizontal, rising (uphill to the right), vertical, or falling (downhill to the right)? Answer horizontal, rising, vertical, or falling.",
+      "responses": [
+        {
+          "confidence": null,
+          "confidence_status": "not_preserved_in_frozen_section1_2_export",
+          "correct": true,
+          "evaluator": "sol_high",
+          "model_id": "openai/gpt-5.6-sol",
+          "prediction": "vertical",
+          "provider": "OpenAI",
+          "served_model": "openai/gpt-5.6-sol",
+          "status": "scored"
+        },
+        {
+          "confidence": null,
+          "confidence_status": "not_preserved_in_frozen_section1_2_export",
+          "correct": true,
+          "evaluator": "opus5_high",
+          "model_id": "anthropic/claude-opus-5",
+          "prediction": "vertical",
+          "provider": "Anthropic",
+          "served_model": "anthropic/claude-opus-5",
+          "status": "scored"
+        },
+        {
+          "confidence": null,
+          "confidence_status": "not_preserved_in_frozen_section1_2_export",
+          "correct": true,
+          "evaluator": "gemini37_flash_high",
+          "model_id": "google/gemini-3.7-flash",
+          "prediction": "vertical",
+          "provider": "Google",
+          "served_model": "google/gemini-3.7-flash",
+          "status": "scored"
+        }
+      ],
+      "sample_id": "sample-01"
+    },
+    {
+      "candidates": [
+        "horizontal",
+        "rising",
+        "vertical",
+        "falling"
+      ],
+      "oracle_answer": "falling",
+      "question": "The dark dots together form one elongated cloud. Looking at the whole cloud, along which single direction is it stretched out: horizontal, rising (uphill to the right), vertical, or falling (downhill to the right)? Answer horizontal, rising, vertical, or falling.",
+      "responses": [
+        {
+          "confidence": null,
+          "confidence_status": "not_preserved_in_frozen_section1_2_export",
+          "correct": false,
+          "evaluator": "sol_high",
+          "model_id": "openai/gpt-5.6-sol",
+          "prediction": "rising",
+          "provider": "OpenAI",
+          "served_model": "openai/gpt-5.6-sol",
+          "status": "scored"
+        },
+        {
+          "confidence": null,
+          "confidence_status": "not_preserved_in_frozen_section1_2_export",
+          "correct": false,
+          "evaluator": "opus5_high",
+          "model_id": "anthropic/claude-opus-5",
+          "prediction": "rising",
+          "provider": "Anthropic",
+          "served_model": "anthropic/claude-opus-5",
+          "status": "scored"
+        },
+        {
+          "confidence": null,
+          "confidence_status": "not_preserved_in_frozen_section1_2_export",
+          "correct": false,
+          "evaluator": "gemini37_flash_high",
+          "model_id": "google/gemini-3.7-flash",
+          "prediction": "rising",
+          "provider": "Google",
+          "served_model": "google/gemini-3.7-flash",
+          "status": "scored"
+        }
+      ],
+      "sample_id": "sample-02"
+    },
+    {
+      "candidates": [
+        "horizontal",
+        "rising",
+        "vertical",
+        "falling"
+      ],
+      "oracle_answer": "rising",
+      "question": "The dark dots together form one elongated cloud. Looking at the whole cloud, along which single direction is it stretched out: horizontal, rising (uphill to the right), vertical, or falling (downhill to the right)? Answer horizontal, rising, vertical, or falling.",
+      "responses": [
+        {
+          "confidence": null,
+          "confidence_status": "not_preserved_in_frozen_section1_2_export",
+          "correct": false,
+          "evaluator": "sol_high",
+          "model_id": "openai/gpt-5.6-sol",
+          "prediction": "falling",
+          "provider": "OpenAI",
+          "served_model": "openai/gpt-5.6-sol",
+          "status": "scored"
+        },
+        {
+          "confidence": null,
+          "confidence_status": "not_preserved_in_frozen_section1_2_export",
+          "correct": false,
+          "evaluator": "opus5_high",
+          "model_id": "anthropic/claude-opus-5",
+          "prediction": "falling",
+          "provider": "Anthropic",
+          "served_model": "anthropic/claude-opus-5",
+          "status": "scored"
+        },
+        {
+          "confidence": null,
+          "confidence_status": "not_preserved_in_frozen_section1_2_export",
+          "correct": false,
+          "evaluator": "gemini37_flash_high",
+          "model_id": "google/gemini-3.7-flash",
+          "prediction": "falling",
+          "provider": "Google",
+          "served_model": "google/gemini-3.7-flash",
+          "status": "scored"
+        }
+      ],
+      "sample_id": "sample-03"
+    },
+    {
+      "candidates": [
+        "horizontal",
+        "rising",
+        "vertical",
+        "falling"
+      ],
+      "oracle_answer": "horizontal",
+      "question": "The dark dots together form one elongated cloud. Looking at the whole cloud, along which single direction is it stretched out: horizontal, rising (uphill to the right), vertical, or falling (downhill to the right)? Answer horizontal, rising, vertical, or falling.",
+      "responses": [
+        {
+          "confidence": null,
+          "confidence_status": "not_preserved_in_frozen_section1_2_export",
+          "correct": true,
+          "evaluator": "sol_high",
+          "model_id": "openai/gpt-5.6-sol",
+          "prediction": "horizontal",
+          "provider": "OpenAI",
+          "served_model": "openai/gpt-5.6-sol",
+          "status": "scored"
+        },
+        {
+          "confidence": null,
+          "confidence_status": "not_preserved_in_frozen_section1_2_export",
+          "correct": true,
+          "evaluator": "opus5_high",
+          "model_id": "anthropic/claude-opus-5",
+          "prediction": "horizontal",
+          "provider": "Anthropic",
+          "served_model": "anthropic/claude-opus-5",
+          "status": "scored"
+        },
+        {
+          "confidence": null,
+          "confidence_status": "not_preserved_in_frozen_section1_2_export",
+          "correct": true,
+          "evaluator": "gemini37_flash_high",
+          "model_id": "google/gemini-3.7-flash",
+          "prediction": "horizontal",
+          "provider": "Google",
+          "served_model": "google/gemini-3.7-flash",
+          "status": "scored"
+        }
+      ],
+      "sample_id": "sample-04"
+    },
+    {
+      "candidates": [
+        "horizontal",
+        "rising",
+        "vertical",
+        "falling"
+      ],
+      "oracle_answer": "vertical",
+      "question": "The dark dots together form one elongated cloud. Looking at the whole cloud, along which single direction is it stretched out: horizontal, rising (uphill to the right), vertical, or falling (downhill to the right)? Answer horizontal, rising, vertical, or falling.",
+      "responses": [
+        {
+          "confidence": null,
+          "confidence_status": "not_preserved_in_frozen_section1_2_export",
+          "correct": true,
+          "evaluator": "sol_high",
+          "model_id": "openai/gpt-5.6-sol",
+          "prediction": "vertical",
+          "provider": "OpenAI",
+          "served_model": "openai/gpt-5.6-sol",
+          "status": "scored"
+        },
+        {
+          "confidence": null,
+          "confidence_status": "not_preserved_in_frozen_section1_2_export",
+          "correct": true,
+          "evaluator": "opus5_high",
+          "model_id": "anthropic/claude-opus-5",
+          "prediction": "vertical",
+          "provider": "Anthropic",
+          "served_model": "anthropic/claude-opus-5",
+          "status": "scored"
+        },
+        {
+          "confidence": null,
+          "confidence_status": "not_preserved_in_frozen_section1_2_export",
+          "correct": true,
+          "evaluator": "gemini37_flash_high",
+          "model_id": "google/gemini-3.7-flash",
+          "prediction": "vertical",
+          "provider": "Google",
+          "served_model": "google/gemini-3.7-flash",
+          "status": "scored"
+        }
+      ],
+      "sample_id": "sample-05"
+    }
+  ],
+  "sample_set_sha256": "b8e096e5af5e65b6c90d27aa855d162df7763ad36da60e4b42ae505264e7e11b",
+  "schema_version": "difficulty-feedback-result-0.6.0",
+  "source_archive_candidate_sha256": "2be8dee8703510339ed6da883709155345474c0836094d65d7fd7837d2a6e311",
+  "source_cost_status": "not_preserved_in_frozen_section1_2_export",
+  "status": "complete",
+  "total_cost_usd": 0.0
+}

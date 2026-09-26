@@ -1,0 +1,16 @@
+{
+  "agent": {
+    "adapter": "openrouter_opencode_foundry:OpenRouterOpenCodeFoundry",
+    "allow_provider_fallbacks": false,
+    "cli_version": "1.18.11",
+    "continuation_delay_seconds": 0,
+    "model": "openrouter/deepseek/deepseek-v4-flash-0731",
+    "output_format": "json",
+    "provider_turn_policy": "single_turn",
+    "reasoning_effort": "high",
+    "timeout_seconds_per_episode": 1200,
+    "upstream_provider": "deepinfra"
+  },
+  "cost_reporting": "provider_native",
+  "soft_cost_limit_usd": 8.0
+}

@@ -1,0 +1,74 @@
+id = "rq1_example"
+status = "awaiting_operator_approval"
+mode = "discovery"
+protocol = "question-world@0.4.0"
+strategy = "episodic-sequential@0.7.0"
+seed_set = "baseline_three@0.2.0"
+mechanism_memory = "known-mechanisms@0.1.0"
+negative_memory = "rejected-mechanisms@0.1.0"
+outcome_memory = "funnel-outcomes@0.1.0"
+
+[agent]
+adapter = "codex_oauth:CodexOAuth"
+model = "gpt-5.6-sol"
+reasoning_effort = "max"
+output_format = "json"
+cli_version = "0.147.0"
+timeout_seconds_per_episode = 1200
+provider_turn_policy = "single_turn"
+continuation_delay_seconds = 0
+
+[campaign]
+wall_time_seconds = 28800
+minimum_start_seconds = 300
+verifier_reserve_seconds = 900
+cost_reporting = "unavailable_subscription"
+soft_cost_limit_usd = 100.0
+episode_limit_policy = "repeat_until_agent_budget"
+completion_policy = "consume_agent_time_budget"
+agent_time_seconds = 21600
+transient_error_policy = "retry_with_backoff"
+retry_backoff_seconds = [15, 30, 60]
+max_consecutive_provider_failures = 3
+max_consecutive_empty_submissions = 3
+
+[task]
+min_candidates = 1
+repair_turns = -1
+candidate_limit_policy = "exactly_one_per_session"
+
+[verification]
+semantic_neighbor_limit = 5
+semantic_duplicate_threshold = 0.68
+oracle_stress_seeds = [101, 2027, 9929]
+oracle_stress_scenes_per_seed = 24
+
+[environment]
+agent_network = "public"
+verifier_network = "no-network"
+cpus = 2
+memory_mb = 4096
+storage_mb = 20480
+render_runtime = "latex-tikz@0.1.0"
+
+[transition]
+require_submission_valid = true
+require_all_mechanical_gates = true
+require_registry_distinct = true
+require_semantic_review_ready = true
+canonical_admission = "human-only"
+
+[comparison]
+experiment_id = "rq1_example"
+orchestration_mode = "episodic_sequential"
+question_status = "open"
+budget_scope = "per_profile"
+context_policy = "fresh_session_with_structured_memory"
+protected_verification_cadence = "after_every_session"
+provider_conversation_resume = false
+provider_turn_policy = "single_turn"
+completion_policy = "consume_agent_time_budget"
+session_limit_policy = "repeat_until_agent_budget"
+candidate_limit_policy = "exactly_one_per_session"
+proposal_refresh_policy = "not_applicable"
+hypothesis_profile = "paper-semantic@0.3.0:tracing"

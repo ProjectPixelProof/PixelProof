@@ -1,0 +1,89 @@
+{
+  "candidate_id": "interleaved_sheet_extract",
+  "candidate_sha256": "9cd09572ec2444c7eec129b934f2fd9ee3b70a6556ebd7eae789ccdbaf5b40fa",
+  "distinct_image_count": 5,
+  "sample_unit": "unique_image",
+  "samples": [
+    {
+      "candidate_id": "interleaved_sheet_extract",
+      "candidates": [
+        "arrow",
+        "ring",
+        "slash",
+        "wedge",
+        "zigzag"
+      ],
+      "image_path": "bootstrap/feedback/interleaved_sheet_extract/images/sample-01.png",
+      "image_sha256": "016aba20865558930a82cb06ba2e1dfae0db400c2723881f7db61a0a27678749",
+      "margin": "22.0",
+      "question": "The picture shows one framed lattice of 14 rows and 7 columns of square cells; each cell is either dark (filled) or blank. Beside every lattice row, just outside the frame on its left, exactly one marker is printed: either a filled dot or a hollow ring. Exactly 7 rows carry a filled dot and exactly 7 rows carry a hollow ring. Discard every row whose marker is a hollow ring, keep the rows whose marker is a filled dot in their original top-to-bottom order, and push those 7 kept rows together into a single block of 7 rows and 7 columns. The dark cells of that block form one of these five symbols: ring (a closed square outline with a hollow centre), wedge (a solid triangle pointing down, widest across its top row), zigzag (a bar along the top, a staircase running down to the left, and a bar along the bottom), arrow (a broad arrowhead pointing down with a short stem below it), slash (a thick diagonal band running from the top left corner to the bottom right corner). Which of the five symbols do the dark cells of that block form? Answer with one word.",
+      "sample_id": "sample-01",
+      "sample_key": "aefc7a8313c1896992a35eedf9166d252fd72edfbab86bbf8970ff81e4fb022e"
+    },
+    {
+      "candidate_id": "interleaved_sheet_extract",
+      "candidates": [
+        "arrow",
+        "ring",
+        "slash",
+        "wedge",
+        "zigzag"
+      ],
+      "image_path": "bootstrap/feedback/interleaved_sheet_extract/images/sample-02.png",
+      "image_sha256": "2bc004158f20b8901db61370924323e7a725c12241c72273381434f20ba57f0c",
+      "margin": "12.0",
+      "question": "The picture shows one framed lattice of 14 rows and 7 columns of square cells; each cell is either dark (filled) or blank. Beside every lattice row, just outside the frame on its left, exactly one marker is printed: either a filled dot or a hollow ring. Exactly 7 rows carry a filled dot and exactly 7 rows carry a hollow ring. Discard every row whose marker is a hollow ring, keep the rows whose marker is a filled dot in their original top-to-bottom order, and push those 7 kept rows together into a single block of 7 rows and 7 columns. The dark cells of that block form one of these five symbols: ring (a closed square outline with a hollow centre), wedge (a solid triangle pointing down, widest across its top row), zigzag (a bar along the top, a staircase running down to the left, and a bar along the bottom), arrow (a broad arrowhead pointing down with a short stem below it), slash (a thick diagonal band running from the top left corner to the bottom right corner). Which of the five symbols do the dark cells of that block form? Answer with one word.",
+      "sample_id": "sample-02",
+      "sample_key": "49eb6bd49912cb7faf1033be39a17e33ba44cba8ebcc3aef3555a17bc2eee84c"
+    },
+    {
+      "candidate_id": "interleaved_sheet_extract",
+      "candidates": [
+        "arrow",
+        "ring",
+        "slash",
+        "wedge",
+        "zigzag"
+      ],
+      "image_path": "bootstrap/feedback/interleaved_sheet_extract/images/sample-03.png",
+      "image_sha256": "746b2bb939fe47d9c74bfe306ef13c16dd3a08cbcf4f1d5ecfbc08b9a95aae34",
+      "margin": "8.0",
+      "question": "The picture shows one framed lattice of 14 rows and 7 columns of square cells; each cell is either dark (filled) or blank. Beside every lattice row, just outside the frame on its left, exactly one marker is printed: either a filled dot or a hollow ring. Exactly 7 rows carry a filled dot and exactly 7 rows carry a hollow ring. Discard every row whose marker is a hollow ring, keep the rows whose marker is a filled dot in their original top-to-bottom order, and push those 7 kept rows together into a single block of 7 rows and 7 columns. The dark cells of that block form one of these five symbols: ring (a closed square outline with a hollow centre), wedge (a solid triangle pointing down, widest across its top row), zigzag (a bar along the top, a staircase running down to the left, and a bar along the bottom), arrow (a broad arrowhead pointing down with a short stem below it), slash (a thick diagonal band running from the top left corner to the bottom right corner). Which of the five symbols do the dark cells of that block form? Answer with one word.",
+      "sample_id": "sample-03",
+      "sample_key": "97d740dbde7e495ff93ddd070b259a2d309984391729e3e664a2e4d8cbe69608"
+    },
+    {
+      "candidate_id": "interleaved_sheet_extract",
+      "candidates": [
+        "arrow",
+        "ring",
+        "slash",
+        "wedge",
+        "zigzag"
+      ],
+      "image_path": "bootstrap/feedback/interleaved_sheet_extract/images/sample-04.png",
+      "image_sha256": "0467589dc4e5c3e4c19ba5b550b03c3f82a301a5b3fdf84d42db88854ca2c611",
+      "margin": "2.0",
+      "question": "The picture shows one framed lattice of 14 rows and 7 columns of square cells; each cell is either dark (filled) or blank. Beside every lattice row, just outside the frame on its left, exactly one marker is printed: either a filled dot or a hollow ring. Exactly 7 rows carry a filled dot and exactly 7 rows carry a hollow ring. Discard every row whose marker is a hollow ring, keep the rows whose marker is a filled dot in their original top-to-bottom order, and push those 7 kept rows together into a single block of 7 rows and 7 columns. The dark cells of that block form one of these five symbols: ring (a closed square outline with a hollow centre), wedge (a solid triangle pointing down, widest across its top row), zigzag (a bar along the top, a staircase running down to the left, and a bar along the bottom), arrow (a broad arrowhead pointing down with a short stem below it), slash (a thick diagonal band running from the top left corner to the bottom right corner). Which of the five symbols do the dark cells of that block form? Answer with one word.",
+      "sample_id": "sample-04",
+      "sample_key": "8c5fdda474ab8b2d4b0b7c737596ffaaa834d1a9fc991b07c84575250362efc3"
+    },
+    {
+      "candidate_id": "interleaved_sheet_extract",
+      "candidates": [
+        "arrow",
+        "ring",
+        "slash",
+        "wedge",
+        "zigzag"
+      ],
+      "image_path": "bootstrap/feedback/interleaved_sheet_extract/images/sample-05.png",
+      "image_sha256": "fbc8c28f3d00b03c3740cadf3daab92e17dc025d78ff128fa73f30a8b8be0425",
+      "margin": "2.0",
+      "question": "The picture shows one framed lattice of 14 rows and 7 columns of square cells; each cell is either dark (filled) or blank. Beside every lattice row, just outside the frame on its left, exactly one marker is printed: either a filled dot or a hollow ring. Exactly 7 rows carry a filled dot and exactly 7 rows carry a hollow ring. Discard every row whose marker is a hollow ring, keep the rows whose marker is a filled dot in their original top-to-bottom order, and push those 7 kept rows together into a single block of 7 rows and 7 columns. The dark cells of that block form one of these five symbols: ring (a closed square outline with a hollow centre), wedge (a solid triangle pointing down, widest across its top row), zigzag (a bar along the top, a staircase running down to the left, and a bar along the bottom), arrow (a broad arrowhead pointing down with a short stem below it), slash (a thick diagonal band running from the top left corner to the bottom right corner). Which of the five symbols do the dark cells of that block form? Answer with one word.",
+      "sample_id": "sample-05",
+      "sample_key": "7c1ddd7f058327b483e89fddcee84149de2b019d2c94fe21b263428c7005f193"
+    }
+  ],
+  "source_selection_id": "section3-frontier-hard-seeds@0.2.0"
+}

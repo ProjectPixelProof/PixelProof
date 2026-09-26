@@ -1,0 +1,74 @@
+{
+  "candidate_id": "paired_seam_correspondence",
+  "candidate_sha256": "0b94b22f95bfb6098ca8ad607e2f4792c7a4f31c04baa79dce32324a6cd5fa0a",
+  "distinct_image_count": 5,
+  "sample_unit": "unique_image",
+  "samples": [
+    {
+      "candidate_id": "paired_seam_correspondence",
+      "candidates": [
+        "yes",
+        "no"
+      ],
+      "image_path": "bootstrap/feedback/paired_seam_correspondence/images/sample-01.png",
+      "image_sha256": "c8efe016ec84264bf2ded45197712f971c9a1c2bd155f692a24288c910fa71bd",
+      "margin": "14.980444",
+      "question": "Ignoring color, position, size, and the gap, do the two separated tiles have the same sequence of bumps and recesses along their facing edges? Keep the top-to-bottom order and do not rotate or flip either tile. Answer yes or no.",
+      "sample_id": "sample-01",
+      "sample_key": "a3de2a7e0e4aa43e2170dea6db1f99233c2671e3712ce011fd57eec6cfabe17c"
+    },
+    {
+      "candidate_id": "paired_seam_correspondence",
+      "candidates": [
+        "yes",
+        "no"
+      ],
+      "image_path": "bootstrap/feedback/paired_seam_correspondence/images/sample-02.png",
+      "image_sha256": "2b7d1354f78f9b247e6c747e2f48fca9209d8d64b05619161d89ad388bba8673",
+      "margin": "4.0",
+      "question": "Ignoring color, position, size, and the gap, do the two separated tiles have the same sequence of bumps and recesses along their facing edges? Keep the top-to-bottom order and do not rotate or flip either tile. Answer yes or no.",
+      "sample_id": "sample-02",
+      "sample_key": "c79d36474db4230d2cf59c54175050eedbf41321beb46929c86f7660130c871f"
+    },
+    {
+      "candidate_id": "paired_seam_correspondence",
+      "candidates": [
+        "yes",
+        "no"
+      ],
+      "image_path": "bootstrap/feedback/paired_seam_correspondence/images/sample-03.png",
+      "image_sha256": "e11c326fe5d1aa3ce6ce997a8b6391de91848b14c8c660a576a1a9285b1b78b5",
+      "margin": "5.156222",
+      "question": "Ignoring color, position, size, and the gap, do the two separated tiles have the same sequence of bumps and recesses along their facing edges? Keep the top-to-bottom order and do not rotate or flip either tile. Answer yes or no.",
+      "sample_id": "sample-03",
+      "sample_key": "bab025d593757434db71be58d6d64ae34c2ba44de86f5122f0df957b91d89594"
+    },
+    {
+      "candidate_id": "paired_seam_correspondence",
+      "candidates": [
+        "yes",
+        "no"
+      ],
+      "image_path": "bootstrap/feedback/paired_seam_correspondence/images/sample-04.png",
+      "image_sha256": "eaf2a950339665b8a243670ca650d4d2cb7a189b202b72830e3eff48f5fd8150",
+      "margin": "4.0",
+      "question": "Ignoring color, position, size, and the gap, do the two separated tiles have the same sequence of bumps and recesses along their facing edges? Keep the top-to-bottom order and do not rotate or flip either tile. Answer yes or no.",
+      "sample_id": "sample-04",
+      "sample_key": "b9a3c1aed3ca093c983c780a3c6005130eef2c67b75d032c95f2705bbb206fc0"
+    },
+    {
+      "candidate_id": "paired_seam_correspondence",
+      "candidates": [
+        "yes",
+        "no"
+      ],
+      "image_path": "bootstrap/feedback/paired_seam_correspondence/images/sample-05.png",
+      "image_sha256": "fb58e601a4c0d4353c632b92682dab12239b3186d1ff60da136ec22ec4d6a3ae",
+      "margin": "13.250222",
+      "question": "Ignoring color, position, size, and the gap, do the two separated tiles have the same sequence of bumps and recesses along their facing edges? Keep the top-to-bottom order and do not rotate or flip either tile. Answer yes or no.",
+      "sample_id": "sample-05",
+      "sample_key": "e8d04efda3793251d7d17a3d917fb80093d40063db4c2f2319a15d0eb2fbf8e2"
+    }
+  ],
+  "source_selection_id": "section3-frontier-hard-seeds@0.2.0"
+}

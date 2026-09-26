@@ -1,0 +1,40 @@
+schema_version = "discovery-profile-set-0.1.0"
+id = "paper-difficulty@0.3.0"
+status = "frozen"
+review_status = "operator-authorized-paper-run"
+delivery = "public_text_card_with_seed_abstracts"
+source_study = "studies/luna_s3_frontier_hard_6h_001"
+created = "2026-08-29"
+note = "Two neutral randomized replicates for the Section 3 frontier-difficulty feedback loop."
+selection_dataset = "anonymous/starting-world-selection"
+selection_dataset_revision = "3090875ead5b363aa8799215abd664bfbff3dfc2"
+selection_count_per_profile = 10
+profile_ids = ["frontier_hard_a", "frontier_hard_b"]
+
+[visibility]
+executable_prototypes = false
+private_scenes = false
+gold_answers = false
+oracle_outputs = false
+review_material = false
+
+[policy]
+seed_count_per_profile = 10
+global_question_text_deduplication = true
+global_near_duplicate_cluster_deduplication = true
+older_section3_candidates_excluded = true
+human_content_filtering = false
+campaign_local_growth_only = true
+human_only_canonical_admission = true
+pixel_only_inverse_arm = true
+builder_image_access = "none"
+bootstrap_feedback = "outcome-only"
+new_candidate_feedback = "predictions_outcomes_confidence_public_rationales"
+
+[selection]
+task_eligibility = "all three frontier evaluators scored the same five images and at least two evaluators each scored at most 3/5"
+section_quota_per_profile = "five Section 1 plus five Section 2"
+generator_quota_per_profile = "two each from DeepSeek, Luna, Opus, Sol High, and Sol Max"
+historical_profile_cap_per_profile = 3
+near_duplicate_rule = "exact text or pixels, DINO image cosine >= 0.95, or DINO and MiniLM cosines both >= 0.90"
+lottery = "ascending SHA-256 ranks under section3-frontier-hard-seeds@0.2.0 with deterministic constrained backtracking"

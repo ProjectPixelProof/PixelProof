@@ -1,0 +1,46 @@
+{
+  "schema_version": "0.4.0",
+  "candidate_id": "coherent_arc_triplet",
+  "title": "Coherent arc triplet",
+  "question": "Do all three separated colored curve fragments trace parts of one imaginary circle? Answer yes or no.",
+  "decision_type": "yesno",
+  "task_signature": {
+    "decision_var": "shared_circle_residual",
+    "structure": "disconnected_arc_triplet",
+    "decision_type": "yesno",
+    "mechanism": "Recover three disconnected curved contours and decide whether their independently estimated continuation circles agree."
+  },
+  "latent_z": {
+    "description": "Three equal-ink arc fragments around a translated local implied circle, with palette, scale, phase, draw order, and discordant-fragment identity as balanced variables.",
+    "fields": ["canvas_size", "center_x", "center_y", "radius", "arc_span", "phase", "stroke_width", "ink_rgb", "background_rgb", "fragment_order", "fragment_modes"]
+  },
+  "latent_alias": {
+    "mode": "tested_transforms",
+    "justification": "The three disconnected fragments are composited without overlap, so reversing their serialized draw order changes the latent representation while preserving every rendered pixel and the collective-circle label.",
+    "label_inputs": ["fragment_modes"]
+  },
+  "boundary": {
+    "observable": "Each visible contour supplies an independently measurable curvature center; the decision boundary is the visible disagreement among the three recovered continuation circles.",
+    "quarantine": "Scenes near the calibrated collective-fit residual threshold are quarantined, and missing or merged fragments make the pixel oracle abstain."
+  },
+  "oracle_independence": {
+    "image_only": true,
+    "forbidden_imports_absent": true
+  },
+  "mechanism_fingerprint": {
+    "decision_family": "composition",
+    "entities": ["arc", "circle", "set"],
+    "arity": "triple",
+    "relation": "composition",
+    "margin_operator": "composition_min",
+    "oracle_primitives": ["color_segmentation", "connected_components", "circle_fit", "distance_geometry", "composition"],
+    "composition_depth": 2
+  },
+  "semantic_contrast": {
+    "closest_known_worlds": ["arc_compare", "arc_curvature", "collinearity", "compactness", "conjunction"],
+    "known_negative_matches": ["polyline_turn_count", "parallel_bars"],
+    "contrast": "Unlike arc_curvature or arc_compare, no fragment's curvature sign or magnitude is itself the answer: three spatially separated contours must be fit independently and bound into one common continuation circle. Unlike collinearity, the evidence is curved and the relation is agreement of recovered centers and radii, not point-to-line distance.",
+    "expected_information_gain": "This isolates collective contour completion across disconnected local evidence while holding component count, total ink, palette, placement, and scale independent of the label."
+  },
+  "deviations": []
+}

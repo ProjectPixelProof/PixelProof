@@ -1,0 +1,46 @@
+{
+  "schema_version": "0.4.0",
+  "candidate_id": "spring_coil_count",
+  "title": "Visible full coils along one spring wire",
+  "question": "How many full coils are visible in the single blue spring? Count one coil for each complete top-to-bottom-to-top cycle while following the wire from left to right. Do not count a partial cycle at either end.",
+  "decision_type": "count_open",
+  "task_signature": {
+    "decision_var": "full_cycle_count",
+    "structure": "single_connected_spring_trace",
+    "decision_type": "count_open",
+    "mechanism": "Follow one connected oscillating wire and count complete top-to-bottom-to-top cycles between visibly level endpoints."
+  },
+  "latent_z": {
+    "description": "A sampled full-cycle count and nuisance geometry determine one continuous blue spring trace with level endpoint stubs.",
+    "fields": ["coil_count", "amplitude", "wire_width", "vertical_shift", "horizontal_margin", "canvas_width", "canvas_height"]
+  },
+  "latent_alias": {
+    "mode": "not_applicable",
+    "justification": "Every declared scene field changes rendered pixels, and the only field used by analytic gold is the visibly instantiated coil_count.",
+    "label_inputs": ["coil_count"]
+  },
+  "boundary": {
+    "observable": "Each full coil is one complete visible top-bottom-top traversal; both endpoint stubs lie on the same top level so partial end cycles are explicit.",
+    "quarantine": "Scenes are quarantined if pixel recovery loses connectivity, extrema separation, endpoint-level agreement, or runner-up count margin."
+  },
+  "oracle_independence": {
+    "image_only": true,
+    "forbidden_imports_absent": true
+  },
+  "mechanism_fingerprint": {
+    "decision_family": "count",
+    "entities": ["line", "arc", "set"],
+    "arity": "single",
+    "relation": "curvature",
+    "margin_operator": "discrete_boundary",
+    "oracle_primitives": ["color_segmentation", "connected_components", "bounding_box", "centroid", "composition"],
+    "composition_depth": 2
+  },
+  "semantic_contrast": {
+    "closest_known_worlds": ["visible_trident_point_count", "continuous_staff_row_count", "visible_m_arch_count", "visible_wave_alternation"],
+    "known_negative_matches": ["polyline_turn_count"],
+    "contrast": "Unlike trident terminal counting, arch counting against a guide, row traversal counting, or a binary alternation check, this mechanism has no branches or endpoints to enumerate: it follows a single curved wire and composes paired opposite extrema into complete periodic cycles with explicitly level terminal phases.",
+    "expected_information_gain": "It isolates whether a model overrides an iconic regular-spring prior by integrating all visible cycles of one long connected trace."
+  },
+  "deviations": []
+}

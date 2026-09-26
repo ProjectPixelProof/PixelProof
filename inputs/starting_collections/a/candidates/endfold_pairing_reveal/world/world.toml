@@ -1,0 +1,35 @@
+[world]
+name = "endfold_pairing_reveal"
+description = "Declared-transform reveal world: one teal 50-bead cord spans the canvas, and folding it end to end pairs bead k with bead 51-k; the 25 same-gray verdicts spell one abstract glyph."
+task = "declared-transform-symbol-reveal"
+splits = ["evidence", "stress"]
+entrypoint = "world.generate"
+
+[targets]
+categorical = "decision"
+answer = "answer"
+candidates = "candidates"
+continuous = "margin"
+
+[gold]
+decision_attr = "tones (bead grays in walking order, folded onto themselves)"
+margin_key = "margin"
+margin_units = "luma_units_of_per_bead_tone_clearance"
+quarantine_rule = "per-bead tone clearance (half the rendered gray gap) below 17.0 luma units"
+boundary_observable = "every bead carries one of exactly two rendered grays and the two-square key renders both of them, so the per-bead tone boundary is drawn in the image and the pixel arm splits the 50 bead readings at the midpoint of their own observed range; the fold boundary is combinatorial and needs no threshold"
+diagnostic_keys = ["glyph_hamming_margin", "bead_count"]
+
+[transform]
+declared = "walk the teal cord from its bracketed end bead to the far end, fold the walk end to end so bead k meets bead 51-k, mark each of the 25 folded pairs whose two beads share a gray, write the 25 verdicts row by row into a 5x5 grid, and read the glyph they spell"
+fiducials = "the teal cord colour isolates the decisive trace; each round bead marks one node of the route and fixes the bead spacing; unbroken ink between beads at the minimum spacing gives cord adjacency; the four black corner brackets around one end bead fix where the walk starts; the two-swatch tone key is placed in a corner the cord does not reach"
+answer_set = ["ell", "ex", "plus", "tee"]
+order_dependence = "each output bit compares two beads that the fold brings together from opposite ends of one walk, so no per-bead reading and no positional reading of the canvas recovers the glyph; the raw first half, the raw second half, the half-on-half pairing and the neighbour pairing are all rejected at sampling time when they would spell a declared glyph"
+
+[support]
+placement = "the decisive cord is one connected unbranching thin route of 50 beads on a 21x21 lattice of pitch 28 px, built from long straight legs so that it stays sparse, and sampling requires its bounding box to span at least 17 lattice steps in both axes, at least 3 beads in each lattice quadrant, and at least 19 of the 25 folded pairs to be at least 8 lattice steps apart, so the support is one thin elongated component reaching across the whole 640 px canvas while staying clear of the edges"
+nondiagnostic = "the pale lavender decoy cords and the two-swatch tone key are never read by the pixel oracle, which derives its tone split from the 50 cord beads themselves"
+interior_dependence = "erasing any interior stretch of the cord breaks the 50-bead count or the unbranching degree sequence and forces abstention, and whiting out either half of the picture - left, right, top or bottom - also forces abstention, because every folded pair needs one bead from each end of the walk"
+
+[provenance]
+role = "episode_candidate"
+renderer = "numpy + Pillow flat polyline and ellipse fills, no antialiasing, no LaTeX"

@@ -1,0 +1,461 @@
+{
+  "id": "starting_collection_b",
+  "records": [
+    {
+      "candidate_id": "interleaved_sheet_extract",
+      "candidate_path": "inputs/starting_collections/b/candidates/interleaved_sheet_extract",
+      "candidate_sha256": "9cd09572ec2444c7eec129b934f2fd9ee3b70a6556ebd7eae789ccdbaf5b40fa",
+      "feedback_path": "inputs/starting_collections/b/feedback/interleaved_sheet_extract",
+      "feedback_result_sha256": "8c484b69152062b9f12f0cefd44eb63827feb72b7bf5003025ece81e3b7c5cbf",
+      "sample_set_sha256": "cf982b45bfd680e7d6cab2498d1c03027078ad93094228828df15caa648ad120",
+      "working_seed_record": {
+        "artifact_path": "bootstrap-placeholder",
+        "candidate_id": "interleaved_sheet_extract",
+        "candidate_sha256": "9cd09572ec2444c7eec129b934f2fd9ee3b70a6556ebd7eae789ccdbaf5b40fa",
+        "canonical_admitted": false,
+        "episode_index": 0,
+        "failed_gates": [],
+        "gate_report_sha256": null,
+        "mechanically_eligible": true,
+        "mechanism_fingerprint": {
+          "arity": "mixed",
+          "composition_depth": 2,
+          "decision_family": "selection",
+          "entities": [
+            "region",
+            "set",
+            "shape",
+            "attribute"
+          ],
+          "margin_operator": "top_gap",
+          "oracle_primitives": [
+            "color_segmentation",
+            "bounding_box",
+            "pixel_count",
+            "composition"
+          ],
+          "relation": "composition"
+        },
+        "metadata_status": "parsed",
+        "near_duplicate_cluster": "cluster-17e9fbfca122",
+        "registry_distinct": true,
+        "reported_submission_valid": true,
+        "semantic_duplicate_risk": "historical_review_ready",
+        "semantic_review_ready": true,
+        "source_snapshot_vendored": true,
+        "submission_valid": true,
+        "verifier_completed": true
+      }
+    },
+    {
+      "candidate_id": "arrow_reachable_terminal",
+      "candidate_path": "inputs/starting_collections/b/candidates/arrow_reachable_terminal",
+      "candidate_sha256": "67cd799feb58664fa2e1d0dc89ef22ac71ebdc897966e19aa9d251f44f3b2786",
+      "feedback_path": "inputs/starting_collections/b/feedback/arrow_reachable_terminal",
+      "feedback_result_sha256": "4b28370ca7d10c36623454bc3de66387fe13e5244ffdf6b24cb70d74b1be89ea",
+      "sample_set_sha256": "5212d7ca15a7bf167fe5d7b448703da07782ae574278da4869b9617c8c95f93f",
+      "working_seed_record": {
+        "artifact_path": "bootstrap-placeholder",
+        "candidate_id": "arrow_reachable_terminal",
+        "candidate_sha256": "67cd799feb58664fa2e1d0dc89ef22ac71ebdc897966e19aa9d251f44f3b2786",
+        "canonical_admitted": false,
+        "episode_index": 0,
+        "failed_gates": [],
+        "gate_report_sha256": null,
+        "mechanically_eligible": true,
+        "mechanism_fingerprint": {
+          "arity": "mixed",
+          "composition_depth": 4,
+          "decision_family": "selection",
+          "entities": [
+            "point",
+            "line",
+            "color"
+          ],
+          "margin_operator": "composition_min",
+          "oracle_primitives": [
+            "color_segmentation",
+            "connected_components",
+            "centroid",
+            "line_fit",
+            "composition"
+          ],
+          "relation": "composition"
+        },
+        "metadata_status": "parsed",
+        "near_duplicate_cluster": "cluster-7fc75a3419a1",
+        "registry_distinct": true,
+        "reported_submission_valid": true,
+        "semantic_duplicate_risk": "historical_review_ready",
+        "semantic_review_ready": true,
+        "source_snapshot_vendored": true,
+        "submission_valid": true,
+        "verifier_completed": true
+      }
+    },
+    {
+      "candidate_id": "paired_seam_correspondence",
+      "candidate_path": "inputs/starting_collections/b/candidates/paired_seam_correspondence",
+      "candidate_sha256": "0b94b22f95bfb6098ca8ad607e2f4792c7a4f31c04baa79dce32324a6cd5fa0a",
+      "feedback_path": "inputs/starting_collections/b/feedback/paired_seam_correspondence",
+      "feedback_result_sha256": "44ff607696053c355faab6fecf79d365ac4599f867d1a3b8bdfd360f0f4daf2a",
+      "sample_set_sha256": "d703768aa3b1e5b43b56952d26f992694138bffe6f7424b30ef942c12d992bb5",
+      "working_seed_record": {
+        "artifact_path": "bootstrap-placeholder",
+        "candidate_id": "paired_seam_correspondence",
+        "candidate_sha256": "0b94b22f95bfb6098ca8ad607e2f4792c7a4f31c04baa79dce32324a6cd5fa0a",
+        "canonical_admitted": false,
+        "episode_index": 0,
+        "failed_gates": [],
+        "gate_report_sha256": null,
+        "mechanically_eligible": true,
+        "mechanism_fingerprint": {
+          "arity": "pair",
+          "composition_depth": 2,
+          "decision_family": "composition",
+          "entities": [
+            "shape"
+          ],
+          "margin_operator": "signed_difference",
+          "oracle_primitives": [
+            "color_segmentation",
+            "connected_components",
+            "bounding_box",
+            "pixel_count",
+            "composition"
+          ],
+          "relation": "composition"
+        },
+        "metadata_status": "parsed",
+        "near_duplicate_cluster": "cluster-ec8f0c7a37b3",
+        "registry_distinct": true,
+        "reported_submission_valid": true,
+        "semantic_duplicate_risk": "historical_review_ready",
+        "semantic_review_ready": true,
+        "source_snapshot_vendored": true,
+        "submission_valid": true,
+        "verifier_completed": true
+      }
+    },
+    {
+      "candidate_id": "bitplane_glyph_reveal",
+      "candidate_path": "inputs/starting_collections/b/candidates/bitplane_glyph_reveal",
+      "candidate_sha256": "bc66d512b0b4e3c7944db14f0e02c596444e6fb740d7e2fb9a474015fec36e6a",
+      "feedback_path": "inputs/starting_collections/b/feedback/bitplane_glyph_reveal",
+      "feedback_result_sha256": "b79854ab0fc5aabdff79c3f7cddeaa66ca27baf299b678e9761ad6782e9fe276",
+      "sample_set_sha256": "9f18675be98683667cec9f797c0ccc63a2da37381ba5c9a458cbde7922a69eda",
+      "working_seed_record": {
+        "artifact_path": "bootstrap-placeholder",
+        "candidate_id": "bitplane_glyph_reveal",
+        "candidate_sha256": "bc66d512b0b4e3c7944db14f0e02c596444e6fb740d7e2fb9a474015fec36e6a",
+        "canonical_admitted": false,
+        "episode_index": 0,
+        "failed_gates": [],
+        "gate_report_sha256": null,
+        "mechanically_eligible": true,
+        "mechanism_fingerprint": {
+          "arity": "single",
+          "composition_depth": 2,
+          "decision_family": "selection",
+          "entities": [
+            "shape",
+            "region"
+          ],
+          "margin_operator": "count_difference",
+          "oracle_primitives": [
+            "pixel_count",
+            "composition"
+          ],
+          "relation": "composition"
+        },
+        "metadata_status": "parsed",
+        "near_duplicate_cluster": "cluster-4c72cc1c5d0a",
+        "registry_distinct": true,
+        "reported_submission_valid": true,
+        "semantic_duplicate_risk": "historical_review_ready",
+        "semantic_review_ready": true,
+        "source_snapshot_vendored": true,
+        "submission_valid": true,
+        "verifier_completed": true
+      }
+    },
+    {
+      "candidate_id": "stitch_face_alternation",
+      "candidate_path": "inputs/starting_collections/b/candidates/stitch_face_alternation",
+      "candidate_sha256": "697db0e24cec4c6c86516c4581a40c570ac1bfdb51b6f9d97f8782c16c21da93",
+      "feedback_path": "inputs/starting_collections/b/feedback/stitch_face_alternation",
+      "feedback_result_sha256": "d4c2448ba04c939826b062564ad202efd5135d420a8f11fa2d7d059b26db3626",
+      "sample_set_sha256": "920212bb6be87fc2c9144a43aa6d25b8c26b4b585bd127ee80458966a84158ed",
+      "working_seed_record": {
+        "artifact_path": "bootstrap-placeholder",
+        "candidate_id": "stitch_face_alternation",
+        "candidate_sha256": "697db0e24cec4c6c86516c4581a40c570ac1bfdb51b6f9d97f8782c16c21da93",
+        "canonical_admitted": false,
+        "episode_index": 0,
+        "failed_gates": [],
+        "gate_report_sha256": null,
+        "mechanically_eligible": true,
+        "mechanism_fingerprint": {
+          "arity": "mixed",
+          "composition_depth": 3,
+          "decision_family": "composition",
+          "entities": [
+            "segment",
+            "region",
+            "set",
+            "color"
+          ],
+          "margin_operator": "composition_min",
+          "oracle_primitives": [
+            "color_segmentation",
+            "connected_components",
+            "bounding_box",
+            "distance_geometry",
+            "pixel_count",
+            "composition"
+          ],
+          "relation": "order"
+        },
+        "metadata_status": "parsed",
+        "near_duplicate_cluster": "cluster-330443093490",
+        "registry_distinct": true,
+        "reported_submission_valid": true,
+        "semantic_duplicate_risk": "historical_review_ready",
+        "semantic_review_ready": true,
+        "source_snapshot_vendored": true,
+        "submission_valid": true,
+        "verifier_completed": true
+      }
+    },
+    {
+      "candidate_id": "global_elongation_axis",
+      "candidate_path": "inputs/starting_collections/b/candidates/global_elongation_axis",
+      "candidate_sha256": "1c8c311a3de8a723145fe89f0b7242161ea46862d5159b265361d3253d8b4d43",
+      "feedback_path": "inputs/starting_collections/b/feedback/global_elongation_axis",
+      "feedback_result_sha256": "3971235db6ae297898c37693d8be950ba4563c0624de1e46d27ac205366c208e",
+      "sample_set_sha256": "df398c657c5e5625d0b214ccac1cb566a241ab46a8a6f63b23f4da73922941ab",
+      "working_seed_record": {
+        "artifact_path": "bootstrap-placeholder",
+        "candidate_id": "global_elongation_axis",
+        "candidate_sha256": "1c8c311a3de8a723145fe89f0b7242161ea46862d5159b265361d3253d8b4d43",
+        "canonical_admitted": false,
+        "episode_index": 0,
+        "failed_gates": [],
+        "gate_report_sha256": null,
+        "mechanically_eligible": true,
+        "mechanism_fingerprint": {
+          "arity": "single",
+          "composition_depth": 2,
+          "decision_family": "selection",
+          "entities": [
+            "set",
+            "point"
+          ],
+          "margin_operator": "angular_difference",
+          "oracle_primitives": [
+            "color_segmentation",
+            "centroid",
+            "composition"
+          ],
+          "relation": "orientation"
+        },
+        "metadata_status": "parsed",
+        "near_duplicate_cluster": "cluster-e1b89a971020",
+        "registry_distinct": true,
+        "reported_submission_valid": true,
+        "semantic_duplicate_risk": "historical_review_ready",
+        "semantic_review_ready": true,
+        "source_snapshot_vendored": true,
+        "submission_valid": true,
+        "verifier_completed": true
+      }
+    },
+    {
+      "candidate_id": "colored_arc_curvature_correspondence",
+      "candidate_path": "inputs/starting_collections/b/candidates/colored_arc_curvature_correspondence",
+      "candidate_sha256": "0219844734b905ba1bc789d2f3fe83a03bdcd8a409daf939e30ebb4066760364",
+      "feedback_path": "inputs/starting_collections/b/feedback/colored_arc_curvature_correspondence",
+      "feedback_result_sha256": "bd783c84e3f663d6ccbc1c9b1322a2d47bce847a64b48c88df16c60db7508a5b",
+      "sample_set_sha256": "0fcbef8ef3417564c7b55fe8ee29b1c759c8506cf10617abeb01157ed049acc9",
+      "working_seed_record": {
+        "artifact_path": "bootstrap-placeholder",
+        "candidate_id": "colored_arc_curvature_correspondence",
+        "candidate_sha256": "0219844734b905ba1bc789d2f3fe83a03bdcd8a409daf939e30ebb4066760364",
+        "canonical_admitted": false,
+        "episode_index": 0,
+        "failed_gates": [],
+        "gate_report_sha256": null,
+        "mechanically_eligible": true,
+        "mechanism_fingerprint": {
+          "arity": "mixed",
+          "composition_depth": 2,
+          "decision_family": "selection",
+          "entities": [
+            "arc",
+            "color",
+            "set"
+          ],
+          "margin_operator": "discrete_boundary",
+          "oracle_primitives": [
+            "color_segmentation",
+            "connected_components",
+            "arc_fit",
+            "composition"
+          ],
+          "relation": "curvature"
+        },
+        "metadata_status": "parsed",
+        "near_duplicate_cluster": "cluster-248f66a94109",
+        "registry_distinct": true,
+        "reported_submission_valid": true,
+        "semantic_duplicate_risk": "historical_review_ready",
+        "semantic_review_ready": true,
+        "source_snapshot_vendored": true,
+        "submission_valid": true,
+        "verifier_completed": true
+      }
+    },
+    {
+      "candidate_id": "transpose_stamp_correspondence",
+      "candidate_path": "inputs/starting_collections/b/candidates/transpose_stamp_correspondence",
+      "candidate_sha256": "e5bd5f104ff7493ba2f16e6efccd634a708a5706f9d9d2fb3060f192e3641ce9",
+      "feedback_path": "inputs/starting_collections/b/feedback/transpose_stamp_correspondence",
+      "feedback_result_sha256": "9c585a8ace445f3111bed8decdcd6c7e4893a82a74da9527016fde8af8bb6f02",
+      "sample_set_sha256": "b60b1709622953a612187f58e2fd1d87ed7952d231a4882c0c13af7f1c618865",
+      "working_seed_record": {
+        "artifact_path": "bootstrap-placeholder",
+        "candidate_id": "transpose_stamp_correspondence",
+        "candidate_sha256": "e5bd5f104ff7493ba2f16e6efccd634a708a5706f9d9d2fb3060f192e3641ce9",
+        "canonical_admitted": false,
+        "episode_index": 0,
+        "failed_gates": [],
+        "gate_report_sha256": null,
+        "mechanically_eligible": true,
+        "mechanism_fingerprint": {
+          "arity": "mixed",
+          "composition_depth": 3,
+          "decision_family": "selection",
+          "entities": [
+            "set",
+            "region",
+            "color",
+            "attribute"
+          ],
+          "margin_operator": "discrete_boundary",
+          "oracle_primitives": [
+            "color_segmentation",
+            "connected_components",
+            "bounding_box",
+            "pixel_count",
+            "composition"
+          ],
+          "relation": "attribute_binding"
+        },
+        "metadata_status": "parsed",
+        "near_duplicate_cluster": "cluster-803a4f308537",
+        "registry_distinct": true,
+        "reported_submission_valid": true,
+        "semantic_duplicate_risk": "historical_review_ready",
+        "semantic_review_ready": true,
+        "source_snapshot_vendored": true,
+        "submission_valid": true,
+        "verifier_completed": true
+      }
+    },
+    {
+      "candidate_id": "toothline_rasterize",
+      "candidate_path": "inputs/starting_collections/b/candidates/toothline_rasterize",
+      "candidate_sha256": "774c8b83057f0f6187f111fc24224f1d1b2475c9e73921f3f06c4922d10aade6",
+      "feedback_path": "inputs/starting_collections/b/feedback/toothline_rasterize",
+      "feedback_result_sha256": "e8c9bbfc5878a618732556f6b0bc08cd32590f5353bb802da63e4ddc1f9634f5",
+      "sample_set_sha256": "c258276a6b7033b2d7ebccd88f36c567220ef3f76ff2422fd7ee0b1da028fdfe",
+      "working_seed_record": {
+        "artifact_path": "bootstrap-placeholder",
+        "candidate_id": "toothline_rasterize",
+        "candidate_sha256": "774c8b83057f0f6187f111fc24224f1d1b2475c9e73921f3f06c4922d10aade6",
+        "canonical_admitted": false,
+        "episode_index": 0,
+        "failed_gates": [],
+        "gate_report_sha256": null,
+        "mechanically_eligible": true,
+        "mechanism_fingerprint": {
+          "arity": "single",
+          "composition_depth": 2,
+          "decision_family": "composition",
+          "entities": [
+            "segment",
+            "shape"
+          ],
+          "margin_operator": "composition_min",
+          "oracle_primitives": [
+            "color_segmentation",
+            "connected_components",
+            "bounding_box",
+            "composition"
+          ],
+          "relation": "composition"
+        },
+        "metadata_status": "parsed",
+        "near_duplicate_cluster": "cluster-047d314a0bd7",
+        "registry_distinct": true,
+        "reported_submission_valid": true,
+        "semantic_duplicate_risk": "historical_review_ready",
+        "semantic_review_ready": true,
+        "source_snapshot_vendored": true,
+        "submission_valid": true,
+        "verifier_completed": true
+      }
+    },
+    {
+      "candidate_id": "spring_coil_count",
+      "candidate_path": "inputs/starting_collections/b/candidates/spring_coil_count",
+      "candidate_sha256": "dca5b3e7490bc6d6ec56c3e71bcc16d90472f05f578be2cc0a04c55d6ec36e84",
+      "feedback_path": "inputs/starting_collections/b/feedback/spring_coil_count",
+      "feedback_result_sha256": "418458cec27e885feb860bfbbefa743195c4b98d39c53828c73d15a7d48ac548",
+      "sample_set_sha256": "4c6fa50a46c7400a9b46ac92073ad6ca0b1c813d4730dab7b065ef99b8165dff",
+      "working_seed_record": {
+        "artifact_path": "bootstrap-placeholder",
+        "candidate_id": "spring_coil_count",
+        "candidate_sha256": "dca5b3e7490bc6d6ec56c3e71bcc16d90472f05f578be2cc0a04c55d6ec36e84",
+        "canonical_admitted": false,
+        "episode_index": 0,
+        "failed_gates": [],
+        "gate_report_sha256": null,
+        "mechanically_eligible": true,
+        "mechanism_fingerprint": {
+          "arity": "single",
+          "composition_depth": 2,
+          "decision_family": "count",
+          "entities": [
+            "line",
+            "arc",
+            "set"
+          ],
+          "margin_operator": "discrete_boundary",
+          "oracle_primitives": [
+            "color_segmentation",
+            "connected_components",
+            "bounding_box",
+            "centroid",
+            "composition"
+          ],
+          "relation": "curvature"
+        },
+        "metadata_status": "parsed",
+        "near_duplicate_cluster": "cluster-3ac6f1020201",
+        "registry_distinct": true,
+        "reported_submission_valid": true,
+        "semantic_duplicate_risk": "historical_review_ready",
+        "semantic_review_ready": true,
+        "source_snapshot_vendored": true,
+        "submission_valid": true,
+        "verifier_completed": true
+      }
+    }
+  ],
+  "schema_version": "difficulty-feedback-bootstrap-0.1.0",
+  "source": {
+    "collection": "b",
+    "selection_status": "frozen_starting_input"
+  }
+}

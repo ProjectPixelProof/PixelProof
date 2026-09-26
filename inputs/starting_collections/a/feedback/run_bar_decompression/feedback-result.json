@@ -1,0 +1,259 @@
+{
+  "aggregate_accuracy": 0.6,
+  "aggregation": "majority_evaluators_at_or_below_threshold",
+  "candidate_id": "run_bar_decompression",
+  "candidate_sha256": "fcd8796336c2fb7e76cf27dfac938554a6f16a55eb01e9b9233e7f192542c3ee",
+  "difficulty_hypothesis": null,
+  "episode_index": 0,
+  "evaluated_at": "2026-08-29T00:00:00Z",
+  "evaluator_accuracies": {
+    "gemini37_flash_high": 0.6,
+    "opus5_high": 0.4,
+    "sol_high": 0.8
+  },
+  "examples_per_evaluator": 5,
+  "feedback_visibility": "outcome_only_bootstrap_no_public_rationales",
+  "hard_accuracy_threshold": 0.6,
+  "hard_seed_eligible": true,
+  "maximum_paid_requests": 15,
+  "policy_id": "difficulty-feedback@0.6.0",
+  "protected_valid": true,
+  "sample_responses": [
+    {
+      "candidates": [
+        "zigzag",
+        "key",
+        "anchor",
+        "bell"
+      ],
+      "oracle_answer": "bell",
+      "question": "In each cyan lane, read the bars from left to right. A dark bar means black cells and a pale bar means white cells; the bar height in small grid steps is that run's length. Expand the runs into one row per lane, then stack the lanes from top to bottom. Which symbol appears: zigzag, key, anchor, or bell?",
+      "responses": [
+        {
+          "confidence": null,
+          "confidence_status": "not_preserved_in_frozen_section1_2_export",
+          "correct": true,
+          "evaluator": "sol_high",
+          "model_id": "openai/gpt-5.6-sol",
+          "prediction": "bell",
+          "provider": "OpenAI",
+          "served_model": "openai/gpt-5.6-sol",
+          "status": "scored"
+        },
+        {
+          "confidence": null,
+          "confidence_status": "not_preserved_in_frozen_section1_2_export",
+          "correct": false,
+          "evaluator": "opus5_high",
+          "model_id": "anthropic/claude-opus-5",
+          "prediction": "anchor",
+          "provider": "Anthropic",
+          "served_model": "anthropic/claude-opus-5",
+          "status": "scored"
+        },
+        {
+          "confidence": null,
+          "confidence_status": "not_preserved_in_frozen_section1_2_export",
+          "correct": true,
+          "evaluator": "gemini37_flash_high",
+          "model_id": "google/gemini-3.7-flash",
+          "prediction": "bell",
+          "provider": "Google",
+          "served_model": "google/gemini-3.7-flash",
+          "status": "scored"
+        }
+      ],
+      "sample_id": "sample-01"
+    },
+    {
+      "candidates": [
+        "zigzag",
+        "key",
+        "anchor",
+        "bell"
+      ],
+      "oracle_answer": "key",
+      "question": "In each cyan lane, read the bars from left to right. A dark bar means black cells and a pale bar means white cells; the bar height in small grid steps is that run's length. Expand the runs into one row per lane, then stack the lanes from top to bottom. Which symbol appears: zigzag, key, anchor, or bell?",
+      "responses": [
+        {
+          "confidence": null,
+          "confidence_status": "not_preserved_in_frozen_section1_2_export",
+          "correct": true,
+          "evaluator": "sol_high",
+          "model_id": "openai/gpt-5.6-sol",
+          "prediction": "key",
+          "provider": "OpenAI",
+          "served_model": "openai/gpt-5.6-sol",
+          "status": "scored"
+        },
+        {
+          "confidence": null,
+          "confidence_status": "not_preserved_in_frozen_section1_2_export",
+          "correct": false,
+          "evaluator": "opus5_high",
+          "model_id": "anthropic/claude-opus-5",
+          "prediction": "zigzag",
+          "provider": "Anthropic",
+          "served_model": "anthropic/claude-opus-5",
+          "status": "scored"
+        },
+        {
+          "confidence": null,
+          "confidence_status": "not_preserved_in_frozen_section1_2_export",
+          "correct": true,
+          "evaluator": "gemini37_flash_high",
+          "model_id": "google/gemini-3.7-flash",
+          "prediction": "key",
+          "provider": "Google",
+          "served_model": "google/gemini-3.7-flash",
+          "status": "scored"
+        }
+      ],
+      "sample_id": "sample-02"
+    },
+    {
+      "candidates": [
+        "zigzag",
+        "key",
+        "anchor",
+        "bell"
+      ],
+      "oracle_answer": "anchor",
+      "question": "In each cyan lane, read the bars from left to right. A dark bar means black cells and a pale bar means white cells; the bar height in small grid steps is that run's length. Expand the runs into one row per lane, then stack the lanes from top to bottom. Which symbol appears: zigzag, key, anchor, or bell?",
+      "responses": [
+        {
+          "confidence": null,
+          "confidence_status": "not_preserved_in_frozen_section1_2_export",
+          "correct": true,
+          "evaluator": "sol_high",
+          "model_id": "openai/gpt-5.6-sol",
+          "prediction": "anchor",
+          "provider": "OpenAI",
+          "served_model": "openai/gpt-5.6-sol",
+          "status": "scored"
+        },
+        {
+          "confidence": null,
+          "confidence_status": "not_preserved_in_frozen_section1_2_export",
+          "correct": true,
+          "evaluator": "opus5_high",
+          "model_id": "anthropic/claude-opus-5",
+          "prediction": "anchor",
+          "provider": "Anthropic",
+          "served_model": "anthropic/claude-opus-5",
+          "status": "scored"
+        },
+        {
+          "confidence": null,
+          "confidence_status": "not_preserved_in_frozen_section1_2_export",
+          "correct": false,
+          "evaluator": "gemini37_flash_high",
+          "model_id": "google/gemini-3.7-flash",
+          "prediction": "key",
+          "provider": "Google",
+          "served_model": "google/gemini-3.7-flash",
+          "status": "scored"
+        }
+      ],
+      "sample_id": "sample-03"
+    },
+    {
+      "candidates": [
+        "zigzag",
+        "key",
+        "anchor",
+        "bell"
+      ],
+      "oracle_answer": "zigzag",
+      "question": "In each cyan lane, read the bars from left to right. A dark bar means black cells and a pale bar means white cells; the bar height in small grid steps is that run's length. Expand the runs into one row per lane, then stack the lanes from top to bottom. Which symbol appears: zigzag, key, anchor, or bell?",
+      "responses": [
+        {
+          "confidence": null,
+          "confidence_status": "not_preserved_in_frozen_section1_2_export",
+          "correct": false,
+          "evaluator": "sol_high",
+          "model_id": "openai/gpt-5.6-sol",
+          "prediction": "key",
+          "provider": "OpenAI",
+          "served_model": "openai/gpt-5.6-sol",
+          "status": "scored"
+        },
+        {
+          "confidence": null,
+          "confidence_status": "not_preserved_in_frozen_section1_2_export",
+          "correct": false,
+          "evaluator": "opus5_high",
+          "model_id": "anthropic/claude-opus-5",
+          "prediction": "key",
+          "provider": "Anthropic",
+          "served_model": "anthropic/claude-opus-5",
+          "status": "scored"
+        },
+        {
+          "confidence": null,
+          "confidence_status": "not_preserved_in_frozen_section1_2_export",
+          "correct": false,
+          "evaluator": "gemini37_flash_high",
+          "model_id": "google/gemini-3.7-flash",
+          "prediction": "key",
+          "provider": "Google",
+          "served_model": "google/gemini-3.7-flash",
+          "status": "scored"
+        }
+      ],
+      "sample_id": "sample-04"
+    },
+    {
+      "candidates": [
+        "zigzag",
+        "key",
+        "anchor",
+        "bell"
+      ],
+      "oracle_answer": "bell",
+      "question": "In each cyan lane, read the bars from left to right. A dark bar means black cells and a pale bar means white cells; the bar height in small grid steps is that run's length. Expand the runs into one row per lane, then stack the lanes from top to bottom. Which symbol appears: zigzag, key, anchor, or bell?",
+      "responses": [
+        {
+          "confidence": null,
+          "confidence_status": "not_preserved_in_frozen_section1_2_export",
+          "correct": true,
+          "evaluator": "sol_high",
+          "model_id": "openai/gpt-5.6-sol",
+          "prediction": "bell",
+          "provider": "OpenAI",
+          "served_model": "openai/gpt-5.6-sol",
+          "status": "scored"
+        },
+        {
+          "confidence": null,
+          "confidence_status": "not_preserved_in_frozen_section1_2_export",
+          "correct": true,
+          "evaluator": "opus5_high",
+          "model_id": "anthropic/claude-opus-5",
+          "prediction": "bell",
+          "provider": "Anthropic",
+          "served_model": "anthropic/claude-opus-5",
+          "status": "scored"
+        },
+        {
+          "confidence": null,
+          "confidence_status": "not_preserved_in_frozen_section1_2_export",
+          "correct": true,
+          "evaluator": "gemini37_flash_high",
+          "model_id": "google/gemini-3.7-flash",
+          "prediction": "bell",
+          "provider": "Google",
+          "served_model": "google/gemini-3.7-flash",
+          "status": "scored"
+        }
+      ],
+      "sample_id": "sample-05"
+    }
+  ],
+  "sample_set_sha256": "5041c7fe29af9578c47028f6a04c61829a6e92af2551075bb22dfa8339ab93e5",
+  "schema_version": "difficulty-feedback-result-0.6.0",
+  "source_archive_candidate_sha256": "1a7a5085cf3dc27233fd144e223b6221234cd0eaacee1ff7a5a8970f5a141fcc",
+  "source_cost_status": "not_preserved_in_frozen_section1_2_export",
+  "status": "complete",
+  "total_cost_usd": 0.0
+}

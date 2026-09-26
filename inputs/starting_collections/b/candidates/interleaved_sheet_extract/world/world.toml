@@ -1,0 +1,31 @@
+[world]
+name = "interleaved_sheet_extract"
+description = "Marker-keyed de-interleaving of two stacked 7x7 sheets printed into one 14x7 lattice; the dot-marked sheet names the answer."
+task = "symbol-selection"
+decision_type = "selection"
+splits = ["smoke", "full"]
+entrypoint = "generate"
+
+[targets]
+categorical = "decision"
+answer = "answer"
+candidates = "candidates"
+margin_key = "margin"
+
+[gold]
+decision_attr = "extracted_symbol"
+margin_key = "margin"
+quarantine_rule = "runner-up template gap below two cells"
+boundary_observable = "the compacted seven-row block of dot-marked lattice rows; the boundary is the cell-for-cell tie between the two closest named symbol templates"
+
+[render]
+backend = "pillow"
+canvas = [420, 706]
+lattice_rows = 14
+lattice_cols = 7
+block_rows = 7
+symbols = ["ring", "wedge", "zigzag", "arrow", "slash"]
+
+[provenance]
+role = "generated_candidate"
+campaign = "opus5_paper_completion_6h_003_reveal_declared_transform"

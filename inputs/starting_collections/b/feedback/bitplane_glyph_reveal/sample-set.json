@@ -1,0 +1,74 @@
+{
+  "candidate_id": "bitplane_glyph_reveal",
+  "candidate_sha256": "bc66d512b0b4e3c7944db14f0e02c596444e6fb740d7e2fb9a474015fec36e6a",
+  "distinct_image_count": 5,
+  "sample_unit": "unique_image",
+  "samples": [
+    {
+      "candidate_id": "bitplane_glyph_reveal",
+      "candidates": [
+        "A",
+        "B"
+      ],
+      "image_path": "bootstrap/feedback/bitplane_glyph_reveal/images/sample-01.png",
+      "image_sha256": "47bc12df9aac767ae1550ac6fe314e43ef975c82883b550aa5ee74d74840e346",
+      "margin": "0.714286",
+      "question": "The image is a dense field of gray noise. The answer letter is hidden only in the least-significant bit (bit-plane 0) of each pixel's gray value; the other seven bits are random noise. Read that least-significant bit plane. Which letter, A or B, is revealed? Answer A or B.",
+      "sample_id": "sample-01",
+      "sample_key": "7e47dbea21a245dfa3fda3b473635619516337b3dcdc36fdcc55fc1b804c3842"
+    },
+    {
+      "candidate_id": "bitplane_glyph_reveal",
+      "candidates": [
+        "A",
+        "B"
+      ],
+      "image_path": "bootstrap/feedback/bitplane_glyph_reveal/images/sample-02.png",
+      "image_sha256": "5eea946563fc8c49d8433603022e11d4bbc83156ed84e96da6354e116a771fdb",
+      "margin": "0.6",
+      "question": "The image is a dense field of gray noise. The answer letter is hidden only in the least-significant bit (bit-plane 0) of each pixel's gray value; the other seven bits are random noise. Read that least-significant bit plane. Which letter, A or B, is revealed? Answer A or B.",
+      "sample_id": "sample-02",
+      "sample_key": "ebccc663f1dc63c361ca371ecc9f434c1b9bc4b563baeb3c0ef3b28b132d17ce"
+    },
+    {
+      "candidate_id": "bitplane_glyph_reveal",
+      "candidates": [
+        "A",
+        "B"
+      ],
+      "image_path": "bootstrap/feedback/bitplane_glyph_reveal/images/sample-03.png",
+      "image_sha256": "09c2e528a6e6a3166d38f3e17d12904a74143a52d82073cf39caa6355d6a3b42",
+      "margin": "0.714286",
+      "question": "The image is a dense field of gray noise. The answer letter is hidden only in the least-significant bit (bit-plane 0) of each pixel's gray value; the other seven bits are random noise. Read that least-significant bit plane. Which letter, A or B, is revealed? Answer A or B.",
+      "sample_id": "sample-03",
+      "sample_key": "cc69c4f3c41bb166bcb7609b6813cb20c25922da9c45330b06c91a641e6f1b27"
+    },
+    {
+      "candidate_id": "bitplane_glyph_reveal",
+      "candidates": [
+        "A",
+        "B"
+      ],
+      "image_path": "bootstrap/feedback/bitplane_glyph_reveal/images/sample-04.png",
+      "image_sha256": "8e83418e7aed03c71ca9d3220c96dc0e121f63d5c33ed9cbefa7dec3f1c6b2af",
+      "margin": "0.6",
+      "question": "The image is a dense field of gray noise. The answer letter is hidden only in the least-significant bit (bit-plane 0) of each pixel's gray value; the other seven bits are random noise. Read that least-significant bit plane. Which letter, A or B, is revealed? Answer A or B.",
+      "sample_id": "sample-04",
+      "sample_key": "c141fd6efb0d043aa852e6a99a9fcefe78d60e1263e608f783f2fb7656070965"
+    },
+    {
+      "candidate_id": "bitplane_glyph_reveal",
+      "candidates": [
+        "A",
+        "B"
+      ],
+      "image_path": "bootstrap/feedback/bitplane_glyph_reveal/images/sample-05.png",
+      "image_sha256": "89015681aaa97aa07241952d5d91b87bf2d971500b593aa2ca58c98836ceb40e",
+      "margin": "0.714286",
+      "question": "The image is a dense field of gray noise. The answer letter is hidden only in the least-significant bit (bit-plane 0) of each pixel's gray value; the other seven bits are random noise. Read that least-significant bit plane. Which letter, A or B, is revealed? Answer A or B.",
+      "sample_id": "sample-05",
+      "sample_key": "24db7b6b8d16336eefa7ead663ba6ed8cb19572303ef14acf3446951764eb5a1"
+    }
+  ],
+  "source_selection_id": "section3-frontier-hard-seeds@0.2.0"
+}

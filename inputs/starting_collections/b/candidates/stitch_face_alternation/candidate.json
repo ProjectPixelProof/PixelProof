@@ -1,0 +1,88 @@
+{
+  "schema_version": "0.4.0",
+  "candidate_id": "stitch_face_alternation",
+  "title": "Front/behind alternation audit along one thin stitched thread, against the running-stitch prior",
+  "question": "This picture shows a mending board on a plain white background. Exactly one flat tape strip has a thin thread stitched through it: that thread crosses the tape exactly five times, and one end of that thread carries a small crimson square tag. At each crossing the thread either passes in FRONT of the tape, staying visible right across it, or BEHIND the tape, hidden where the tape covers it and leaving a visible gap. Loose thread scraps and bare tape pieces elsewhere in the picture are not stitched through any tape and must be ignored. Walk the thread from its tagged end and take the five crossings in the order the thread meets them. The stitch alternates if front and behind strictly take turns along that walk, never twice in a row. Does this stitch alternate? Answer with exactly one of: yes, no.",
+  "decision_type": "yesno",
+  "task_signature": {
+    "decision_var": "walked_face_alternation",
+    "structure": "one_thin_thread_stitched_five_times_through_one_small_tape_strip",
+    "decision_type": "yesno",
+    "mechanism": "One thin thread meanders through a single narrow tape strip confined to a small local inset. Each of its five crossings carries a locally visible binary occlusion state -- the thread is either drawn across the tape (front) or interrupted by it (behind) -- and the decision is a relation between consecutive states taken in the order the thread meets them, starting from the tagged end. No single crossing, and no unordered tally of front and behind crossings, determines the answer: the same multiset of states is alternating or broken depending on where along the thread the repeat sits, so the thin trace must be followed through its interior. The pixel arm recovers the strip by finding the only tape with thread stubs on both long edges, pairs the stubs into five chords in position order, probes each chord inside the tape for thread ink, orients the sequence by the crimson tag, and abstains whenever the strip, the stub count, a chord or the tag is unreadable."
+  },
+  "latent_z": {
+    "description": "The meander vertices (five straight tape crossings joined by runs that stay clear of the tape), the front/behind state of each crossing in path order, which path endpoint carries the crimson tag, the tape rectangle, the crossing pitch, the meander amplitude, the tape band height, the remote-scrap clearance, the thread width, the tag size, the remote nondiagnostic scraps and bare tape pieces, the canvas, the variant, and the recorded canonical prior answer.",
+    "fields": [
+      "verts",
+      "faces",
+      "tag_at",
+      "tape",
+      "pitch",
+      "amp",
+      "band",
+      "clear",
+      "thread_w",
+      "tag_side_px",
+      "distractors",
+      "width",
+      "height",
+      "variant",
+      "canonical_prior_answer"
+    ]
+  },
+  "latent_alias": {
+    "mode": "tested_transforms",
+    "justification": "An open thread has no intrinsic storage direction. The scene stores the meander from one physical end, but reversing verts and faces together and remapping tag_at to the mirrored endpoint names the identical physical stitch read from its other end. The renderer canonicalises every draw call from the left-to-right layout and places the tag at the stored physical endpoint, so the alias is asserted byte-identical while gold must not move; a gold rule keyed to list position rather than to the tagged physical end would fail this transform. Analytic gold reads exactly verts, faces and tag_at; no sampled pair of distinct-gold scenes shares a raster, because every crossing state is directly visible as thread ink present or absent inside saturated tape ink, and the walk orientation is visible as the crimson tag's position.",
+    "label_inputs": [
+      "verts",
+      "faces",
+      "tag_at"
+    ]
+  },
+  "boundary": {
+    "observable": "Every boundary event is visible in the raster. A crossing flips between front and behind exactly when thread ink stops being drawn across the tape at that crossing, which flips the alternation verdict whenever it creates or removes a same-side neighbouring pair; the walk orientation, and therefore the reported first face, flips exactly when the crimson tag moves to the other end of the thread. No code-only threshold participates in the decision.",
+    "quarantine": "margin is the minimum over (a) the crossing pitch above the width at which neighbouring crossings merge, (b) the thread stub length outside the tape, (c) the tape band height above the width at which a behind gap stops being a visible interruption, and (d) the clearance between the stitched inset and every remote scrap. Scenes with margin < 6.0 canvas px are quarantined, excluded from headline claims, and the pixel arm may abstain on them; the sampler never emits them, and the tight bin [6, 12) px supplies near-boundary coverage."
+  },
+  "oracle_independence": {
+    "image_only": true,
+    "forbidden_imports_absent": true
+  },
+  "mechanism_fingerprint": {
+    "decision_family": "composition",
+    "entities": [
+      "segment",
+      "region",
+      "set",
+      "color"
+    ],
+    "arity": "mixed",
+    "relation": "order",
+    "margin_operator": "composition_min",
+    "oracle_primitives": [
+      "color_segmentation",
+      "connected_components",
+      "bounding_box",
+      "distance_geometry",
+      "pixel_count",
+      "composition"
+    ],
+    "composition_depth": 3
+  },
+  "semantic_contrast": {
+    "closest_known_worlds": [
+      "dot_parity",
+      "chain_walk_rank",
+      "coil_curl_majority",
+      "spacing_order",
+      "conjunction"
+    ],
+    "known_negative_matches": [
+      "polyline_turn_count",
+      "opus_search_trace_001__occlusion_order",
+      "elbow_jog_tally"
+    ],
+    "contrast": "The nearest known neighbour by retrieval is dot_parity, which reduces a visible set to the parity of its cardinality: an unordered tally that ignores where each element sits. Here the tally is deliberately uninformative -- control and counterfactual scenes can share the same number of front and behind crossings -- and the verdict depends only on whether two neighbouring states along the thread repeat, so no cardinality, parity or majority statistic reproduces it. dot_side_of_line and spacing_order compare one or two marks against a single visible axis in one glance, with no sequence at all; counting_with_distractors adds distractors to a count but never an order; conjunction evaluates two static predicates on the same mark. chain_walk_rank and coil_curl_majority are the closest visible-memory route worlds and still differ in mechanism: chain_walk_rank reports the attribute of the item at a fixed ordinal position along a route, a single lookup after a walk of declared length, whereas this candidate reports a relation between every pair of consecutive states, so no ordinal index is asked for or sufficient; coil_curl_majority aggregates local turn handedness into a majority vote, an order-insensitive statistic, while alternation is destroyed or created by moving one state without changing any count; the rejected proposals opus_search_trace_001__occlusion_order and elbow_jog_tally are also distinct: the former asks which of two overlapping shapes is in front, a single local depth judgement, whereas occlusion here is not the answer but the per-crossing symbol whose arrangement along the thread is read, and polyline_turn_count / elbow_jog_tally were rejected for tallying bends under an unstated bend threshold, whereas every crossing state here is a binary visible occlusion with no threshold and the answer is their order, not their number.",
+    "expected_information_gain": "Isolates whether a model reads an ordered sequence of local occlusion states along a thin traced path, or substitutes the familiar canonical pattern for that reading. The prior under test is the running-stitch prior that a stitch alternates front and behind: control scenes do alternate, so answering from the prior is right, and matched counterfactual scenes repeat one state so the prior is wrong, with identical wording, palette, tape and thread geometry, crossing count and inset scale in both arms. The polarity-flipped family separates pattern reading from lexical yes-bias, and the tagged-end family separates thread order from left-to-right reading order."
+  },
+  "deviations": []
+}

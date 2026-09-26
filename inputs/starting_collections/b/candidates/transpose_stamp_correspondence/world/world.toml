@@ -1,0 +1,20 @@
+[world]
+name = "transpose_stamp_correspondence"
+description = "Match a compact binary reference grid to its row-column transpose and report the matched border color."
+task = "correspondence-selection"
+entrypoint = "world/generate.py"
+
+[render]
+canvas = [256, 256]
+plaque_size = [46, 46]
+grid = [3, 3]
+answers = ["amber", "cyan", "violet"]
+
+[gold]
+decision = "border color of the unique exact transpose"
+margin = "minimum nonzero candidate Hamming distance from the transpose"
+quarantine = "nonunique match or runner-up distance below two cells"
+
+[oracle]
+input = "final PNG only"
+method = "locate one intact compact plaque, segment four border colors, read cell occupancies, transpose the black grid, and bind the matching color"

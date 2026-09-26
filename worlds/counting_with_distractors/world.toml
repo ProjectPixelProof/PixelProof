@@ -1,0 +1,46 @@
+# Machine-readable metadata for this question world. Parsed by the meta layer
+# (question_foundry.worlds.discover_worlds) with stdlib tomllib — no extra deps.
+
+[world]
+name = "counting_with_distractors"
+description = "Counting-with-distractors world: how many target-coloured dots are there? Does the VLM preserve and causally use the crowding margin that governs when the count stays pixel-verifiable?"
+task = "counting"
+method_refs = ["7.2", "7.6", "7.7", "23.1"]
+splits = ["smoke", "sweep", "pilot"]
+entrypoint = "worlds.counting_with_distractors.generate"
+
+[targets]
+# Ground-truth keys written into ExampleRecord.targets by renderer.scene_targets.
+count = "count"                 # closed-form gold: N target-coloured disks
+n_targets = "n_targets"         # = count
+n_distractors = "n_distractors" # D distractor disks
+continuous = "min_gap"          # m = min pairwise disk gap (px); crowding margin, > 0
+bin = "margin_bin"
+# Constrained-eval keys (filled by generate.py from prompts.correct_answer /
+# candidates_for; consumed by the task-agnostic question_foundry.eval runner).
+answer = "answer"               # ground-truth constrained answer for this record's prompt_family
+candidates = "candidates"       # answer set the eval runner scores via constrained logits
+
+# Position in the five-axis task space (SSOT §7.2). First non-binary-arity instance.
+[axes]
+decision_variable = "m (min pairwise disk gap, px; distance-to-count-change)"
+nuisances = ["disk_positions", "radii", "n_distractors", "distractor_colors", "arrangement"]
+structural = "N objects (N in [2,7]) with aggregation"
+query_axes = ["decision_type (count / threshold)", "lexical (how many / count)", "threshold (>3, <=3, ==4)"]
+verifiability = "closed-form gold count=N; connected-component inverse oracle re-measures the label directly; px crowding margin; render-robust discrete label"
+
+# Gold-recheck / gallery driver config (SSOT §7.6). Read by scripts/gold_recheck.py
+# and scripts/make_gallery.py so new worlds need no per-script edits.
+[gold]
+decision_attr = "count"   # Scene attribute prompts.correct_answer() keys off
+margin_checks = [["count", "count"], ["min_gap", "min_gap"]]   # (targets key, Scene attribute) pairs recomputed and matched
+margin_key = "min_gap"       # targets key holding the continuous margin (gallery caption)
+quarantine_bin = "boundary"   # MARGIN_BINS band quarantined per SSOT §21.6
+gallery_pool_splits = ["sweep"]
+boundary_observable = "each target-coloured disk is a separately visible object; the count is read directly by enumerating them (the margin is the crowding gap governing when two disks are still resolvable as separate, not a hidden threshold)"   # SSOT §7.14 gate 3
+
+[provenance]
+source_repo = "VLMHarnessTest/VLMH15"
+source_commit = "89abcd3ed473f4155431274b9133f72ba0f42319"
+source_path = "harnesses/counting_with_distractors"
+role = "visible_seed"

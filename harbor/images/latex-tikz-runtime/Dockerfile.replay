@@ -1,0 +1,9 @@
+FROM question-foundry-latex-tikz-runtime:0.1
+
+RUN python -m pip install --no-cache-dir \
+    numpy==2.5.1 \
+    pillow==12.3.0 \
+    pytest==9.1.1
+
+LABEL org.opencontainers.image.title="visual-question-discovery LaTeX/TikZ candidate replay" \
+      org.opencontainers.image.version="0.1"

@@ -1,0 +1,74 @@
+{
+  "candidate_id": "radial_density_regime",
+  "candidate_sha256": "16521bace057b378d85ba14082882fb9a20a1645f12c1df223cca7f9553309a4",
+  "distinct_image_count": 5,
+  "sample_unit": "unique_image",
+  "samples": [
+    {
+      "candidate_id": "radial_density_regime",
+      "candidates": [
+        "yes",
+        "no"
+      ],
+      "image_path": "bootstrap/feedback/radial_density_regime/images/sample-01.png",
+      "image_sha256": "9313f6d60998fa515e53268174425c01a6d74830be2b742e567a38b2c9bb2153",
+      "margin": "36.0",
+      "question": "Across the whole canvas the dark dots are distributed radially. Are the dots packed tightly toward the centre (a solid core), with the rim spread thin? Answer yes or no.",
+      "sample_id": "sample-01",
+      "sample_key": "7c3623f32fa986231f932c8eac8379875035aa6877287722b6c306b579f05150"
+    },
+    {
+      "candidate_id": "radial_density_regime",
+      "candidates": [
+        "yes",
+        "no"
+      ],
+      "image_path": "bootstrap/feedback/radial_density_regime/images/sample-02.png",
+      "image_sha256": "939f394be21fa0d4fe80d936eb8ff8bb84bf65235b632a2f8af1766bfcbf0339",
+      "margin": "36.0",
+      "question": "Across the whole canvas the dark dots are distributed radially. Are the dots packed tightly toward the centre (a solid core), with the rim spread thin? Answer yes or no.",
+      "sample_id": "sample-02",
+      "sample_key": "95d60b16903e0fb45bc27c888dd52f93f02ce96e73a6956f4de24fd3d568238e"
+    },
+    {
+      "candidate_id": "radial_density_regime",
+      "candidates": [
+        "yes",
+        "no"
+      ],
+      "image_path": "bootstrap/feedback/radial_density_regime/images/sample-03.png",
+      "image_sha256": "9910a1ac0e664c6bee32417a04bb8b6c627bbe2ee64cde54a284c8968dd14e77",
+      "margin": "36.0",
+      "question": "Across the whole canvas the dark dots are distributed radially. Are the dots packed tightly toward the centre (a solid core), with the rim spread thin? Answer yes or no.",
+      "sample_id": "sample-03",
+      "sample_key": "86511b07a77c855feb55c546ecf9c9281af57aa85ff5786f8ead38343eeb0894"
+    },
+    {
+      "candidate_id": "radial_density_regime",
+      "candidates": [
+        "yes",
+        "no"
+      ],
+      "image_path": "bootstrap/feedback/radial_density_regime/images/sample-04.png",
+      "image_sha256": "3446e1785aeeadad30529ed81f73243b49f534bbdfb60d059d88a420c7471556",
+      "margin": "36.0",
+      "question": "Across the whole canvas the dark dots are distributed radially. Are the dots packed tightly toward the centre (a solid core), with the rim spread thin? Answer yes or no.",
+      "sample_id": "sample-04",
+      "sample_key": "72c455bb5b3800b18d23228f88221cbd34f92108b268dbb7ccd6d15cc0072c2c"
+    },
+    {
+      "candidate_id": "radial_density_regime",
+      "candidates": [
+        "yes",
+        "no"
+      ],
+      "image_path": "bootstrap/feedback/radial_density_regime/images/sample-05.png",
+      "image_sha256": "7b5ed160e8422a2ffc85a356de269e891153eb59a98b9b16fad2fb17f97e2bfc",
+      "margin": "36.0",
+      "question": "Across the whole canvas the dark dots are distributed radially. Are the dots packed tightly toward the centre (a solid core), with the rim spread thin? Answer yes or no.",
+      "sample_id": "sample-05",
+      "sample_key": "8020cfe1e3db093fa0500081c37433c61f09c320122c175969f01a9bbeff6538"
+    }
+  ],
+  "source_selection_id": "section3-frontier-hard-seeds@0.2.0"
+}

@@ -1,0 +1,37 @@
+#!/bin/bash
+set -euo pipefail
+
+apt-get update
+apt-get install -y --no-install-recommends curl ca-certificates util-linux
+
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.2/install.sh | bash
+export NVM_DIR="$HOME/.nvm"
+# nvm.sh may return non-zero internally even when it loaded correctly.
+\. "$NVM_DIR/nvm.sh" || true
+command -v nvm >/dev/null || { echo "nvm failed to load" >&2; exit 1; }
+nvm install 22
+
+{% if version %}
+npm install -g opencode-ai@{{ version }}
+{% else %}
+npm install -g opencode-ai@latest
+{% endif %}
+
+# Harbor installs as root while the foundry executes the provider as the
+# unprivileged agent user. Copy the CLI and its platform package out of root's
+# private nvm tree, then expose only the pinned runtime through /usr/local/bin.
+global_root="$(npm root -g)"
+test -x "$global_root/opencode-ai/bin/opencode.exe"
+rm -rf /opt/opencode-node-modules
+mkdir -p /opt/opencode-node-modules
+cp -a "$global_root/opencode-ai" /opt/opencode-node-modules/
+for package in "$global_root"/opencode-*; do
+  [ -e "$package" ] || continue
+  [ "$(basename "$package")" = opencode-ai ] && continue
+  cp -a "$package" /opt/opencode-node-modules/
+done
+install -m 0755 "$(command -v node)" /usr/local/bin/node
+ln -sfn /opt/opencode-node-modules/opencode-ai/bin/opencode.exe /usr/local/bin/opencode
+chmod -R a+rX /opt/opencode-node-modules
+
+runuser -u agent -- env HOME=/home/agent PATH=/usr/local/bin:/usr/bin:/bin opencode --version

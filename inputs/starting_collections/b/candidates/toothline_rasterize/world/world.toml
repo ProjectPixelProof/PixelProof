@@ -1,0 +1,17 @@
+[world]
+name = "toothline_rasterize"
+description = "Decode nine signed teeth along one oriented connected route and rasterize them into a 3 by 3 glyph."
+task = "declared_transform_selection"
+
+[render]
+width = 512
+height = 512
+format = "PNG"
+
+[oracle]
+input = "final_rgb_pixels_only"
+operation = "dark-route segmentation, continuity check, start-cap orientation, relative tooth sampling, glyph match"
+
+[sampling]
+answers = ["X", "plus", "T", "L"]
+stress_safe = true

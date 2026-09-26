@@ -1,0 +1,79 @@
+{
+  "candidate_id": "arrow_reachable_terminal",
+  "candidate_sha256": "67cd799feb58664fa2e1d0dc89ef22ac71ebdc897966e19aa9d251f44f3b2786",
+  "distinct_image_count": 5,
+  "sample_unit": "unique_image",
+  "samples": [
+    {
+      "candidate_id": "arrow_reachable_terminal",
+      "candidates": [
+        "red",
+        "blue",
+        "orange"
+      ],
+      "image_path": "bootstrap/feedback/arrow_reachable_terminal/images/sample-01.png",
+      "image_sha256": "0dfc474a014ece5c3aae5b308b2fe1d906b37bf285ecce124086be9c7e6a2952",
+      "margin": "1.0",
+      "question": "Starting at the green START circle, follow black links only in the direction of their purple arrowheads. Which colored terminal can be reached? Links meet only at circles, and every link may be followed only in its arrow's direction. Answer red, blue, or orange.",
+      "sample_id": "sample-01",
+      "sample_key": "6d9fe9a37c2ea5e3a45660a530a83b5fda6b558873b4193ab89bf44ad5fe0683"
+    },
+    {
+      "candidate_id": "arrow_reachable_terminal",
+      "candidates": [
+        "red",
+        "blue",
+        "orange"
+      ],
+      "image_path": "bootstrap/feedback/arrow_reachable_terminal/images/sample-02.png",
+      "image_sha256": "0cfb95e8272a42a22ae46252b171c3d833aa22a368f14b31326ff65c5cdbc76e",
+      "margin": "1.0",
+      "question": "Starting at the green START circle, follow black links only in the direction of their purple arrowheads. Which colored terminal can be reached? Links meet only at circles, and every link may be followed only in its arrow's direction. Answer red, blue, or orange.",
+      "sample_id": "sample-02",
+      "sample_key": "a8e98dfec53b5cc3d25abeaf058706ec4a1e27416a0e0de9586795ac8c6adad5"
+    },
+    {
+      "candidate_id": "arrow_reachable_terminal",
+      "candidates": [
+        "red",
+        "blue",
+        "orange"
+      ],
+      "image_path": "bootstrap/feedback/arrow_reachable_terminal/images/sample-03.png",
+      "image_sha256": "084c640627cbf7a8b096813ec70922481fcdb6385c63ff1b6259aa2e4f5de65c",
+      "margin": "1.0",
+      "question": "Starting at the green START circle, follow black links only in the direction of their purple arrowheads. Which colored terminal can be reached? Links meet only at circles, and every link may be followed only in its arrow's direction. Answer red, blue, or orange.",
+      "sample_id": "sample-03",
+      "sample_key": "4a1fab851eb8bfc323d33468f278761f108551d6380ab542f8c9d43773c8b12b"
+    },
+    {
+      "candidate_id": "arrow_reachable_terminal",
+      "candidates": [
+        "red",
+        "blue",
+        "orange"
+      ],
+      "image_path": "bootstrap/feedback/arrow_reachable_terminal/images/sample-04.png",
+      "image_sha256": "a73e9b732d78424dfda7ce2414f629c860f87316227ab8b2c8c8a31ae1f01b07",
+      "margin": "1.0",
+      "question": "Starting at the green START circle, follow black links only in the direction of their purple arrowheads. Which colored terminal can be reached? Links meet only at circles, and every link may be followed only in its arrow's direction. Answer red, blue, or orange.",
+      "sample_id": "sample-04",
+      "sample_key": "014a8dc12bce3513152315f2c44bd77bd147c3ddcd520e50cded147c873744dc"
+    },
+    {
+      "candidate_id": "arrow_reachable_terminal",
+      "candidates": [
+        "red",
+        "blue",
+        "orange"
+      ],
+      "image_path": "bootstrap/feedback/arrow_reachable_terminal/images/sample-05.png",
+      "image_sha256": "81060861d2933b746248f3b3f415d57d81ca91a6b65cc6038a710d4531ddf562",
+      "margin": "1.0",
+      "question": "Starting at the green START circle, follow black links only in the direction of their purple arrowheads. Which colored terminal can be reached? Links meet only at circles, and every link may be followed only in its arrow's direction. Answer red, blue, or orange.",
+      "sample_id": "sample-05",
+      "sample_key": "6b5e3055318b9fd814d9cb198c8fbb72ff42b8a8bc5a8cad33f62ba399a185a7"
+    }
+  ],
+  "source_selection_id": "section3-frontier-hard-seeds@0.2.0"
+}

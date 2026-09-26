@@ -1,0 +1,13 @@
+id = "baseline_three"
+version = "0.2.0"
+status = "frozen"
+description = "Frozen three-world implementation seed for future foundry runs; no generated candidates are included."
+worlds = ["two_circles", "angle_acuteness", "counting_with_distractors"]
+include = ["DESIGN.md", "world.toml", "renderer.py", "oracle.py", "prompts.py"]
+
+[visibility]
+global_registry = false
+historical_candidates = false
+manifests = false
+rendered_images = false
+tests = false

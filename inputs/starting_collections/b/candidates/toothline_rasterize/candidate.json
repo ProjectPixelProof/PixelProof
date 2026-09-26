@@ -1,0 +1,46 @@
+{
+  "schema_version": "0.4.0",
+  "candidate_id": "toothline_rasterize",
+  "title": "Nine-Tooth Route Rasterization",
+  "question": "Follow the connected route from the amber triangle to the teal circle. It has nine V-shaped teeth. In route order, write a dark cell for a tooth pointing up and a light cell for a tooth pointing down, filling a 3 by 3 tile left-to-right and top-to-bottom. Which symbol appears: X, plus, T, or L?",
+  "decision_type": "selection",
+  "task_signature": {
+    "decision_var": "rasterized_tooth_symbol",
+    "structure": "single_oriented_nine_tooth_route",
+    "decision_type": "selection",
+    "mechanism": "Traverse one connected route, decode each tooth's vertical sign, and rasterize the ordered signs into a 3 by 3 symbol."
+  },
+  "latent_z": {
+    "description": "A balanced glyph bit string and independently varied local placement, scale, stroke, direction, ink palette, background, and harmless remote decorations.",
+    "fields": ["bits", "x0", "y0", "step", "amplitude", "stroke", "reverse", "ink", "background", "decorations"]
+  },
+  "latent_alias": {
+    "mode": "not_applicable",
+    "justification": "The rendered route directly exposes every label-bearing tooth sign; no nontrivial render-invariant relabeling is present in this minimal scene representation.",
+    "label_inputs": ["bits"]
+  },
+  "boundary": {
+    "observable": "The amber triangular cap fixes the route start, the teal round cap fixes its end, and all nine V-shaped teeth are visibly joined by one uninterrupted dark stroke.",
+    "quarantine": "The sampler uses wide teeth and fixed sign clearance; malformed, interrupted, or ambiguously decoded routes make the pixel inverse abstain."
+  },
+  "oracle_independence": {
+    "image_only": true,
+    "forbidden_imports_absent": true
+  },
+  "mechanism_fingerprint": {
+    "decision_family": "composition",
+    "entities": ["segment", "shape"],
+    "arity": "single",
+    "relation": "composition",
+    "margin_operator": "composition_min",
+    "oracle_primitives": ["color_segmentation", "connected_components", "bounding_box", "composition"],
+    "composition_depth": 2
+  },
+  "semantic_contrast": {
+    "closest_known_worlds": ["winding_filmstrip_rectify", "toggle_route_reveal", "odd_vertex_reassembly"],
+    "known_negative_matches": ["polyline_turn_count"],
+    "contrast": "Unlike winding-filmstrip rectification, there are no sampled cross-sections to rotate; unlike toggle-route reveal, there are no colored commands or evolving state; unlike odd-vertex reassembly, no vertices are discarded or reconnected. The geometry of each successive tooth is itself one binary sample, and the declared transform serializes those signed samples into a raster.",
+    "expected_information_gain": "It isolates whether a model can preserve start-directed order along one compact connected trace while converting local geometric signs into a two-dimensional raster symbol."
+  },
+  "deviations": []
+}

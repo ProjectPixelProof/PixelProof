@@ -1,0 +1,6 @@
+schema_version = "0.4.0"
+world_id = "unmarked_spur_route"
+width = 512
+height = 512
+background = "white"
+oracle_version = "unmarked-spur-route-pixel-oracle-0.1.0"

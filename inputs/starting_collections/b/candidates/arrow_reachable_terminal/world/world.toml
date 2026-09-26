@@ -1,0 +1,7 @@
+schema_version = "0.4.0"
+candidate_id = "arrow_reachable_terminal"
+renderer = "pillow"
+image_mode = "RGB"
+width = 640
+height = 640
+prompt_families = ["pf1"]

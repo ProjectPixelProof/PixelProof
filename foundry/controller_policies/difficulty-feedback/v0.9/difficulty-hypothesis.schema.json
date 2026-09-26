@@ -1,0 +1,56 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://dualloop.example.invalid/schemas/difficulty-hypothesis-0.3.0.json",
+  "title": "Reasoning-diversity visual-question difficulty hypothesis",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "candidate_id",
+    "parent_candidate_id",
+    "prior_evidence_ids",
+    "prior_attempt_synthesis",
+    "evaluator_strategy_to_block",
+    "intended_visual_computation",
+    "anticipated_model_failure",
+    "causal_mutation_from_prior",
+    "non_artifact_check",
+    "predicted_evaluator_accuracy",
+    "reasoning_target",
+    "reasoning_departure_from_archive"
+  ],
+  "properties": {
+    "schema_version": {"const": "difficulty-hypothesis-0.3.0"},
+    "candidate_id": {"type": "string", "pattern": "^[a-z][a-z0-9_]{2,63}$"},
+    "parent_candidate_id": {"type": "string", "minLength": 1, "maxLength": 128},
+    "prior_evidence_ids": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 5,
+      "uniqueItems": true,
+      "items": {"type": "string", "minLength": 1}
+    },
+    "prior_attempt_synthesis": {"type": "string", "minLength": 80, "maxLength": 2000},
+    "evaluator_strategy_to_block": {"type": "string", "minLength": 80, "maxLength": 2000},
+    "intended_visual_computation": {"type": "string", "minLength": 40, "maxLength": 1200},
+    "anticipated_model_failure": {"type": "string", "minLength": 40, "maxLength": 1200},
+    "causal_mutation_from_prior": {"type": "string", "minLength": 40, "maxLength": 1200},
+    "non_artifact_check": {"type": "string", "minLength": 40, "maxLength": 1200},
+    "predicted_evaluator_accuracy": {"type": "number", "minimum": 0, "maximum": 1},
+    "reasoning_target": {
+      "enum": [
+        "topological_connectivity",
+        "correspondence_binding",
+        "state_transition",
+        "counterfactual_intervention",
+        "geometric_transformation",
+        "quantitative_relation"
+      ]
+    },
+    "reasoning_departure_from_archive": {
+      "type": "string",
+      "minLength": 80,
+      "maxLength": 2000
+    }
+  }
+}

@@ -1,0 +1,20 @@
+# Global-elongation question world metadata.
+
+[world]
+name = "global_elongation_axis"
+description = "Reveal the global principal stretch axis of a scattered dot cloud: horizontal, rising, vertical, or falling."
+task = "global-elongation-axis-classification"
+entrypoint = "worlds.global_elongation_axis.generate"
+
+[targets]
+decision = "decision"        # horizontal | rising | vertical | falling
+margin = "margin"            # angular gap (deg) to nearest axis boundary
+quarantined = "quarantined"  # near-boundary or non-elongated cloud
+
+[gold]
+decision_attr = "decision"
+quarantine_band = [0, 5]
+
+[direction]
+profile = "paper-semantic@0.3.0:reveal_global_structure"
+seed_direction = "global Gestalt closure / axis: the principal elongation direction of a whole mark cloud"

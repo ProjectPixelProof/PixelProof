@@ -1,0 +1,105 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://dualloop.example.invalid/schemas/mechanism-fingerprint-v0.1.json",
+  "title": "Controlled low-level visual decision fingerprint",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "decision_family",
+    "entities",
+    "arity",
+    "relation",
+    "margin_operator",
+    "oracle_primitives",
+    "composition_depth"
+  ],
+  "properties": {
+    "decision_family": {
+      "enum": ["predicate", "comparison", "selection", "count", "composition"]
+    },
+    "entities": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "enum": [
+          "point",
+          "line",
+          "segment",
+          "bar",
+          "disk",
+          "circle",
+          "polygon",
+          "region",
+          "arc",
+          "angle",
+          "axis",
+          "gauge",
+          "set",
+          "shape",
+          "color",
+          "attribute"
+        ]
+      }
+    },
+    "arity": {"enum": ["single", "pair", "triple", "set", "mixed"]},
+    "relation": {
+      "enum": [
+        "proximity",
+        "intersection",
+        "magnitude",
+        "containment",
+        "angle",
+        "count",
+        "proportion",
+        "collinearity",
+        "order",
+        "orientation",
+        "distance",
+        "spacing",
+        "parity",
+        "halfplane",
+        "composition",
+        "curvature",
+        "convexity",
+        "dispersion",
+        "attribute_binding"
+      ]
+    },
+    "margin_operator": {
+      "enum": [
+        "signed_distance",
+        "signed_difference",
+        "absolute_threshold",
+        "top_gap",
+        "minimum",
+        "count_difference",
+        "crowding_clearance",
+        "angular_difference",
+        "discrete_boundary",
+        "composition_min"
+      ]
+    },
+    "oracle_primitives": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "enum": [
+          "color_segmentation",
+          "connected_components",
+          "bounding_box",
+          "centroid",
+          "line_fit",
+          "circle_fit",
+          "polygon_fit",
+          "arc_fit",
+          "pixel_count",
+          "distance_geometry",
+          "composition"
+        ]
+      }
+    },
+    "composition_depth": {"type": "integer", "minimum": 1, "maximum": 4}
+  }
+}

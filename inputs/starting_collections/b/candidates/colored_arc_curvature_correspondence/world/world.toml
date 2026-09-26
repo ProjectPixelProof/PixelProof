@@ -1,0 +1,29 @@
+[world]
+name = "colored_arc_curvature_correspondence"
+description = "Cross-panel correspondence of color-labeled normalized curvature ranks for four isolated open arcs."
+task = "selection"
+entrypoint = "world/generate.py"
+prompt_families = ["pf1_curvature_rank", "pf2_normalized_bow", "pf3_curve_profile"]
+
+[targets]
+decision = "color_curvature_rank_identity"
+continuous = "curvature_signature_margin"
+answer = "answer"
+candidates = "candidates"
+
+[axes]
+decision_variable = "complete color-to-normalized-arc-curvature rank assignment"
+nuisances = ["panel_translation", "arc_slot", "arc_orientation", "arc_scale", "stroke_width", "candidate_side"]
+structural = "three panels with four uniquely colored isolated quadratic arcs"
+query_axes = ["normalized bow rank", "smooth curvature", "cross-panel correspondence", "lexical framing"]
+verifiability = "palette segmentation, connected components, endpoint/chord fit, normalized sagitta ranking, and signature mismatch gap"
+
+[gold]
+decision_attr = "color_curvature_rank_identity"
+margin_key = "curvature_signature_margin"
+quarantine = "missing or duplicate components, indistinguishable curvature ranks, or tied candidate profiles"
+boundary_observable = "the visible bow of each open stroke relative to its straight endpoint-to-endpoint chord"
+
+[provenance]
+profile = "paper-semantic@0.3.0:correspondence"
+protocol = "question-world@0.4.0"

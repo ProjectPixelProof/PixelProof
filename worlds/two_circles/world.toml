@@ -1,0 +1,38 @@
+# Machine-readable metadata for this question world. Parsed by the meta layer
+# (question_foundry.worlds.discover_worlds) with stdlib tomllib — no extra deps.
+
+[world]
+name = "two_circles"
+description = "Two-circle collision world: does the VLM preserve and causally use continuous signed-gap margin?"
+task = "overlap-classification"
+method_refs = ["7.3", "7.4", "7.5", "15"]
+splits = ["smoke", "pilot", "full"]
+entrypoint = "worlds.two_circles.generate"
+
+[targets]
+# Ground-truth keys written into ExampleRecord.targets by renderer.scene_targets.
+continuous = "m"          # signed gap; the variable we test for availability/continuity
+categorical = "label"     # separate | touching | overlapping
+binary = "overlap_or_touch"
+bin = "margin_bin"
+# Constrained-eval keys (filled by generate.py from prompts.correct_answer /
+# candidates_for; consumed by the task-agnostic question_foundry.eval runner).
+answer = "answer"         # ground-truth constrained answer for this record's prompt_family
+candidates = "candidates" # answer set the eval runner scores via constrained logits
+
+# Gold-recheck / gallery driver config (SSOT §7.6). Read by scripts/gold_recheck.py
+# and scripts/make_gallery.py so new worlds need no per-script edits.
+[gold]
+decision_attr = "signed_gap"   # Scene attribute prompts.correct_answer() keys off
+margin_checks = [["m", "signed_gap"]]   # (targets key, Scene attribute) pairs recomputed and matched
+margin_key = "m"       # targets key holding the continuous margin (gallery caption)
+quarantine_bin = "tangent"   # MARGIN_BINS band quarantined per SSOT §21.6
+smoke_excluded_families = ["pf7_no_gap_yesno", "pf8_not_overlapping_yesno", "pf9_apart_yesno"]   # gate 4 (SSOT §7.14): the lexical x polarity battery (pf7-pf9) is BALANCEABLE (both gold classes occur off-quarantine) but is emitted in a dedicated split, not the smoke split. Declared here so its smoke absence is disclosed, not a silent dodge (gate 4).
+gallery_pool_splits = ["sweep", "lexical"]
+boundary_observable = "the two disk rims; m=0 is the tangency event (rims just touching, no gap and no overlap), directly visible in the image"   # SSOT §7.14 gate 3
+
+[provenance]
+source_repo = "VLMHarnessTest/VLMH15"
+source_commit = "89abcd3ed473f4155431274b9133f72ba0f42319"
+source_path = "harnesses/two_circles"
+role = "visible_seed"

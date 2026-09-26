@@ -1,0 +1,84 @@
+{
+  "candidate_id": "remainder_tower_cards",
+  "candidate_sha256": "7572fd6861ea627cab281519950a57c01fff4c9b928e4390fb7eb1ef6c4791a0",
+  "distinct_image_count": 5,
+  "sample_unit": "unique_image",
+  "samples": [
+    {
+      "candidate_id": "remainder_tower_cards",
+      "candidates": [
+        "hourglass",
+        "diamond",
+        "falling blocks",
+        "rising blocks"
+      ],
+      "image_path": "bootstrap/feedback/remainder_tower_cards/images/sample-01.png",
+      "image_sha256": "6ecc17a55731c32795498c0b5ddeb15bb14430cbfd28644ad822e364360ff482",
+      "margin": "8.0",
+      "question": "Order the four violet cards by their one to four amber dots. On each card, replace each tower by a dark square when its height in boxes is a multiple of three, otherwise by a pale square. Use the four results as rows of a 4 by 4 tile. Which symbol appears: hourglass, diamond, falling blocks, or rising blocks?",
+      "sample_id": "sample-01",
+      "sample_key": "09b42c76fc47dc903bcaa658774765a30f27e13a9e5bf5a71fa84b89c165486d"
+    },
+    {
+      "candidate_id": "remainder_tower_cards",
+      "candidates": [
+        "hourglass",
+        "diamond",
+        "falling blocks",
+        "rising blocks"
+      ],
+      "image_path": "bootstrap/feedback/remainder_tower_cards/images/sample-02.png",
+      "image_sha256": "cb1cf6bd4f94fbd7ae7a628f64f3c36281f764a50e4b3f8565a8eb51d4ecf4ee",
+      "margin": "8.0",
+      "question": "Order the four violet cards by their one to four amber dots. On each card, replace each tower by a dark square when its height in boxes is a multiple of three, otherwise by a pale square. Use the four results as rows of a 4 by 4 tile. Which symbol appears: hourglass, diamond, falling blocks, or rising blocks?",
+      "sample_id": "sample-02",
+      "sample_key": "fa1e564a1ca3ffaf2d9cc6a3ee28dbf40af8a8d70410a6f5dd88d57aac0bd3b7"
+    },
+    {
+      "candidate_id": "remainder_tower_cards",
+      "candidates": [
+        "hourglass",
+        "diamond",
+        "falling blocks",
+        "rising blocks"
+      ],
+      "image_path": "bootstrap/feedback/remainder_tower_cards/images/sample-03.png",
+      "image_sha256": "b9f158c20f11e4e3e052556b88a7a0a2f3ad0609a02a99047c53c309bf839286",
+      "margin": "8.0",
+      "question": "Order the four violet cards by their one to four amber dots. On each card, replace each tower by a dark square when its height in boxes is a multiple of three, otherwise by a pale square. Use the four results as rows of a 4 by 4 tile. Which symbol appears: hourglass, diamond, falling blocks, or rising blocks?",
+      "sample_id": "sample-03",
+      "sample_key": "cf7389bac99bf27edd9be4b9a1c9f31c996fb0d8c14329380aea99c19940ca13"
+    },
+    {
+      "candidate_id": "remainder_tower_cards",
+      "candidates": [
+        "hourglass",
+        "diamond",
+        "falling blocks",
+        "rising blocks"
+      ],
+      "image_path": "bootstrap/feedback/remainder_tower_cards/images/sample-04.png",
+      "image_sha256": "951577ea4f013b46622c181ec2cc2aa2758e8ec9e21147ecce573c0f85d2bc8b",
+      "margin": "8.0",
+      "question": "Order the four violet cards by their one to four amber dots. On each card, replace each tower by a dark square when its height in boxes is a multiple of three, otherwise by a pale square. Use the four results as rows of a 4 by 4 tile. Which symbol appears: hourglass, diamond, falling blocks, or rising blocks?",
+      "sample_id": "sample-04",
+      "sample_key": "436a8f583ffd9c575a34af569fc86471d89d6b149cf72426efab8e20f59b2a22"
+    },
+    {
+      "candidate_id": "remainder_tower_cards",
+      "candidates": [
+        "hourglass",
+        "diamond",
+        "falling blocks",
+        "rising blocks"
+      ],
+      "image_path": "bootstrap/feedback/remainder_tower_cards/images/sample-05.png",
+      "image_sha256": "637451c89dbe989e16fd414269b3ee7e6698e53a5e04664dde44c8c76fcf89da",
+      "margin": "8.0",
+      "question": "Order the four violet cards by their one to four amber dots. On each card, replace each tower by a dark square when its height in boxes is a multiple of three, otherwise by a pale square. Use the four results as rows of a 4 by 4 tile. Which symbol appears: hourglass, diamond, falling blocks, or rising blocks?",
+      "sample_id": "sample-05",
+      "sample_key": "62556094079c480a3f42f83c5e3216dfcc84c4be41a4e62d1ec02cb474de3eb7"
+    }
+  ],
+  "source_selection_id": "section3-frontier-hard-seeds@0.2.0"
+}

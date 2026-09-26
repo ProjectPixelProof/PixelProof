@@ -1,0 +1,11 @@
+[world]
+name = "reference_marker"
+version = "0.2.0"
+status = "oracle_contract_fixture"
+
+[gold]
+decision_var = "coordinate_offset_y"
+structure = "point_vs_line"
+decision_type = "yesno"
+boundary_observable = "drawn horizontal line"
+quarantine_pixels = 3

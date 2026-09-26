@@ -1,0 +1,46 @@
+{
+  "schema_version": "0.4.0",
+  "candidate_id": "transpose_stamp_correspondence",
+  "title": "Transpose Stamp Correspondence",
+  "question": "The black-bordered mini-grid is the reference. Swap its rows and columns: the cell at row r, column c moves to row c, column r. Exactly one colored-bordered mini-grid is the result. Which border color marks it? Answer amber, cyan, or violet.",
+  "decision_type": "selection",
+  "task_signature": {
+    "decision_var": "transposed_grid_border",
+    "structure": "compact_four_stamp_plaque",
+    "decision_type": "selection",
+    "mechanism": "Transpose a binary cell-incidence matrix, compare it with three equal-ink candidates, and return the matched candidate's border attribute."
+  },
+  "latent_z": {
+    "description": "A movable compact plaque with one binary reference grid, three candidate grids, a permutation of answer-color bindings, and its visible anchor.",
+    "fields": ["reference", "candidates", "tag_colors", "anchor_x", "anchor_y", "ref_slot"]
+  },
+  "latent_alias": {
+    "mode": "not_applicable",
+    "justification": "Every declared scene field changes rendered pixels, and the sampled nonsymmetric reference plus ordered colored candidate panels has no intended pixel-identical reparameterization.",
+    "label_inputs": ["reference", "candidates", "tag_colors"]
+  },
+  "boundary": {
+    "observable": "The decision boundary is exact visible cell agreement after row-column exchange; every wrong candidate visibly differs in at least two cells.",
+    "quarantine": "Quarantine any scene without one unique exact transpose match or with a runner-up Hamming distance below two cells."
+  },
+  "oracle_independence": {
+    "image_only": true,
+    "forbidden_imports_absent": true
+  },
+  "mechanism_fingerprint": {
+    "decision_family": "selection",
+    "entities": ["set", "region", "color", "attribute"],
+    "arity": "mixed",
+    "relation": "attribute_binding",
+    "margin_operator": "discrete_boundary",
+    "oracle_primitives": ["color_segmentation", "connected_components", "bounding_box", "pixel_count", "composition"],
+    "composition_depth": 3
+  },
+  "semantic_contrast": {
+    "closest_known_worlds": ["quarterturn_atlas_correspondence", "ribbon_link_correspondence", "woven_necklace_correspondence", "xor_mosaic_correspondence", "shuffle_echo_correspondence"],
+    "known_negative_matches": [],
+    "contrast": "Unlike Quarter-Turn Atlas, it matches neither disconnected landmarks nor rigid rotations; unlike Ribbon Link, it transfers no adjacency edge; unlike Woven Necklace, it has no cyclic equivalence; unlike Difference Mosaic, it applies no Boolean operation to paired masks; and unlike Shuffle Echo, it does not transfer a shape's original slot. It tests row-column incidence correspondence inside one inspection plaque.",
+    "expected_information_gain": "It isolates whether a model can bind discrete row and column roles through matrix transposition before reporting an independently permuted color attribute."
+  },
+  "deviations": []
+}

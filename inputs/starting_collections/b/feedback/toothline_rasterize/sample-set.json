@@ -1,0 +1,84 @@
+{
+  "candidate_id": "toothline_rasterize",
+  "candidate_sha256": "774c8b83057f0f6187f111fc24224f1d1b2475c9e73921f3f06c4922d10aade6",
+  "distinct_image_count": 5,
+  "sample_unit": "unique_image",
+  "samples": [
+    {
+      "candidate_id": "toothline_rasterize",
+      "candidates": [
+        "X",
+        "plus",
+        "T",
+        "L"
+      ],
+      "image_path": "bootstrap/feedback/toothline_rasterize/images/sample-01.png",
+      "image_sha256": "ec64d8eef94978dc7723501ec9ad473f79509e10196791def9b8e7ff23d5b8bc",
+      "margin": "4.0",
+      "question": "Follow the connected route from the amber triangle to the teal circle. It has nine V-shaped teeth. In route order, write a dark cell for a tooth pointing up and a light cell for a tooth pointing down, filling a 3 by 3 tile left-to-right and top-to-bottom. Which symbol appears: X, plus, T, or L?",
+      "sample_id": "sample-01",
+      "sample_key": "888a6fc2fe20ebc67d06319a124aefeb3217c667940432142eb121cf95729e7f"
+    },
+    {
+      "candidate_id": "toothline_rasterize",
+      "candidates": [
+        "X",
+        "plus",
+        "T",
+        "L"
+      ],
+      "image_path": "bootstrap/feedback/toothline_rasterize/images/sample-02.png",
+      "image_sha256": "de799a3c08fc60aec2c0bd3db1b101976ee0a292487156858591bdc7a9c0551b",
+      "margin": "4.0",
+      "question": "Follow the connected route from the amber triangle to the teal circle. It has nine V-shaped teeth. In route order, write a dark cell for a tooth pointing up and a light cell for a tooth pointing down, filling a 3 by 3 tile left-to-right and top-to-bottom. Which symbol appears: X, plus, T, or L?",
+      "sample_id": "sample-02",
+      "sample_key": "ed566752e58e714c1d2d081dc23c888fc5c4fd92e7047c8764b2323da8e0aa50"
+    },
+    {
+      "candidate_id": "toothline_rasterize",
+      "candidates": [
+        "X",
+        "plus",
+        "T",
+        "L"
+      ],
+      "image_path": "bootstrap/feedback/toothline_rasterize/images/sample-03.png",
+      "image_sha256": "33482fa4a963bcd8a175d7b90dd129926c7c2ed6137046e3daf400d058f882c8",
+      "margin": "4.0",
+      "question": "Follow the connected route from the amber triangle to the teal circle. It has nine V-shaped teeth. In route order, write a dark cell for a tooth pointing up and a light cell for a tooth pointing down, filling a 3 by 3 tile left-to-right and top-to-bottom. Which symbol appears: X, plus, T, or L?",
+      "sample_id": "sample-03",
+      "sample_key": "0d97691d2d6bea1e04820166d4b39ad325f4720aac9c9a74a90d7f9dfcf814db"
+    },
+    {
+      "candidate_id": "toothline_rasterize",
+      "candidates": [
+        "X",
+        "plus",
+        "T",
+        "L"
+      ],
+      "image_path": "bootstrap/feedback/toothline_rasterize/images/sample-04.png",
+      "image_sha256": "2ca388cd32ca67a71be119124038a50dc1fca25c26785b91046e1df150fd868a",
+      "margin": "4.0",
+      "question": "Follow the connected route from the amber triangle to the teal circle. It has nine V-shaped teeth. In route order, write a dark cell for a tooth pointing up and a light cell for a tooth pointing down, filling a 3 by 3 tile left-to-right and top-to-bottom. Which symbol appears: X, plus, T, or L?",
+      "sample_id": "sample-04",
+      "sample_key": "660f46e1fb341489cf76d0bde0536a167f3f112e992534c450bb1418d3ed5d86"
+    },
+    {
+      "candidate_id": "toothline_rasterize",
+      "candidates": [
+        "X",
+        "plus",
+        "T",
+        "L"
+      ],
+      "image_path": "bootstrap/feedback/toothline_rasterize/images/sample-05.png",
+      "image_sha256": "ae446159a72ea201b2ff3c818298b202bf8d6ffdb98e366fcbfb6ea793e268a3",
+      "margin": "4.0",
+      "question": "Follow the connected route from the amber triangle to the teal circle. It has nine V-shaped teeth. In route order, write a dark cell for a tooth pointing up and a light cell for a tooth pointing down, filling a 3 by 3 tile left-to-right and top-to-bottom. Which symbol appears: X, plus, T, or L?",
+      "sample_id": "sample-05",
+      "sample_key": "fb00968222a6f78abbbbbc374735d4cba3254466a6447fc2ff0702db7944c36e"
+    }
+  ],
+  "source_selection_id": "section3-frontier-hard-seeds@0.2.0"
+}

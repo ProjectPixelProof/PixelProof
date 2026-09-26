@@ -1,0 +1,16 @@
+[world]
+id = "texture_flow_orientation"
+title = "Direction in which the whole texture field of small strokes predominantly aligns"
+profile = "paper-semantic@0.3.0:reveal_global_structure"
+decision_type = "selection"
+prompt_families = ["flow_direction", "field_orientation"]
+answer_classes = ["horizontal", "rising", "vertical", "falling"]
+
+[renderer]
+canvas = 256
+stroke_width = 3
+quarantine_margin = 3.0
+
+[latent]
+mode = "tested_transforms"
+label_inputs = ["strokes"]

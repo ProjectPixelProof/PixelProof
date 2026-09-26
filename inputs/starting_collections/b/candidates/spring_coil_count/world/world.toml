@@ -1,0 +1,14 @@
+[world]
+name = "spring_coil_count"
+description = "Count complete visible top-bottom-top cycles along one connected spring wire."
+task = "counting"
+
+[render]
+width = 768
+height = 384
+background = "warm_white"
+
+[oracle]
+input = "final_png_only"
+method = "chromatic_component_column_centerline_and_extrema_composition"
+abstention = "missing_route_columns_or_low_extrema_separation"

@@ -1,0 +1,74 @@
+{
+  "schema_version": "0.4.0",
+  "candidate_id": "colored_arc_curvature_correspondence",
+  "title": "Colored arc-curvature correspondence",
+  "question": "The image shows a REFERENCE panel and candidates A and B. Each panel has four uniquely colored curved strokes. Rank the strokes from 1 (least bowed) to 4 (most bowed) by how far each stroke bends from its straight endpoint-to-endpoint chord, using the normalized bow so size does not matter. Which candidate has the same color-to-curvature-rank assignment as the REFERENCE? Ignore panel position, stroke position, rotation, reflection, and line width. Answer A or B.",
+  "decision_type": "selection",
+  "task_signature": {
+    "decision_var": "color_curvature_rank_identity",
+    "structure": "cross_panel_normalized_arc_curvature_profile",
+    "decision_type": "selection",
+    "mechanism": "Segment the four colored arcs in each panel, independently estimate each arc's normalized sagitta from its pixels, rank the four curvature magnitudes, bind those ranks to color identities, and select the candidate whose complete color-to-curvature profile matches the reference."
+  },
+  "latent_z": {
+    "description": "A deterministic raster scene contains a reference panel and two candidate panels. Each panel visibly renders four isolated colored quadratic arcs with a profile level, local center, orientation, chord length, and stroke width; one candidate preserves the color-to-profile assignment and the other swaps two colors.",
+    "fields": [
+      "reference",
+      "candidate_a",
+      "candidate_b",
+      "width",
+      "height",
+      "background"
+    ]
+  },
+  "latent_alias": {
+    "mode": "not_applicable",
+    "justification": "The analytic decision reads the visible color and curvature-profile record of each of the three panels, and every local arc parameter that affects the rendered profile is rasterized. Panel presentation, stroke placement, orientation, scale, and line width are rendered nuisances rather than hidden label inputs; no unrendered transform is claimed as an alias.",
+    "label_inputs": [
+      "reference",
+      "candidate_a",
+      "candidate_b"
+    ]
+  },
+  "boundary": {
+    "observable": "The boundary is the visible change in normalized bow between neighboring arc profiles: the straight endpoint chord is directly defined by the two visible endpoints, and the maximum centerline departure from that chord gives the rankable curvature signal.",
+    "quarantine": "Quarantine missing or duplicate colors, overlapping or broken arc components, indistinguishable fitted bow magnitudes, non-unique candidate scores, or a candidate whose profile mapping is not a strict match-versus-decoy pair."
+  },
+  "oracle_independence": {
+    "image_only": true,
+    "forbidden_imports_absent": true
+  },
+  "mechanism_fingerprint": {
+    "decision_family": "selection",
+    "entities": [
+      "arc",
+      "color",
+      "set"
+    ],
+    "arity": "mixed",
+    "relation": "curvature",
+    "margin_operator": "discrete_boundary",
+    "oracle_primitives": [
+      "color_segmentation",
+      "connected_components",
+      "arc_fit",
+      "composition"
+    ],
+    "composition_depth": 2
+  },
+  "semantic_contrast": {
+    "closest_known_worlds": [
+      "arc_curvature",
+      "arc_compare",
+      "cyclic_landmark_correspondence",
+      "corner_turn_profile_correspondence",
+      "colored_aperture_signature"
+    ],
+    "known_negative_matches": [
+      "polyline_turn_count"
+    ],
+    "contrast": "The known arc-curvature and arc-compare worlds make a one-panel predicate or a two-arc magnitude comparison. This candidate instead requires a four-way cross-panel identity assignment: an independent inverse fits every colored open curve, normalizes its bow by chord length, ranks all four profiles, and only then compares the color-bound maps across reference, A, and B. It is not cyclic landmark order, a polygon corner-turn label, an aperture bit, adjacency, or a post-match attribute lookup.",
+    "expected_information_gain": "This isolates whether a visual system can recover a smooth local shape measurement, preserve its ordinal structure under translation, rotation, reflection, scale, and stroke-width changes, and bind that measurement to color identities before selecting a candidate."
+  },
+  "deviations": []
+}

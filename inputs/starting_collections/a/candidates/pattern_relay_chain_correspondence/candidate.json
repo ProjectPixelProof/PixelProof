@@ -1,0 +1,46 @@
+{
+  "schema_version": "0.4.0",
+  "candidate_id": "pattern_relay_chain_correspondence",
+  "title": "Pattern relay chain correspondence",
+  "question": "The magenta-framed pattern is START. Each relay card maps its left pattern to its right pattern; follow the arrow. Find the card whose left pattern exactly matches START, then keep matching each output to another card's input. Stop when no input matches. What color tag is on the last card: red, green, or blue? Do not rotate or reflect patterns.",
+  "decision_type": "selection",
+  "task_signature": {
+    "decision_var": "terminal_relay_tag_color",
+    "structure": "shuffled_pattern_key_value_chains",
+    "decision_type": "selection",
+    "mechanism": "Resolve exact visual key equality across shuffled input-output relay records, follow the selected multi-hop chain, and read the color bound to its terminal record."
+  },
+  "latent_z": {
+    "description": "A visible start glyph and six shuffled relay records forming two disjoint three-hop key chains, with balanced visible color tags.",
+    "fields": ["width", "height", "start_code", "relays"]
+  },
+  "latent_alias": {
+    "mode": "tested_transforms",
+    "justification": "Relay records are stored as a list although their storage order does not affect their visibly slotted cards; reversing that list is exercised as a pixel-identical, gold-preserving alias.",
+    "label_inputs": ["start_code", "relays"]
+  },
+  "boundary": {
+    "observable": "Every chain step has one exact visible glyph match; the runner-up boundary is a competing input glyph only one square away in Hamming distance.",
+    "quarantine": "Scenes whose smallest runner-up glyph distance is one square are explicitly quarantined."
+  },
+  "oracle_independence": {
+    "image_only": true,
+    "forbidden_imports_absent": true
+  },
+  "mechanism_fingerprint": {
+    "decision_family": "composition",
+    "entities": ["shape", "set", "color", "attribute"],
+    "arity": "mixed",
+    "relation": "attribute_binding",
+    "margin_operator": "composition_min",
+    "oracle_primitives": ["color_segmentation", "connected_components", "bounding_box", "pixel_count", "composition"],
+    "composition_depth": 4
+  },
+  "semantic_contrast": {
+    "closest_known_worlds": ["braided_cable_correspondence", "landmark_board_correspondence", "punched_tape_registration", "slot_shuffle_correspondence", "network_station_correspondence"],
+    "known_negative_matches": [],
+    "contrast": "Unlike cable tracing after one plug match, board remapping, subsequence registration, a learned slot permutation, or whole-graph isomorphism, this task repeatedly performs content-addressed joins over shuffled visible key-value records; spatial order supplies no transition rule.",
+    "expected_information_gain": "It isolates whether a model can maintain identity through repeated exact visual joins before reading a terminal bound attribute."
+  },
+  "deviations": []
+}

@@ -1,0 +1,46 @@
+{
+  "schema_version": "0.4.0",
+  "candidate_id": "remainder_tower_cards",
+  "title": "Remainder Tower Cards",
+  "question": "Order the four violet cards by their one to four amber dots. On each card, replace each tower by a dark square when its height in boxes is a multiple of three, otherwise by a pale square. Use the four results as rows of a 4 by 4 tile. Which symbol appears: hourglass, diamond, falling blocks, or rising blocks?",
+  "decision_type": "selection",
+  "task_signature": {
+    "decision_var": "remainder_reassembled_symbol",
+    "structure": "four_detached_ranked_tower_cards",
+    "decision_type": "selection",
+    "mechanism": "Decode tower-height divisibility on four visibly ranked detached cards, then stack the decoded rows and classify the raster symbol."
+  },
+  "latent_z": {
+    "description": "Four shuffled, widely separated cards whose unit-box tower heights encode balanced rows through divisibility by three.",
+    "fields": ["rows", "slot_order", "palette", "jitter"]
+  },
+  "latent_alias": {
+    "mode": "not_applicable",
+    "justification": "The sampled fields all change visible pixels when changed, and no nontrivial pixel-identical latent alias is asserted for this discrete card renderer.",
+    "label_inputs": ["rows"]
+  },
+  "boundary": {
+    "observable": "The runner-up boundary is the pixel-recovered Hamming-distance gap between the decoded 4 by 4 tile and the four declared templates.",
+    "quarantine": "A scene is quarantined if a tower is not an integral three- or four-box stack, a card rank is missing or repeated, or the template margin is below eight cells."
+  },
+  "oracle_independence": {
+    "image_only": true,
+    "forbidden_imports_absent": true
+  },
+  "mechanism_fingerprint": {
+    "decision_family": "composition",
+    "entities": ["region", "bar", "shape", "attribute"],
+    "arity": "set",
+    "relation": "attribute_binding",
+    "margin_operator": "top_gap",
+    "oracle_primitives": ["color_segmentation", "connected_components", "pixel_count", "composition"],
+    "composition_depth": 3
+  },
+  "semantic_contrast": {
+    "closest_known_worlds": ["cyclic_row_origin", "height_tab_strip_sort", "toothline_rasterize", "odd_parity_punchcards", "orthogonal_modular_loom"],
+    "known_negative_matches": [],
+    "contrast": "Unlike cyclic-row rectification, no row is already present as a shifted binary raster and no cell marker declares a cyclic phase; the card dots bind whole cards only after each unary tower has been arithmetically reduced. Unlike height-tab sorting, tower heights are not rank keys and no source strip is moved. Unlike tooth-route rasterization, evidence is four disconnected ranked cards rather than signs along one path. Unlike punch-card parity or the modular loom, no aligned masks are combined and no outer arithmetic field is synthesized.",
+    "expected_information_gain": "Isolates whether a model can bind distant card ranks, count discrete tower units, apply a declared arithmetic predicate repeatedly, and reassemble the resulting rows without relying on aggregate ink."
+  },
+  "deviations": []
+}

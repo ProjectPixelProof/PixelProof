@@ -1,0 +1,82 @@
+{
+  "schema_version": "0.4.0",
+  "candidate_id": "endfold_pairing_reveal",
+  "title": "End-fold pairing reveal: the glyph carried only by folding one long thin cord onto itself end to end",
+  "question": "Which symbol do the marked positions form after you walk the teal cord from its bracketed end bead, fold the cord end to end so bead 1 meets bead 50, bead 2 meets bead 49 and so on, and mark each of the 25 folded pairs whose two beads share the same gray?",
+  "decision_type": "selection",
+  "task_signature": {
+    "decision_var": "revealed_glyph",
+    "structure": "single_thin_cord_folded_onto_itself",
+    "decision_type": "selection",
+    "mechanism": "One teal cord runs as a single unbranching thin route across the whole canvas and carries 50 round beads, each filled with one of exactly two grays. The reader must execute the declared raster operation: walk the cord from the end bead ringed by black brackets, fold the walk onto itself so that bead k meets bead 51-k, and mark each of the 25 folded pairs whose two beads share a gray. The 25 verdicts, written row by row, spell one abstract glyph on a 5x5 grid. Each output bit is a comparison between a bead near one end of the cord and a bead near the other end, so the decision is carried by long-range correspondences along one connected thin trace: the first 25 beads alone are an unbiased coin sequence, the last 25 alone are too, and no local neighbourhood, no crop of either half, and no reading of bead positions on the canvas contains any of the answer."
+  },
+  "latent_z": {
+    "fields": [
+      "canvas",
+      "pitch",
+      "origin",
+      "cord_w",
+      "bead_r",
+      "route",
+      "tones",
+      "dark",
+      "light",
+      "key_corner",
+      "decoys"
+    ],
+    "description": "Canvas size, lattice pitch and window origin, cord stroke width and bead radius, the ordered 50-node non-touching lattice route of the cord, the 50 bead tone bits in walking order, the two rendered grays, which corner carries the two-swatch tone key, and the pale lavender decoy cords.",
+    "rendered": "Every field controls visible pixels: route draws the cord's polyline, its 50 beads and the position of the bracketed start bead; tones set each visible bead's gray; dark and light set the two grays and the two key swatches; key_corner places the visible key; decoys draw the visible lavender cords with their end beads; canvas, pitch, origin, cord_w and bead_r set the visible raster geometry."
+  },
+  "boundary": {
+    "observable": "Two boundaries are drawn in the image and neither uses a code-only threshold. The per-bead boundary is which of exactly two rendered grays fills that bead; the two-square key renders both grays side by side, and the pixel arm splits the 50 bead readings at the midpoint of their own observed range, so the boundary is visible in the beads themselves. The pairing boundary is combinatorial and fully visible: the teal trace has exactly two ends and every interior bead exactly two cord neighbours, and the black corner brackets mark one end bead, so the fold that sends bead k to bead 51-k is fixed by visible connectivity alone. Every declared glyph differs from every other in at least 8 of the 25 positions, and each marks exactly 9 positions.",
+    "quarantine": "A scene is quarantined when the per-bead tone clearance, half the rendered gray gap, falls below 17.0 luma units. Such beads remain decidable by exact pixel comparison against the midpoint of the observed range but are not reliably separable by eye, so those scenes are flagged and excluded from headline claims."
+  },
+  "oracle_independence": {
+    "image_only": true,
+    "forbidden_imports_absent": true
+  },
+  "latent_alias": {
+    "mode": "not_applicable",
+    "justification": "The scene-to-raster map is injective on everything analytic gold reads. Gold reads exactly one scene field, tones, which stores the 50 bead grays already in walking order, and the raster exposes that ordered sequence without loss: the cord is one flat teal polyline with 50 flat-gray beads and no antialiasing, the route is self-avoiding and never lets a non-consecutive bead pair come within one lattice step, so the only bead pairs joined by unbroken ink at the minimum bead spacing are the consecutive ones, and the black brackets appear around exactly one end bead. The route field is not a label input; it only places the pixels that make the walking order readable. Reversing the walk is not an alias that changes the label: end-to-end folding is symmetric under reversal, so the same glyph is rendered and recovered, which the tests assert. Every other latent field is rendered as well, so latent_symmetries(scene) returns an empty list and this gate is declared not_applicable rather than passing.",
+    "label_inputs": [
+      "tones"
+    ]
+  },
+  "mechanism_fingerprint": {
+    "decision_family": "selection",
+    "entities": [
+      "region",
+      "shape",
+      "set",
+      "color"
+    ],
+    "arity": "set",
+    "relation": "composition",
+    "margin_operator": "composition_min",
+    "oracle_primitives": [
+      "color_segmentation",
+      "connected_components",
+      "centroid",
+      "distance_geometry",
+      "composition"
+    ],
+    "composition_depth": 3
+  },
+  "semantic_contrast": {
+    "closest_known_worlds": [
+      "chain_reflow_reveal",
+      "share_difference_reveal",
+      "ribbon_stack_reveal",
+      "speckle_majority_reveal",
+      "spacing_order"
+    ],
+    "known_negative_matches": [
+      "grid_fill_count",
+      "brightness_mean",
+      "dot_midpoint"
+    ],
+    "contrast": "The independently retrieved nearest neighbours are the sibling reveal worlds, which also report an abstract glyph after a declared raster operation, but the operation here is of a different kind and its evidence has a different geometry. chain_reflow_reveal also traces a thin chain, but there the decisive object is a per-tile reading and the transform is a permutation: each tile carries one output bit, and tracing only decides which grid slot that bit lands in. Here tracing decides nothing on its own, because no bead carries an output bit at all: every one of the 25 verdicts is a comparison between two beads that the fold brings together from opposite ends of the walk, and a scene with the same route and the same bead positions can spell any of the four glyphs. share_difference_reveal also compares two things, but it compares two separately drawn chips registered by matching canvas positions, so the two members of each compared pair sit at corresponding places in two neighbouring blocks; here the two members of a pair are two beads on one connected cord whose separation is the arc length of the fold, and their canvas positions are unrelated to each other. ribbon_stack_reveal intersects several panels of one ribbon read in a travel frame, and speckle_majority_reveal takes an area majority inside each cell of a fixed panel; both are per-position functions of a fixed layout. That difference is measurable, not cosmetic, and the tests assert it: whiting out either the left, right, top, or bottom half of the picture forces abstention on every checked scene, because the fold cannot be executed from either half alone, and the raw first half and raw second half of the bead sequence, the half-on-half pairing, and the neighbour pairing are all rejected at sampling time so that none of them ever spells a declared glyph. Unlike the rejected grid_fill_count nothing is tallied: every glyph marks exactly 9 of 25 positions, every scene has 50 beads and 16 unmarked pairs, bead ink and cord length are constant, and the dark-bead totals of the four answers overlap. Unlike the rejected brightness_mean and dot_midpoint the tone boundary is the midpoint of the two rendered grays shown in the key, not a code-only constant, and no near-tie tolerance is needed anywhere. Unlike spacing_order nothing about the cord's own geometry, spacing, or extent is reported, and the route is sampled independently of the answer.",
+    "expected_information_gain": "It isolates whether a model can hold a long-range correspondence along a thin trace: convert visible connectivity into a walking order, pair the order with its own reverse, and integrate 25 two-ended comparisons into one global shape identity. The failure modes separate cleanly. A model that cannot trace a winding thin cord fails everywhere. A model that reads every bead but attends locally cannot beat chance, because each half of the cord is an unbiased coin sequence and the cheap pairings are excluded at sampling time. A model that folds from the wrong place, for example pairing neighbours or pairing the halves without reversing one, lands on a pattern that is provably not a declared glyph. A model that pairs correctly but cannot bind 25 boolean outcomes into a figure fails only on glyph identity. Panel-majority, chip-difference, traversal-permutation, counting and single-region probes cannot separate these cases, because none of them requires two widely separated parts of one image to be brought into correspondence."
+  },
+  "deviations": []
+}

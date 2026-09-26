@@ -1,0 +1,79 @@
+{
+  "candidate_id": "pattern_relay_chain_correspondence",
+  "candidate_sha256": "5465e01983ff48f4a33415fd68e2edc69fb3a198f0456fdbf9d6ef06703a025f",
+  "distinct_image_count": 5,
+  "sample_unit": "unique_image",
+  "samples": [
+    {
+      "candidate_id": "pattern_relay_chain_correspondence",
+      "candidates": [
+        "red",
+        "green",
+        "blue"
+      ],
+      "image_path": "bootstrap/feedback/pattern_relay_chain_correspondence/images/sample-01.png",
+      "image_sha256": "4688ea30909234e82c3b086b355057887b3eccecedf35a62e9d61991eb0b120e",
+      "margin": "3.0",
+      "question": "The magenta-framed pattern is START. Each relay card maps its left pattern to its right pattern; follow the arrow. Find the card whose left pattern exactly matches START, then keep matching each output to another card's input. Stop when no input matches. What color tag is on the last card: red, green, or blue? Do not rotate or reflect patterns.",
+      "sample_id": "sample-01",
+      "sample_key": "dd438f24348c9a855c5be5284ae8f9f80df3b07976e179b553322356f8ef7bbd"
+    },
+    {
+      "candidate_id": "pattern_relay_chain_correspondence",
+      "candidates": [
+        "red",
+        "green",
+        "blue"
+      ],
+      "image_path": "bootstrap/feedback/pattern_relay_chain_correspondence/images/sample-02.png",
+      "image_sha256": "522193528b2979d5987105df8e94e8949ec5d2305db82c4529dfc6c2d58705fc",
+      "margin": "3.0",
+      "question": "The magenta-framed pattern is START. Each relay card maps its left pattern to its right pattern; follow the arrow. Find the card whose left pattern exactly matches START, then keep matching each output to another card's input. Stop when no input matches. What color tag is on the last card: red, green, or blue? Do not rotate or reflect patterns.",
+      "sample_id": "sample-02",
+      "sample_key": "e4df3e0614c07b7e72f90a4e6bb8e934c466f9a115fe6e2ae9e42973d595bf7d"
+    },
+    {
+      "candidate_id": "pattern_relay_chain_correspondence",
+      "candidates": [
+        "red",
+        "green",
+        "blue"
+      ],
+      "image_path": "bootstrap/feedback/pattern_relay_chain_correspondence/images/sample-03.png",
+      "image_sha256": "90d5d02905021a86c2ecc1700e3085646df5937993263131923b499e5c3570f9",
+      "margin": "3.0",
+      "question": "The magenta-framed pattern is START. Each relay card maps its left pattern to its right pattern; follow the arrow. Find the card whose left pattern exactly matches START, then keep matching each output to another card's input. Stop when no input matches. What color tag is on the last card: red, green, or blue? Do not rotate or reflect patterns.",
+      "sample_id": "sample-03",
+      "sample_key": "9c616cddd7860f05fdfeb3845c4735e123ce217ded6e4a31c24cd98c47ed1906"
+    },
+    {
+      "candidate_id": "pattern_relay_chain_correspondence",
+      "candidates": [
+        "red",
+        "green",
+        "blue"
+      ],
+      "image_path": "bootstrap/feedback/pattern_relay_chain_correspondence/images/sample-04.png",
+      "image_sha256": "9fde3618f8cb577d9a62a81aa34ed937c4d3bce3d7825ec9796648837cb03a5a",
+      "margin": "3.0",
+      "question": "The magenta-framed pattern is START. Each relay card maps its left pattern to its right pattern; follow the arrow. Find the card whose left pattern exactly matches START, then keep matching each output to another card's input. Stop when no input matches. What color tag is on the last card: red, green, or blue? Do not rotate or reflect patterns.",
+      "sample_id": "sample-04",
+      "sample_key": "9c5d687a9113227abbe0bc42e768fa6f7a1b9669f8fd662024979e772cf759fb"
+    },
+    {
+      "candidate_id": "pattern_relay_chain_correspondence",
+      "candidates": [
+        "red",
+        "green",
+        "blue"
+      ],
+      "image_path": "bootstrap/feedback/pattern_relay_chain_correspondence/images/sample-05.png",
+      "image_sha256": "8336120696b49e19b1d4e5c83ce42fc72cf13a049eaf9892c4cd592236881d19",
+      "margin": "3.0",
+      "question": "The magenta-framed pattern is START. Each relay card maps its left pattern to its right pattern; follow the arrow. Find the card whose left pattern exactly matches START, then keep matching each output to another card's input. Stop when no input matches. What color tag is on the last card: red, green, or blue? Do not rotate or reflect patterns.",
+      "sample_id": "sample-05",
+      "sample_key": "3386c652b1e09ed67ced2bb9fa57f014833876e2bfdd45294cb637ff0f2e934d"
+    }
+  ],
+  "source_selection_id": "section3-frontier-hard-seeds@0.2.0"
+}

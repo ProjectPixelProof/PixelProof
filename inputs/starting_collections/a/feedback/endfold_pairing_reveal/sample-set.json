@@ -1,0 +1,84 @@
+{
+  "candidate_id": "endfold_pairing_reveal",
+  "candidate_sha256": "50e2e29423316eee96d6965b114aef453bbe972da35d9d7f81df88dde564c4f4",
+  "distinct_image_count": 5,
+  "sample_unit": "unique_image",
+  "samples": [
+    {
+      "candidate_id": "endfold_pairing_reveal",
+      "candidates": [
+        "ell",
+        "ex",
+        "plus",
+        "tee"
+      ],
+      "image_path": "bootstrap/feedback/endfold_pairing_reveal/images/sample-01.png",
+      "image_sha256": "973abc7c20fecca1f2f8ea6a1ed0f2193f96d2205152943192d4483580dceacb",
+      "margin": "31.0",
+      "question": "Exactly one cord in this picture is teal; any other cord is pale lavender. The teal cord is a single unbranching thin route with exactly two ends, and it carries exactly 50 round beads, one at every corner and one at each end. Each bead is filled with one of just two grays, a darker gray and a lighter gray; the two-square key near one corner of the picture shows those two grays. Exactly one end bead of the teal cord has four small black brackets around it. Carry out this operation: walk the teal cord from that bracketed end bead to its other end and number the beads 1 to 50 in the order you meet them; then fold the cord end to end, so that bead 1 meets bead 50, bead 2 meets bead 49, bead 3 meets bead 48, and so on down to bead 25 meeting bead 26, giving 25 folded pairs; then mark every folded pair whose two beads are filled with the same gray, and leave a pair unmarked when its two beads differ. Then write the 25 verdicts into a 5 by 5 grid, filling the first row left to right with pairs 1 to 5, the second row with pairs 6 to 10, and so on to the fifth row with pairs 21 to 25. Exactly 9 of the 25 positions are marked. The marked positions form one symbol on the 5 by 5 grid: 'plus' is the full centre row together with the full centre column, 'ex' is the two full diagonals, 'tee' is the full top row together with the centre column below it, and 'ell' is the full left column together with the full bottom row. The shape the cord traces across the picture is not the symbol, the lavender cords and the key are decoration, and only the folded pairing of beads from the two ends of the walk decides which positions are marked. Which symbol do the marked positions form? Answer with exactly one of: ell, ex, plus, tee.",
+      "sample_id": "sample-01",
+      "sample_key": "e62ae3a864bfa5333cde0e8a605ae0741b722ccdaf8a620d9be5ad9113391e9b"
+    },
+    {
+      "candidate_id": "endfold_pairing_reveal",
+      "candidates": [
+        "ell",
+        "ex",
+        "plus",
+        "tee"
+      ],
+      "image_path": "bootstrap/feedback/endfold_pairing_reveal/images/sample-02.png",
+      "image_sha256": "c30a3305b7e82e52a4a70adb3ae4a32debbb42b5292c11fefc7163095bfaee1c",
+      "margin": "20.0",
+      "question": "Exactly one cord in this picture is teal; any other cord is pale lavender. The teal cord is a single unbranching thin route with exactly two ends, and it carries exactly 50 round beads, one at every corner and one at each end. Each bead is filled with one of just two grays, a darker gray and a lighter gray; the two-square key near one corner of the picture shows those two grays. Exactly one end bead of the teal cord has four small black brackets around it. Carry out this operation: walk the teal cord from that bracketed end bead to its other end and number the beads 1 to 50 in the order you meet them; then fold the cord end to end, so that bead 1 meets bead 50, bead 2 meets bead 49, bead 3 meets bead 48, and so on down to bead 25 meeting bead 26, giving 25 folded pairs; then mark every folded pair whose two beads are filled with the same gray, and leave a pair unmarked when its two beads differ. Then write the 25 verdicts into a 5 by 5 grid, filling the first row left to right with pairs 1 to 5, the second row with pairs 6 to 10, and so on to the fifth row with pairs 21 to 25. Exactly 9 of the 25 positions are marked. The marked positions form one symbol on the 5 by 5 grid: 'plus' is the full centre row together with the full centre column, 'ex' is the two full diagonals, 'tee' is the full top row together with the centre column below it, and 'ell' is the full left column together with the full bottom row. The shape the cord traces across the picture is not the symbol, the lavender cords and the key are decoration, and only the folded pairing of beads from the two ends of the walk decides which positions are marked. Which symbol do the marked positions form? Answer with exactly one of: ell, ex, plus, tee.",
+      "sample_id": "sample-02",
+      "sample_key": "237f5d666ec9a20e028e00538bba79885799f647303824f6aa2d97efc3ffab5e"
+    },
+    {
+      "candidate_id": "endfold_pairing_reveal",
+      "candidates": [
+        "ell",
+        "ex",
+        "plus",
+        "tee"
+      ],
+      "image_path": "bootstrap/feedback/endfold_pairing_reveal/images/sample-03.png",
+      "image_sha256": "82db297a243b3b4795fec96e7f1c741f964159779e3b069b5c33995d5e494bbd",
+      "margin": "47.5",
+      "question": "Exactly one cord in this picture is teal; any other cord is pale lavender. The teal cord is a single unbranching thin route with exactly two ends, and it carries exactly 50 round beads, one at every corner and one at each end. Each bead is filled with one of just two grays, a darker gray and a lighter gray; the two-square key near one corner of the picture shows those two grays. Exactly one end bead of the teal cord has four small black brackets around it. Carry out this operation: walk the teal cord from that bracketed end bead to its other end and number the beads 1 to 50 in the order you meet them; then fold the cord end to end, so that bead 1 meets bead 50, bead 2 meets bead 49, bead 3 meets bead 48, and so on down to bead 25 meeting bead 26, giving 25 folded pairs; then mark every folded pair whose two beads are filled with the same gray, and leave a pair unmarked when its two beads differ. Then write the 25 verdicts into a 5 by 5 grid, filling the first row left to right with pairs 1 to 5, the second row with pairs 6 to 10, and so on to the fifth row with pairs 21 to 25. Exactly 9 of the 25 positions are marked. The marked positions form one symbol on the 5 by 5 grid: 'plus' is the full centre row together with the full centre column, 'ex' is the two full diagonals, 'tee' is the full top row together with the centre column below it, and 'ell' is the full left column together with the full bottom row. The shape the cord traces across the picture is not the symbol, the lavender cords and the key are decoration, and only the folded pairing of beads from the two ends of the walk decides which positions are marked. Which symbol do the marked positions form? Answer with exactly one of: ell, ex, plus, tee.",
+      "sample_id": "sample-03",
+      "sample_key": "6fb49ce9d4d17372f8a64126193d561fdadaf9fa83d1f4648629e6dda9b0288e"
+    },
+    {
+      "candidate_id": "endfold_pairing_reveal",
+      "candidates": [
+        "ell",
+        "ex",
+        "plus",
+        "tee"
+      ],
+      "image_path": "bootstrap/feedback/endfold_pairing_reveal/images/sample-04.png",
+      "image_sha256": "f71e241a886d0a7052d33cdb927492118955587253809116bd249d80233e49f8",
+      "margin": "19.5",
+      "question": "Exactly one cord in this picture is teal; any other cord is pale lavender. The teal cord is a single unbranching thin route with exactly two ends, and it carries exactly 50 round beads, one at every corner and one at each end. Each bead is filled with one of just two grays, a darker gray and a lighter gray; the two-square key near one corner of the picture shows those two grays. Exactly one end bead of the teal cord has four small black brackets around it. Carry out this operation: walk the teal cord from that bracketed end bead to its other end and number the beads 1 to 50 in the order you meet them; then fold the cord end to end, so that bead 1 meets bead 50, bead 2 meets bead 49, bead 3 meets bead 48, and so on down to bead 25 meeting bead 26, giving 25 folded pairs; then mark every folded pair whose two beads are filled with the same gray, and leave a pair unmarked when its two beads differ. Then write the 25 verdicts into a 5 by 5 grid, filling the first row left to right with pairs 1 to 5, the second row with pairs 6 to 10, and so on to the fifth row with pairs 21 to 25. Exactly 9 of the 25 positions are marked. The marked positions form one symbol on the 5 by 5 grid: 'plus' is the full centre row together with the full centre column, 'ex' is the two full diagonals, 'tee' is the full top row together with the centre column below it, and 'ell' is the full left column together with the full bottom row. The shape the cord traces across the picture is not the symbol, the lavender cords and the key are decoration, and only the folded pairing of beads from the two ends of the walk decides which positions are marked. Which symbol do the marked positions form? Answer with exactly one of: ell, ex, plus, tee.",
+      "sample_id": "sample-04",
+      "sample_key": "c93745788a21819918e0df2e37280ea274e2982944b9528c5d91443c975bfbb2"
+    },
+    {
+      "candidate_id": "endfold_pairing_reveal",
+      "candidates": [
+        "ell",
+        "ex",
+        "plus",
+        "tee"
+      ],
+      "image_path": "bootstrap/feedback/endfold_pairing_reveal/images/sample-05.png",
+      "image_sha256": "f505f6041a386ec6d012abbb2a3523429f053cb5279f1673fcfb71165f3188cb",
+      "margin": "29.0",
+      "question": "Exactly one cord in this picture is teal; any other cord is pale lavender. The teal cord is a single unbranching thin route with exactly two ends, and it carries exactly 50 round beads, one at every corner and one at each end. Each bead is filled with one of just two grays, a darker gray and a lighter gray; the two-square key near one corner of the picture shows those two grays. Exactly one end bead of the teal cord has four small black brackets around it. Carry out this operation: walk the teal cord from that bracketed end bead to its other end and number the beads 1 to 50 in the order you meet them; then fold the cord end to end, so that bead 1 meets bead 50, bead 2 meets bead 49, bead 3 meets bead 48, and so on down to bead 25 meeting bead 26, giving 25 folded pairs; then mark every folded pair whose two beads are filled with the same gray, and leave a pair unmarked when its two beads differ. Then write the 25 verdicts into a 5 by 5 grid, filling the first row left to right with pairs 1 to 5, the second row with pairs 6 to 10, and so on to the fifth row with pairs 21 to 25. Exactly 9 of the 25 positions are marked. The marked positions form one symbol on the 5 by 5 grid: 'plus' is the full centre row together with the full centre column, 'ex' is the two full diagonals, 'tee' is the full top row together with the centre column below it, and 'ell' is the full left column together with the full bottom row. The shape the cord traces across the picture is not the symbol, the lavender cords and the key are decoration, and only the folded pairing of beads from the two ends of the walk decides which positions are marked. Which symbol do the marked positions form? Answer with exactly one of: ell, ex, plus, tee.",
+      "sample_id": "sample-05",
+      "sample_key": "0580ed37184f6beadc655f7e6dcc34645f3f69853f6ab00f25eebfa0bc9c5d3f"
+    }
+  ],
+  "source_selection_id": "section3-frontier-hard-seeds@0.2.0"
+}

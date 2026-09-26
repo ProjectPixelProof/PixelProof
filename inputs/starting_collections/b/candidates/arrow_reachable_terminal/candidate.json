@@ -1,0 +1,46 @@
+{
+  "schema_version": "0.4.0",
+  "candidate_id": "arrow_reachable_terminal",
+  "title": "Terminal reachable along arrow directions",
+  "question": "Starting at the green START circle, follow black links only in the direction of their purple arrowheads. Which colored terminal can be reached? Links meet only at circles, and every link may be followed only in its arrow's direction. Answer red, blue, or orange.",
+  "decision_type": "selection",
+  "task_signature": {
+    "decision_var": "directed_reachable_terminal_color",
+    "structure": "symmetric_three_arm_directed_network",
+    "decision_type": "selection",
+    "mechanism": "Reconstruct the visible node-link graph, recover the direction of every arrowed link, and select the unique colored terminal reachable from green START by a fully direction-respecting path."
+  },
+  "latent_z": {
+    "description": "A planar three-arm graph with visible node positions, terminal colors, directed edges, and rendering dimensions.",
+    "fields": ["nodes", "edges"]
+  },
+  "latent_alias": {
+    "mode": "tested_transforms",
+    "justification": "Node-list and edge-list record order are non-semantic aliases: reordering either collection leaves the composited raster and directed reachability answer exactly unchanged.",
+    "label_inputs": ["nodes", "edges"]
+  },
+  "boundary": {
+    "observable": "The discrete boundary is a visible reversal of an arrowhead on the last blocked link of a distractor route; reversing it opens that route from START.",
+    "quarantine": "Scenes are quarantined if they lack one unique reachable terminal, if an edge or arrow is too short, or if nonincident geometry approaches the fixed clearance limit."
+  },
+  "oracle_independence": {
+    "image_only": true,
+    "forbidden_imports_absent": true
+  },
+  "mechanism_fingerprint": {
+    "decision_family": "selection",
+    "entities": ["point", "line", "color"],
+    "arity": "mixed",
+    "relation": "composition",
+    "margin_operator": "composition_min",
+    "oracle_primitives": ["color_segmentation", "connected_components", "centroid", "line_fit", "composition"],
+    "composition_depth": 4
+  },
+  "semantic_contrast": {
+    "closest_known_worlds": ["corridor_reachable_terminal", "alternating_link_terminal", "relay_trace_terminal", "four_link_terminal", "unique_visit_terminal"],
+    "known_negative_matches": [],
+    "contrast": "Unlike corridor_reachable_terminal, connectivity alone is insufficient: every arm is undirected-connected to START, and only directed edge orientation separates the answer. Unlike alternating_link_terminal, the rule is reachability under local edge direction rather than matching a prescribed style sequence. Unlike relay_trace_terminal, there are explicit graph nodes and branching search rather than straight-through crossing composition.",
+    "expected_information_gain": "This isolates whether a model can bind arrowhead orientation to individual links and compose those asymmetric relations across a multi-link route while ignoring symmetric position and length cues."
+  },
+  "deviations": []
+}

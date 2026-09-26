@@ -1,0 +1,46 @@
+{
+  "schema_version": "0.4.0",
+  "candidate_id": "paired_seam_correspondence",
+  "title": "Paired seam correspondence",
+  "question": "Ignoring color, position, size, and the gap, do the two separated tiles have the same sequence of bumps and recesses along their facing edges? Keep the top-to-bottom order and do not rotate or flip either tile. Answer yes or no.",
+  "decision_type": "yesno",
+  "task_signature": {
+    "decision_var": "seam_match",
+    "structure": "paired_edge_correspondence",
+    "decision_type": "yesno",
+    "mechanism": "Compare the ordered contour displacement profiles of the two facing edges of two disconnected filled tiles; the answer is yes only when both components carry the same full top-to-bottom profile."
+  },
+  "latent_z": {
+    "description": "The binary seam relation is rendered as equal or cyclically mismatched facing contours, while profile values, group translation, scale, gap, and shared palette color are randomized nuisances.",
+    "fields": ["match", "profile", "mismatch_shift", "x", "y", "gap", "scale", "color"]
+  },
+  "latent_alias": {
+    "mode": "not_applicable",
+    "justification": "The only analytic label input is match, and it is rendered through the visible relation between the two facing contours. The base profile and all placement, scale, gap, and palette fields affect pixels but are not hidden gold-only inputs; no distinct latent transform is pixel-identical under this minimal scene parametrization, so the no-alias rendered-field audit is applicable.",
+    "label_inputs": ["match"]
+  },
+  "boundary": {
+    "observable": "The boundary is a visible contour-displacement difference: after aligning the two tile heights, identical top-to-bottom seam profiles have near-zero residual while a cyclic mismatch has a multi-pixel residual.",
+    "quarantine": "Quarantine an image when either tile is missing or the recovered profile residual is within 3 pixels of the comparison threshold; sampled scenes use a larger separation and a clear gap."
+  },
+  "oracle_independence": {
+    "image_only": true,
+    "forbidden_imports_absent": true
+  },
+  "mechanism_fingerprint": {
+    "decision_family": "composition",
+    "entities": ["shape"],
+    "arity": "pair",
+    "relation": "composition",
+    "margin_operator": "signed_difference",
+    "oracle_primitives": ["color_segmentation", "connected_components", "bounding_box", "pixel_count", "composition"],
+    "composition_depth": 2
+  },
+  "semantic_contrast": {
+    "closest_known_worlds": ["hollow_chamber_balance", "textured_energy_silhouette", "connected_route_pockets", "relational_reference"],
+    "known_negative_matches": [],
+    "contrast": "This is not a cavity-area comparison, a connected-route pocket count, or a texture silhouette. It does not classify either tile in isolation and does not select an object by a spatial attribute. The answer is a correspondence relation between two disconnected, ordered boundary traces: each tile contributes a complete facing contour, and the image-only oracle must recover their normalized profiles before deciding.",
+    "expected_information_gain": "It isolates whether a visual system can bind two separated contour fragments by ordered shape correspondence while ignoring matched nuisance statistics such as color, area, placement, and total ink."
+  },
+  "deviations": []
+}

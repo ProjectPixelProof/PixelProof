@@ -1,0 +1,26 @@
+{
+  "schema_version": "0.2.0",
+  "candidate_id": "reference_marker",
+  "title": "Marker above a visible horizontal reference",
+  "question": "Is the red marker above the visible horizontal reference line?",
+  "decision_type": "yesno",
+  "task_signature": {
+    "decision_var": "coordinate_offset_y",
+    "structure": "point_vs_line",
+    "decision_type": "yesno",
+    "mechanism": "Compare a colored marker's visible vertical coordinate with a separately drawn reference line."
+  },
+  "latent_z": {
+    "description": "Marker and reference coordinates plus an unused tag for a declared render-invariant symmetry.",
+    "fields": ["marker_x", "marker_y", "reference_y", "latent_tag"]
+  },
+  "boundary": {
+    "observable": "The horizontal gray line is drawn directly; equality is the visible boundary.",
+    "quarantine": "Exclude marker centers within three rendered pixels of the line."
+  },
+  "oracle_independence": {
+    "image_only": true,
+    "forbidden_imports_absent": true
+  },
+  "deviations": ["Known verifier contract fixture; not a scientific proposal."]
+}

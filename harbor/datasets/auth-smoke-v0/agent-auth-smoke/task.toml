@@ -1,0 +1,27 @@
+schema_version = "1.4"
+artifacts = ["/logs/artifacts/auth-smoke"]
+
+[task]
+name = "question-foundry/agent-auth-smoke"
+version = "0.1.0"
+description = "Make one minimal authenticated agent call and preserve a fixed artifact"
+keywords = ["auth-smoke", "harbor", "agent"]
+
+[metadata]
+category = "infrastructure"
+difficulty_explanation = "Intentionally trivial; validates auth, execution, and artifact transport."
+verification_explanation = "Checks one exact artifact. The reward has no scientific meaning."
+
+[agent]
+timeout_sec = 300.0
+
+[verifier]
+timeout_sec = 60.0
+
+[environment]
+allow_internet = true
+build_timeout_sec = 600.0
+cpus = 1
+memory_mb = 2048
+storage_mb = 4096
+gpus = 0

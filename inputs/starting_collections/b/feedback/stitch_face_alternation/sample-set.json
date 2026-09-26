@@ -1,0 +1,74 @@
+{
+  "candidate_id": "stitch_face_alternation",
+  "candidate_sha256": "697db0e24cec4c6c86516c4581a40c570ac1bfdb51b6f9d97f8782c16c21da93",
+  "distinct_image_count": 5,
+  "sample_unit": "unique_image",
+  "samples": [
+    {
+      "candidate_id": "stitch_face_alternation",
+      "candidates": [
+        "yes",
+        "no"
+      ],
+      "image_path": "bootstrap/feedback/stitch_face_alternation/images/sample-01.png",
+      "image_sha256": "d3572480f7a18a8eeddbcd4769a656688c084c60c11d5acd210dd5a153a90b52",
+      "margin": "17.563",
+      "question": "This picture shows a mending board on a plain white background. Exactly one flat tape strip has a thin thread stitched through it: that thread crosses the tape exactly five times, and one end of that thread carries a small crimson square tag. At each crossing the thread either passes in FRONT of the tape, staying visible right across it, or BEHIND the tape, hidden where the tape covers it and leaving a visible gap. Loose thread scraps and bare tape pieces elsewhere in the picture are not stitched through any tape and must be ignored. Walk the thread from its tagged end and take the five crossings in the order the thread meets them. The stitch alternates if front and behind strictly take turns along that walk, never twice in a row. Does this stitch alternate? Answer with exactly one of: yes, no.",
+      "sample_id": "sample-01",
+      "sample_key": "2c290932d17df00d796b2f3c9a4381e1d923f78f92d91aec57dbc8f9297834dc"
+    },
+    {
+      "candidate_id": "stitch_face_alternation",
+      "candidates": [
+        "yes",
+        "no"
+      ],
+      "image_path": "bootstrap/feedback/stitch_face_alternation/images/sample-02.png",
+      "image_sha256": "a82f1214c4cb1db42ee2d8972ffbbac20c204191c3449626569d3ae76903870b",
+      "margin": "18.359",
+      "question": "This picture shows a mending board on a plain white background. Exactly one flat tape strip has a thin thread stitched through it: that thread crosses the tape exactly five times, and one end of that thread carries a small crimson square tag. At each crossing the thread either passes in FRONT of the tape, staying visible right across it, or BEHIND the tape, hidden where the tape covers it and leaving a visible gap. Loose thread scraps and bare tape pieces elsewhere in the picture are not stitched through any tape and must be ignored. Walk the thread from its tagged end and take the five crossings in the order the thread meets them. The stitch alternates if front and behind strictly take turns along that walk, never twice in a row. Does this stitch alternate? Answer with exactly one of: yes, no.",
+      "sample_id": "sample-02",
+      "sample_key": "e4cdeec60f7e6d05c20b61832084b9b1620d0e1f0ce3aa1416b83cc4290a4834"
+    },
+    {
+      "candidate_id": "stitch_face_alternation",
+      "candidates": [
+        "yes",
+        "no"
+      ],
+      "image_path": "bootstrap/feedback/stitch_face_alternation/images/sample-03.png",
+      "image_sha256": "a89d4d40f4e4d7f2109cb4f51c7ba6be3dd0858397747f5e4a82355ac78782a4",
+      "margin": "6.987",
+      "question": "This picture shows a mending board on a plain white background. Exactly one flat tape strip has a thin thread stitched through it: that thread crosses the tape exactly five times, and one end of that thread carries a small crimson square tag. At each crossing the thread either passes in FRONT of the tape, staying visible right across it, or BEHIND the tape, hidden where the tape covers it and leaving a visible gap. Loose thread scraps and bare tape pieces elsewhere in the picture are not stitched through any tape and must be ignored. Walk the thread from its tagged end and take the five crossings in the order the thread meets them. The stitch alternates if front and behind strictly take turns along that walk, never twice in a row. Does this stitch alternate? Answer with exactly one of: yes, no.",
+      "sample_id": "sample-03",
+      "sample_key": "c19f90ef18976dd6aa7bfe049cb057e4d1b0a5c641af4e39187afec568354e2b"
+    },
+    {
+      "candidate_id": "stitch_face_alternation",
+      "candidates": [
+        "yes",
+        "no"
+      ],
+      "image_path": "bootstrap/feedback/stitch_face_alternation/images/sample-04.png",
+      "image_sha256": "09d1d3efb22b963acc1a6dfda3d3e6a027124ae34f66181e1f572e32d2dd4e4d",
+      "margin": "17.731",
+      "question": "This picture shows a mending board on a plain white background. Exactly one flat tape strip has a thin thread stitched through it: that thread crosses the tape exactly five times, and one end of that thread carries a small crimson square tag. At each crossing the thread either passes in FRONT of the tape, staying visible right across it, or BEHIND the tape, hidden where the tape covers it and leaving a visible gap. Loose thread scraps and bare tape pieces elsewhere in the picture are not stitched through any tape and must be ignored. Walk the thread from its tagged end and take the five crossings in the order the thread meets them. The stitch alternates if front and behind strictly take turns along that walk, never twice in a row. Does this stitch alternate? Answer with exactly one of: yes, no.",
+      "sample_id": "sample-04",
+      "sample_key": "b84c6f2ec16b766e7e017950101f52fce47e0316ca422d7a8ea580cef07414c1"
+    },
+    {
+      "candidate_id": "stitch_face_alternation",
+      "candidates": [
+        "yes",
+        "no"
+      ],
+      "image_path": "bootstrap/feedback/stitch_face_alternation/images/sample-05.png",
+      "image_sha256": "950f2381b6d654b69b7ae643f09255278e4b2c023318e4f57c32d5dddede1f00",
+      "margin": "9.334",
+      "question": "This picture shows a mending board on a plain white background. Exactly one flat tape strip has a thin thread stitched through it: that thread crosses the tape exactly five times, and one end of that thread carries a small crimson square tag. At each crossing the thread either passes in FRONT of the tape, staying visible right across it, or BEHIND the tape, hidden where the tape covers it and leaving a visible gap. Loose thread scraps and bare tape pieces elsewhere in the picture are not stitched through any tape and must be ignored. Walk the thread from its tagged end and take the five crossings in the order the thread meets them. The stitch alternates if front and behind strictly take turns along that walk, never twice in a row. Does this stitch alternate? Answer with exactly one of: yes, no.",
+      "sample_id": "sample-05",
+      "sample_key": "70ad249179714645443712dcd2b129ea103844cd8488c12b21f8be7c15b03565"
+    }
+  ],
+  "source_selection_id": "section3-frontier-hard-seeds@0.2.0"
+}

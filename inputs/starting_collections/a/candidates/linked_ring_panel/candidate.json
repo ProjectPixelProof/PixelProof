@@ -1,0 +1,70 @@
+{
+  "schema_version": "0.4.0",
+  "candidate_id": "linked_ring_panel",
+  "title": "Panel whose two rings are interlocked rather than merely stacked",
+  "question": "This image shows five framed square panels of identical size standing side by side in one row, numbered 1 to 5 from left to right. Every panel holds exactly two rings of the same thickness, drawn in two different flat colours, and in every panel the two rings cross each other at exactly two places, so ring count, ring size, colour, position and the amount of ink carry no information. The rings are opaque, so at each crossing one ring passes in front and hides a short piece of the other one, leaving a plain break in the ring behind. Two rings are interlocked when neither ring stays in front the whole way round: one ring passes in front at one crossing and behind at the other, so each of the two rings carries exactly one break and each is still a single connected curve. Two rings are merely stacked when the same ring passes in front at both crossings, so that front ring carries no break at all while the ring behind it is broken twice and falls into two separate pieces. Exactly one panel holds a pair of interlocked rings. In each of the other four panels the pair is merely stacked, and the piece of the ring behind that lies between its two breaks is at least 26 pixels long, so both of its breaks are plainly visible. Which ring is drawn in which colour, which ring is in front at a given crossing, and where the pair sits inside its panel are all free to vary. Which numbered panel holds the two interlocked rings, that is the panel in which each of the two rings carries exactly one break? Answer with exactly one of: panel-1, panel-2, panel-3, panel-4, panel-5.",
+  "decision_type": "selection",
+  "task_signature": {
+    "decision_var": "linked_ring_panel",
+    "structure": "five_panels_each_holding_two_crossing_opaque_rings",
+    "decision_type": "selection",
+    "mechanism": "Every panel holds two opaque rings of equal thickness in two different flat colours whose circles cross at exactly two points, so every panel shows the same crossing configuration. The decision statistic is the depth order read off the two crossings: at each crossing the ring painted in front hides a short arc of the other, and the visible consequence is how many connected pieces each colour survives as. In exactly one panel the depth order alternates, so each ring is hidden once and each colour stays a single connected curve; in every other panel one ring is in front at both crossings, so that colour is unbroken while the other falls into two pieces. The selected panel is the unique one scoring one component in both colours, and the margin is the length in pixels of the shortest surviving fragment of a stacked panel's under ring, the distance of the runner-up panel from also reading as interlocked."
+  },
+  "latent_z": {
+    "description": "Canvas size, palette offset, and for each of the five panels two ring records giving centre, radius and colour index, plus the draw order, the interlocked flag and which of the two crossings is repainted.",
+    "fields": [
+      "canvas",
+      "palette",
+      "panels"
+    ]
+  },
+  "latent_alias": {
+    "mode": "tested_transforms",
+    "justification": "The analytic gold reads exactly one scene field, the per-panel interlocked flag, and nothing else; canvas size, palette offset, ring geometry and draw order never reach it. Three declared latent aliases leave the raster byte-identical and the gold unchanged. The palette offset is consumed modulo the palette length, so adding the palette period is invisible. Each panel's two ring records occupy slots that are only read through the draw order, so reversing the slot pair while flipping the draw-order index reproduces the identical paint sequence; the repainted crossing is chosen by its own screen position rather than by slot, which is what makes that swap exact. The repainted-crossing side is only consumed on interlocked panels, so flipping it on stacked panels is invisible. All three are exercised by latent_symmetries and asserted pixel-identical, margin-preserving and label-preserving in the tests.",
+    "label_inputs": [
+      "panels"
+    ]
+  },
+  "boundary": {
+    "observable": "The decision boundary is the visible depth order at the two crossings of one ring pair. Every crossing shows which colour is continuous and which is interrupted, so a reader can settle every panel by looking at its two crossings and asking whether the same colour won both. No threshold, no hidden reference and no unmarked axis is used: an interlocked panel shows one break in each colour, and a stacked panel shows an unbroken front ring plus a rear ring in two pieces whose shorter piece is at least 26 pixels long, a length the question text states.",
+    "quarantine": "Scenes whose weakest stacked panel keeps an under-ring fragment shorter than 8.0 px between its two breaks, and scenes without exactly one interlocked panel, are quarantined and the pixel arm is permitted to abstain on them. The sampler enforces exactly one interlocked panel and a fragment of at least 26 px everywhere else, so sampled scenes are off-boundary by construction; the quarantine path is exercised on a constructed near-tangent scene in the tests."
+  },
+  "oracle_independence": {
+    "image_only": true,
+    "forbidden_imports_absent": true
+  },
+  "mechanism_fingerprint": {
+    "decision_family": "selection",
+    "entities": [
+      "circle",
+      "arc",
+      "region"
+    ],
+    "arity": "pair",
+    "relation": "intersection",
+    "margin_operator": "minimum",
+    "oracle_primitives": [
+      "color_segmentation",
+      "connected_components",
+      "pixel_count"
+    ],
+    "composition_depth": 3
+  },
+  "semantic_contrast": {
+    "closest_known_worlds": [
+      "pipe_path_panel",
+      "twin_glyph_panel",
+      "chiral_match_panel",
+      "lines",
+      "point_in_polygon"
+    ],
+    "known_negative_matches": [
+      "opus_search_trace_001__occlusion_order",
+      "grok_search_trace_004__visible_occlusion_front",
+      "segment_crossing"
+    ],
+    "contrast": "The independently nearest visible world is pipe_path_panel, which asks whether ink joins two marked terminals; both worlds are settled by reading ink continuity, but there continuity is the answer itself and here it is only the visible trace of something else, the depth order of two opaque curves at their two crossings. Nothing is traced from a start to an end, there are no terminals, and a panel can be rejected by looking at its two crossings alone. twin_glyph_panel and chiral_match_panel are matching worlds where two silhouettes must be brought into agreement under translation or rotation; nothing here is compared for agreement, and the two rings of a pair are deliberately never congruent. lines decides whether two strokes intersect at all, whereas every pair in every panel here crosses twice by construction, so intersection is uninformative and only the order in depth decides. point_in_polygon reads containment of a mark by a closed curve; no mark exists here and closure is shared by all ten rings. Two rejected proposals are the closest negatives and are disclosed deliberately: opus_search_trace_001__occlusion_order and grok_search_trace_004__visible_occlusion_front both asked which of two overlapping disks is in front, a single depth judgement at one overlap region, and both failed the protected gates. This world is not that question. A single crossing here is uninformative by construction, because in every panel some ring is in front at any crossing you pick; the decision is the alternation of two depth judgements taken at the two crossings of the same pair, which is a relation between crossings rather than a fact about one. That also removes the failure mode those negatives hit, where draw order is a latent field with no pixel consequence: rings are thin and cross twice, so the draw order of every pair is fully written into the raster as which colour survives unbroken, and the one slot-level rewrite that is invisible is declared and tested as a latent alias. segment_crossing failed its image-only oracle at an occluded crossing; the inverse arm here is built on exactly that occluded crossing and reads it by connected-component count per colour rather than by tracing through the junction.",
+    "expected_information_gain": "It isolates whether a model reads occlusion, that is figure-ground depth order at a junction, and can compare that order across the two crossings of the same pair instead of treating each crossing independently. Passing requires binding two local depth judgements into a single alternation predicate while ring count, size, colour, ink, position and the presence of crossings are all counterbalanced across panels."
+  },
+  "deviations": []
+}

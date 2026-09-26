@@ -1,0 +1,79 @@
+{
+  "candidate_id": "transpose_stamp_correspondence",
+  "candidate_sha256": "e5bd5f104ff7493ba2f16e6efccd634a708a5706f9d9d2fb3060f192e3641ce9",
+  "distinct_image_count": 5,
+  "sample_unit": "unique_image",
+  "samples": [
+    {
+      "candidate_id": "transpose_stamp_correspondence",
+      "candidates": [
+        "amber",
+        "cyan",
+        "violet"
+      ],
+      "image_path": "bootstrap/feedback/transpose_stamp_correspondence/images/sample-01.png",
+      "image_sha256": "b498d8063765658bf46359d484f4e449541ca7bc25f2dd29e81ee7f6a33325a2",
+      "margin": "2.0",
+      "question": "The black-bordered mini-grid is the reference. Swap its rows and columns: the cell at row r, column c moves to row c, column r. Exactly one colored-bordered mini-grid is the result. Which border color marks it? Answer amber, cyan, or violet.",
+      "sample_id": "sample-01",
+      "sample_key": "0bf0a59458094239b45ce7e841a1d8a43e3901923f90d301205455b67e81795a"
+    },
+    {
+      "candidate_id": "transpose_stamp_correspondence",
+      "candidates": [
+        "amber",
+        "cyan",
+        "violet"
+      ],
+      "image_path": "bootstrap/feedback/transpose_stamp_correspondence/images/sample-02.png",
+      "image_sha256": "242ca83765a8a10034cb40a7740d380eef5030712f5d638c426ce0849965558a",
+      "margin": "2.0",
+      "question": "The black-bordered mini-grid is the reference. Swap its rows and columns: the cell at row r, column c moves to row c, column r. Exactly one colored-bordered mini-grid is the result. Which border color marks it? Answer amber, cyan, or violet.",
+      "sample_id": "sample-02",
+      "sample_key": "d41483b5c462201af1663610c622262a4aaf4bdd2b05d6fe40fd44d205d7f4b5"
+    },
+    {
+      "candidate_id": "transpose_stamp_correspondence",
+      "candidates": [
+        "amber",
+        "cyan",
+        "violet"
+      ],
+      "image_path": "bootstrap/feedback/transpose_stamp_correspondence/images/sample-03.png",
+      "image_sha256": "7a3237275f0c8ef112b1c01c2b7949f6c9406ad53a50a03c0b5f0be7a8aeda55",
+      "margin": "4.0",
+      "question": "The black-bordered mini-grid is the reference. Swap its rows and columns: the cell at row r, column c moves to row c, column r. Exactly one colored-bordered mini-grid is the result. Which border color marks it? Answer amber, cyan, or violet.",
+      "sample_id": "sample-03",
+      "sample_key": "21251a2cd625623d7d6797f251cc66f25b46b2735df1336ed5264c37067d78d6"
+    },
+    {
+      "candidate_id": "transpose_stamp_correspondence",
+      "candidates": [
+        "amber",
+        "cyan",
+        "violet"
+      ],
+      "image_path": "bootstrap/feedback/transpose_stamp_correspondence/images/sample-04.png",
+      "image_sha256": "67e65b6c65ff9d9fb1b395c77d9e19c6da053f6d0c4cfdf33224a41425a8ebef",
+      "margin": "4.0",
+      "question": "The black-bordered mini-grid is the reference. Swap its rows and columns: the cell at row r, column c moves to row c, column r. Exactly one colored-bordered mini-grid is the result. Which border color marks it? Answer amber, cyan, or violet.",
+      "sample_id": "sample-04",
+      "sample_key": "7d12dde211f1e311435769f6bd1f1a7d46c5b566f04f2166b667f6020bf91ec1"
+    },
+    {
+      "candidate_id": "transpose_stamp_correspondence",
+      "candidates": [
+        "amber",
+        "cyan",
+        "violet"
+      ],
+      "image_path": "bootstrap/feedback/transpose_stamp_correspondence/images/sample-05.png",
+      "image_sha256": "76434a9cfaeef0061089af5e643cad9f3eae8ad10fb5dc8b26002adafcd8a882",
+      "margin": "4.0",
+      "question": "The black-bordered mini-grid is the reference. Swap its rows and columns: the cell at row r, column c moves to row c, column r. Exactly one colored-bordered mini-grid is the result. Which border color marks it? Answer amber, cyan, or violet.",
+      "sample_id": "sample-05",
+      "sample_key": "f3fba92b8cf21cb8d93ee40c4d626625539b84a133f11ef6aa5f426173ea8393"
+    }
+  ],
+  "source_selection_id": "section3-frontier-hard-seeds@0.2.0"
+}

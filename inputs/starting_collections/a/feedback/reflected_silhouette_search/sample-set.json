@@ -1,0 +1,84 @@
+{
+  "candidate_id": "reflected_silhouette_search",
+  "candidate_sha256": "fc5abb4af7ce90b70aa5772f2424cd39031ccc7cc9c10da62ce24509fb0e99a0",
+  "distinct_image_count": 5,
+  "sample_unit": "unique_image",
+  "samples": [
+    {
+      "candidate_id": "reflected_silhouette_search",
+      "candidates": [
+        "NW",
+        "NE",
+        "SW",
+        "SE"
+      ],
+      "image_path": "bootstrap/feedback/reflected_silhouette_search/images/sample-01.png",
+      "image_sha256": "e7ffcac95b9a67810bb087ab009184bd428093fafc41de5415fa5c49deaf8507",
+      "margin": "0.5542",
+      "question": "Each sector contains two separate filled glyphs. Imagine the line through the midpoint of the line joining their centers, perpendicular to that joining line. Which sector contains the only pair whose silhouettes are mirror images across that line? Answer NW, NE, SW, or SE.",
+      "sample_id": "sample-01",
+      "sample_key": "f873b51232c99232597afff44350ccf9f6452d0809b6b31a2d488a7c8f43b270"
+    },
+    {
+      "candidate_id": "reflected_silhouette_search",
+      "candidates": [
+        "NW",
+        "NE",
+        "SW",
+        "SE"
+      ],
+      "image_path": "bootstrap/feedback/reflected_silhouette_search/images/sample-02.png",
+      "image_sha256": "94f47382d2d322d1648f88f7f54ea2138d5d5b5fc09ada11ad0ce936da904e11",
+      "margin": "0.5124",
+      "question": "Each sector contains two separate filled glyphs. Imagine the line through the midpoint of the line joining their centers, perpendicular to that joining line. Which sector contains the only pair whose silhouettes are mirror images across that line? Answer NW, NE, SW, or SE.",
+      "sample_id": "sample-02",
+      "sample_key": "a22ba477f715a923ea0e4a80fa40bb0f92ac6ea6daa09d39c3f9124f4549c512"
+    },
+    {
+      "candidate_id": "reflected_silhouette_search",
+      "candidates": [
+        "NW",
+        "NE",
+        "SW",
+        "SE"
+      ],
+      "image_path": "bootstrap/feedback/reflected_silhouette_search/images/sample-03.png",
+      "image_sha256": "f0c181e5702bf1a035dc9ae312d9b8367670baae3a2e0361b5d03814115a2de1",
+      "margin": "0.6645",
+      "question": "Each sector contains two separate filled glyphs. Imagine the line through the midpoint of the line joining their centers, perpendicular to that joining line. Which sector contains the only pair whose silhouettes are mirror images across that line? Answer NW, NE, SW, or SE.",
+      "sample_id": "sample-03",
+      "sample_key": "76afba6836cf3068bf26c3efc4fcc8c531e22603c2c3df1f09e6fc5cfbbbd22c"
+    },
+    {
+      "candidate_id": "reflected_silhouette_search",
+      "candidates": [
+        "NW",
+        "NE",
+        "SW",
+        "SE"
+      ],
+      "image_path": "bootstrap/feedback/reflected_silhouette_search/images/sample-04.png",
+      "image_sha256": "e4a4b318c3fe3461577987d4238d931599aa77f9a3ea1c8fb99f88c8092e4035",
+      "margin": "0.5959",
+      "question": "Each sector contains two separate filled glyphs. Imagine the line through the midpoint of the line joining their centers, perpendicular to that joining line. Which sector contains the only pair whose silhouettes are mirror images across that line? Answer NW, NE, SW, or SE.",
+      "sample_id": "sample-04",
+      "sample_key": "d118314afa874be077add48bce5d7a1152ad6600086dd0fc745da3b0e86584f0"
+    },
+    {
+      "candidate_id": "reflected_silhouette_search",
+      "candidates": [
+        "NW",
+        "NE",
+        "SW",
+        "SE"
+      ],
+      "image_path": "bootstrap/feedback/reflected_silhouette_search/images/sample-05.png",
+      "image_sha256": "4f78565083c32332d29756e93638a919d9aa2b8d243c8a3df4a31c22ccb6bed4",
+      "margin": "0.5653",
+      "question": "Each sector contains two separate filled glyphs. Imagine the line through the midpoint of the line joining their centers, perpendicular to that joining line. Which sector contains the only pair whose silhouettes are mirror images across that line? Answer NW, NE, SW, or SE.",
+      "sample_id": "sample-05",
+      "sample_key": "4efc2c77a0a79ab7c07146ed433580b9f0dc39298113e15ae7c873c342d27067"
+    }
+  ],
+  "source_selection_id": "section3-frontier-hard-seeds@0.2.0"
+}

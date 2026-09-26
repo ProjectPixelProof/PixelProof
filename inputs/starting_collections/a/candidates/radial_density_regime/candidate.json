@@ -1,0 +1,52 @@
+{
+  "schema_version": "0.4.0",
+  "candidate_id": "radial_density_regime",
+  "title": "Global radial texture energy: are the dots packed toward the centre core or the outer rim?",
+  "question": "A field of small dark dots covers a white square canvas. Looking at the whole dot field at once: are the dots packed tightly toward the centre of the canvas, forming a solid central core with the rim spread thin? Or are the dots packed toward the outside rim, forming a surrounding ring with the centre left sparse? Answer core if the dots are denser toward the centre, or rim if the dots are denser toward the outer edges.",
+  "decision_type": "yesno",
+  "task_signature": {
+    "decision_var": "radial_density_regime",
+    "structure": "radial_density_field",
+    "decision_type": "yesno",
+    "mechanism": "Recover every dark dot from the raster, take each dot as one equal-mass mark, and measure the global radial texture-energy field: count how much of the whole constellation lies inside a central disc (relative to the shared canvas centre) versus in the surrounding annulus, and decide whether the majority mass is concentrated toward the core or toward the rim. This is a collective radial-density Gestalt of the entire field, not any single dot, its count, ink, colour, position, or overall extent."
+  },
+  "latent_z": {
+    "description": "Latent scene: the set of dark dot centres and the (photometrically invisible) order in which the non-overlapping dots are painted.",
+    "fields": ["dots", "dot_order"]
+  },
+  "boundary": {
+    "observable": "The answer is visible wherever the radial dot-mass comparison crosses the central-vs-outer boundary: the pixel-only arm counts dark ink inside versus outside a central disc and reads the majority, so the boundary (inner mass vs outer mass) is exposed in the raster.",
+    "quarantine": "Scenes whose inner-vs-outer dot-count difference falls below 14 dots are flagged; at that near-tie the pixel arm cannot cleanly separate a core regime from a rim regime."
+  },
+  "oracle_independence": {
+    "image_only": true,
+    "forbidden_imports_absent": true
+  },
+  "deviations": [],
+  "latent_alias": {
+    "mode": "tested_transforms",
+    "justification": "The dark dots never overlap, so the order in which they are painted is photometrically invisible yet is a genuine sampled scene field. Rotating the declared dot_order list produces a byte-identical raster while analytic gold (which reads only the dot positions) is unchanged, giving a nontrivial pixel-identical tested transform.",
+    "label_inputs": ["dots"]
+  },
+  "mechanism_fingerprint": {
+    "decision_family": "predicate",
+    "entities": ["point", "set", "disk", "circle"],
+    "arity": "set",
+    "relation": "proportion",
+    "margin_operator": "count_difference",
+    "oracle_primitives": ["color_segmentation", "connected_components", "centroid", "distance_geometry", "pixel_count"],
+    "composition_depth": 2
+  },
+  "semantic_contrast": {
+    "closest_known_worlds": [
+      "density_gradient_direction",
+      "center_surround",
+      "texture_energy_silhouette",
+      "concyclic_consistency",
+      "dotcloud_centroid_marker"
+    ],
+    "known_negative_matches": [],
+    "contrast": "Unlike density_gradient_direction (a monotone linear density increase along one cardinal axis) this world measures a radial, centre-vs-rim imbalance around the shared canvas centre: the decision is whether the majority of the whole field's mass is interior (core) or peripheral (rim), a radial proportion rather than a linear axis-and-sign gradient. center_surround asks whether the constellation surrounds the exact centre at all; here the constellation always spans both inner and outer regions and the question is which radial band holds the majority of the ink, independent of any polygon/concyclicity or centroid-offset selection.",
+    "expected_information_gain": "Isolates whether a model can reconstruct the global radial density field of a dot cloud and compare inner-versus-outer mass into a binary core/rim regime, decoupled from linear gradient direction, surround containment, concyclicity, silhouette shape, and centroid-position selection."
+  }
+}

@@ -1,0 +1,13 @@
+schema_version = "0.4.0"
+world_id = "paired_seam_correspondence"
+title = "Paired seam correspondence"
+decision_type = "yesno"
+question = "Do the two separated tiles have the same ordered profile along their facing edges?"
+renderer = "renderer.py"
+oracle = "oracle.py"
+prompt_api = "prompts.py"
+
+[axes]
+mechanism = "ordered correspondence between two disconnected contour traces"
+support_scale = "regional"
+support_shape = "multipart"

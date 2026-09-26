@@ -1,0 +1,34 @@
+schema_version = "discovery-profile-set-0.1.0"
+id = "paper-semantic@0.3.0"
+status = "experimental"
+review_status = "author-choice-pending"
+delivery = "public_text_card_with_seed_abstracts"
+source_study = "studies/paper_semantic_profile_review_003"
+source_profile_set = "paper-semantic@0.1.0"
+created = "2026-08-09"
+note = "Parallel five-seed candidate variant B; not a supersession and not yet selected for confirmatory runs."
+variant_label = "B"
+variant_relation = "parallel-candidate-not-supersession"
+sampling_algorithm = "ascending-sha256(seed NUL profile_id NUL seed_id)"
+sampling_seed = "paper-semantic-v0.3.0-2026-08-09"
+selection_count_per_profile = 5
+source_exclusions = "foundry/discovery_profiles/paper-semantic/review/exclusions-2026-08-09.toml"
+profile_ids = ["tracing", "topology", "correspondence", "search", "state_tracking", "measurement", "prior_conflict", "reveal_global_structure", "reveal_declared_transform"]
+excluded_profile_ids = ["transformation", "mechanism"]
+
+[visibility]
+executable_prototypes = false
+private_scenes = false
+gold_answers = false
+oracle_outputs = false
+review_material = false
+
+[policy]
+same_canonical_seed_set = true
+anti_cloning_required = true
+campaign_local_growth_only = true
+human_only_canonical_admission = true
+pixel_only_inverse_arm = true
+generated_candidates_excluded = true
+agent_selection_prohibited = true
+author_choice_required_before_confirmatory_run = true
